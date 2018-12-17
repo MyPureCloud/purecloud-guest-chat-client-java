@@ -37,7 +37,7 @@ public class ApiClient implements AutoCloseable {
     private static Map<String, Authentication> buildAuthentications() {
         Map<String, Authentication> authentications = new HashMap<>();
         authentications.put("PureCloud OAuth", new OAuth());
-        authentications.put("Guest Chat JWT", new ApiKeyAuth("header", "Authorization"));
+        authentications.put("Guest Chat JWT", new ApiKeyAuth("header", "Authorization")  { { setApiKeyPrefix("Bearer"); } });
 
         return Collections.unmodifiableMap(authentications);
     }
@@ -141,6 +141,19 @@ public class ApiClient implements AutoCloseable {
         for (Authentication auth : authentications.values()) {
             if (auth instanceof OAuth) {
                 ((OAuth) auth).setAccessToken(accessToken);
+                return;
+            }
+        }
+        throw new RuntimeException("No OAuth2 authentication configured!");
+    }
+
+    /**
+     * Helper method to set access token for the first OAuth2 authentication.
+     */
+    public void setJwt(String jwt) {
+        for (Authentication auth : authentications.values()) {
+            if (auth instanceof ApiKeyAuth) {
+                ((ApiKeyAuth) auth).setApiKey(jwt);
                 return;
             }
         }
@@ -657,7 +670,7 @@ public class ApiClient implements AutoCloseable {
         private Builder(ConnectorProperties properties) {
             this.properties = (properties != null) ? properties.copy() : new ConnectorProperties();
             withUserAgent(DEFAULT_USER_AGENT);
-            withDefaultHeader("purecloud-sdk", "1.0.1");
+            withDefaultHeader("purecloud-sdk", "1.0.2");
         }
 
         public Builder withDefaultHeader(String header, String value) {

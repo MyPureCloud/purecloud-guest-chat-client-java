@@ -7,7 +7,7 @@ title: PureCloud Guest Chat Client - Java
 [![platform-client-v2](https://maven-badges.herokuapp.com/maven-central/com.mypurecloud/purecloud-guest-chat-client/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.mypurecloud/purecloud-guest-chat-client)
 
 * **Documentation** https://developer.mypurecloud.com/api/rest/client-libraries/java-guest/
-* **Source** https://github.com/MyPureCloud/purecloud-guest-chat-client
+* **Source** https://github.com/MyPureCloud/purecloud-guest-chat-client-java
 * **Guest chat documentation** https://developerpreview.inindca.com/api/webchat/guestchat.html (preview documentation)
 
 ## Install Using maven
@@ -85,7 +85,7 @@ System.out.println("Conversation ID: " + chatInfo.getId());
 
 
 // Set JWT in SDK
-apiClient.setAccessToken(chatInfo.getJwt());
+apiClient.setJwt(chatInfo.getJwt());
 
 // Create websocket instance
 System.out.println("Connecting to websocket...");
@@ -167,10 +167,10 @@ Example of getting the authenticated user's information:
 
 #### Set the JWT (access token)
 
-The JWT from the newly created chat must be applied to the SDK before any requests can be made targeting the chat. Do this by setting the access token on the ApiClient instance.
+The JWT from the newly created chat must be applied to the SDK before any requests can be made targeting the chat. Do this by setting the JWT on the ApiClient instance.
 
 ~~~ java
-apiClient.setAccessToken(chatInfo.getJwt());
+apiClient.setJwt(chatInfo.getJwt());
 ~~~
 
 #### Using a request builder
