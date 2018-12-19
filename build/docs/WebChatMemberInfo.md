@@ -1,5 +1,6 @@
 ---
 title: WebChatMemberInfo
+ispreview: true
 ---
 ## WebChatMemberInfo
 

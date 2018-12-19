@@ -1,5 +1,6 @@
 ---
 title: Detail
+ispreview: true
 ---
 ## Detail
 

@@ -1,5 +1,6 @@
 ---
 title: ErrorBody
+ispreview: true
 ---
 ## ErrorBody
 
