@@ -1,6 +1,5 @@
 ---
 title: WebChatApi
-ispreview: true
 ---
 ## WebChatApi
 
@@ -37,13 +36,13 @@ Requires NO permissions:
 
 ### Example
 
-~~~java
+```{"language":"java"}
 //Import classes:
-//import com.mypurecloud.sdk.v2.guest.ApiClient;
-//import com.mypurecloud.sdk.v2.guest.ApiException;
-//import com.mypurecloud.sdk.v2.guest.Configuration;
-//import com.mypurecloud.sdk.v2.guest.auth.*;
-//import com.mypurecloud.sdk.v2.guest.api.WebChatApi;
+import com.mypurecloud.sdk.v2.guest.ApiClient;
+import com.mypurecloud.sdk.v2.guest.ApiException;
+import com.mypurecloud.sdk.v2.guest.Configuration;
+import com.mypurecloud.sdk.v2.guest.auth.*;
+import com.mypurecloud.sdk.v2.guest.api.WebChatApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -62,7 +61,7 @@ try {
     System.err.println("Exception when calling WebChatApi#deleteWebchatGuestConversationMember");
     e.printStackTrace();
 }
-~~~
+```
 
 ### Parameters
 
@@ -96,13 +95,13 @@ Requires NO permissions:
 
 ### Example
 
-~~~java
+```{"language":"java"}
 //Import classes:
-//import com.mypurecloud.sdk.v2.guest.ApiClient;
-//import com.mypurecloud.sdk.v2.guest.ApiException;
-//import com.mypurecloud.sdk.v2.guest.Configuration;
-//import com.mypurecloud.sdk.v2.guest.auth.*;
-//import com.mypurecloud.sdk.v2.guest.api.WebChatApi;
+import com.mypurecloud.sdk.v2.guest.ApiClient;
+import com.mypurecloud.sdk.v2.guest.ApiException;
+import com.mypurecloud.sdk.v2.guest.Configuration;
+import com.mypurecloud.sdk.v2.guest.auth.*;
+import com.mypurecloud.sdk.v2.guest.api.WebChatApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -122,7 +121,7 @@ try {
     System.err.println("Exception when calling WebChatApi#getWebchatGuestConversationMember");
     e.printStackTrace();
 }
-~~~
+```
 
 ### Parameters
 
@@ -156,13 +155,13 @@ Requires NO permissions:
 
 ### Example
 
-~~~java
+```{"language":"java"}
 //Import classes:
-//import com.mypurecloud.sdk.v2.guest.ApiClient;
-//import com.mypurecloud.sdk.v2.guest.ApiException;
-//import com.mypurecloud.sdk.v2.guest.Configuration;
-//import com.mypurecloud.sdk.v2.guest.auth.*;
-//import com.mypurecloud.sdk.v2.guest.api.WebChatApi;
+import com.mypurecloud.sdk.v2.guest.ApiClient;
+import com.mypurecloud.sdk.v2.guest.ApiException;
+import com.mypurecloud.sdk.v2.guest.Configuration;
+import com.mypurecloud.sdk.v2.guest.auth.*;
+import com.mypurecloud.sdk.v2.guest.api.WebChatApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -184,7 +183,7 @@ try {
     System.err.println("Exception when calling WebChatApi#getWebchatGuestConversationMembers");
     e.printStackTrace();
 }
-~~~
+```
 
 ### Parameters
 
@@ -220,13 +219,13 @@ Requires NO permissions:
 
 ### Example
 
-~~~java
+```{"language":"java"}
 //Import classes:
-//import com.mypurecloud.sdk.v2.guest.ApiClient;
-//import com.mypurecloud.sdk.v2.guest.ApiException;
-//import com.mypurecloud.sdk.v2.guest.Configuration;
-//import com.mypurecloud.sdk.v2.guest.auth.*;
-//import com.mypurecloud.sdk.v2.guest.api.WebChatApi;
+import com.mypurecloud.sdk.v2.guest.ApiClient;
+import com.mypurecloud.sdk.v2.guest.ApiException;
+import com.mypurecloud.sdk.v2.guest.Configuration;
+import com.mypurecloud.sdk.v2.guest.auth.*;
+import com.mypurecloud.sdk.v2.guest.api.WebChatApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -246,7 +245,7 @@ try {
     System.err.println("Exception when calling WebChatApi#getWebchatGuestConversationMessage");
     e.printStackTrace();
 }
-~~~
+```
 
 ### Parameters
 
@@ -280,13 +279,13 @@ Requires NO permissions:
 
 ### Example
 
-~~~java
+```{"language":"java"}
 //Import classes:
-//import com.mypurecloud.sdk.v2.guest.ApiClient;
-//import com.mypurecloud.sdk.v2.guest.ApiException;
-//import com.mypurecloud.sdk.v2.guest.Configuration;
-//import com.mypurecloud.sdk.v2.guest.auth.*;
-//import com.mypurecloud.sdk.v2.guest.api.WebChatApi;
+import com.mypurecloud.sdk.v2.guest.ApiClient;
+import com.mypurecloud.sdk.v2.guest.ApiException;
+import com.mypurecloud.sdk.v2.guest.Configuration;
+import com.mypurecloud.sdk.v2.guest.auth.*;
+import com.mypurecloud.sdk.v2.guest.api.WebChatApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -307,7 +306,7 @@ try {
     System.err.println("Exception when calling WebChatApi#getWebchatGuestConversationMessages");
     e.printStackTrace();
 }
-~~~
+```
 
 ### Parameters
 
@@ -342,13 +341,13 @@ Requires NO permissions:
 
 ### Example
 
-~~~java
+```{"language":"java"}
 //Import classes:
-//import com.mypurecloud.sdk.v2.guest.ApiClient;
-//import com.mypurecloud.sdk.v2.guest.ApiException;
-//import com.mypurecloud.sdk.v2.guest.Configuration;
-//import com.mypurecloud.sdk.v2.guest.auth.*;
-//import com.mypurecloud.sdk.v2.guest.api.WebChatApi;
+import com.mypurecloud.sdk.v2.guest.ApiClient;
+import com.mypurecloud.sdk.v2.guest.ApiException;
+import com.mypurecloud.sdk.v2.guest.Configuration;
+import com.mypurecloud.sdk.v2.guest.auth.*;
+import com.mypurecloud.sdk.v2.guest.api.WebChatApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -369,7 +368,7 @@ try {
     System.err.println("Exception when calling WebChatApi#postWebchatGuestConversationMemberMessages");
     e.printStackTrace();
 }
-~~~
+```
 
 ### Parameters
 
@@ -404,13 +403,13 @@ Requires NO permissions:
 
 ### Example
 
-~~~java
+```{"language":"java"}
 //Import classes:
-//import com.mypurecloud.sdk.v2.guest.ApiClient;
-//import com.mypurecloud.sdk.v2.guest.ApiException;
-//import com.mypurecloud.sdk.v2.guest.Configuration;
-//import com.mypurecloud.sdk.v2.guest.auth.*;
-//import com.mypurecloud.sdk.v2.guest.api.WebChatApi;
+import com.mypurecloud.sdk.v2.guest.ApiClient;
+import com.mypurecloud.sdk.v2.guest.ApiException;
+import com.mypurecloud.sdk.v2.guest.Configuration;
+import com.mypurecloud.sdk.v2.guest.auth.*;
+import com.mypurecloud.sdk.v2.guest.api.WebChatApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -430,7 +429,7 @@ try {
     System.err.println("Exception when calling WebChatApi#postWebchatGuestConversationMemberTyping");
     e.printStackTrace();
 }
-~~~
+```
 
 ### Parameters
 
@@ -464,10 +463,10 @@ Requires NO permissions:
 
 ### Example
 
-~~~java
+```{"language":"java"}
 //Import classes:
-//import com.mypurecloud.sdk.v2.guest.ApiException;
-//import com.mypurecloud.sdk.v2.guest.api.WebChatApi;
+import com.mypurecloud.sdk.v2.guest.ApiException;
+import com.mypurecloud.sdk.v2.guest.api.WebChatApi;
 
 
 WebChatApi apiInstance = new WebChatApi();
@@ -479,7 +478,7 @@ try {
     System.err.println("Exception when calling WebChatApi#postWebchatGuestConversations");
     e.printStackTrace();
 }
-~~~
+```
 
 ### Parameters
 

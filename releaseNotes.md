@@ -1,9 +1,9 @@
-Platform API version: 2897
+Platform API version: 2960
 
 
-# Doc changes
+# SDK Changes
 
-* Adding preview header to all doc pages
+* None, just doc updates
 
 # Major Changes (0 changes)
 
