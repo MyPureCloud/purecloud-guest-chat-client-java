@@ -14,6 +14,8 @@ import com.mypurecloud.sdk.v2.guest.model.*;
 import com.mypurecloud.sdk.v2.guest.Pair;
 
 import com.mypurecloud.sdk.v2.guest.model.ErrorBody;
+import com.mypurecloud.sdk.v2.guest.model.WebChatGuestMediaRequest;
+import com.mypurecloud.sdk.v2.guest.model.WebChatGuestMediaRequestEntityList;
 import com.mypurecloud.sdk.v2.guest.model.WebChatMemberInfo;
 import com.mypurecloud.sdk.v2.guest.model.WebChatMemberInfoEntityList;
 import com.mypurecloud.sdk.v2.guest.model.WebChatMessage;
@@ -25,10 +27,13 @@ import com.mypurecloud.sdk.v2.guest.model.CreateWebChatConversationRequest;
 
 
 import com.mypurecloud.sdk.v2.guest.api.request.DeleteWebchatGuestConversationMemberRequest;
+import com.mypurecloud.sdk.v2.guest.api.request.GetWebchatGuestConversationMediarequestRequest;
+import com.mypurecloud.sdk.v2.guest.api.request.GetWebchatGuestConversationMediarequestsRequest;
 import com.mypurecloud.sdk.v2.guest.api.request.GetWebchatGuestConversationMemberRequest;
 import com.mypurecloud.sdk.v2.guest.api.request.GetWebchatGuestConversationMembersRequest;
 import com.mypurecloud.sdk.v2.guest.api.request.GetWebchatGuestConversationMessageRequest;
 import com.mypurecloud.sdk.v2.guest.api.request.GetWebchatGuestConversationMessagesRequest;
+import com.mypurecloud.sdk.v2.guest.api.request.PatchWebchatGuestConversationMediarequestRequest;
 import com.mypurecloud.sdk.v2.guest.api.request.PostWebchatGuestConversationMemberMessagesRequest;
 import com.mypurecloud.sdk.v2.guest.api.request.PostWebchatGuestConversationMemberTypingRequest;
 import com.mypurecloud.sdk.v2.guest.api.request.PostWebchatGuestConversationsRequest;
@@ -117,6 +122,158 @@ public class WebChatApiAsync {
           else {
             @SuppressWarnings("unchecked")
             ApiResponse<Void> response = (ApiResponse<Void>)(ApiResponse<?>)(new ApiException(exception));
+            notifySuccess(future, callback, response);
+          }
+        }
+      });
+      return future;
+    }
+    catch (Throwable exception) {
+      return Futures.immediateFailedFuture(exception);
+    }
+  }
+
+  
+  /**
+   * Get a media request in the conversation
+   * 
+   * @param request the request object
+   * @param callback the action to perform when the request is completed
+   * @return the future indication when the request has completed
+   */
+  public Future<WebChatGuestMediaRequest> getWebchatGuestConversationMediarequestAsync(GetWebchatGuestConversationMediarequestRequest request, final AsyncApiCallback<WebChatGuestMediaRequest> callback) {
+    try {
+      final SettableFuture<WebChatGuestMediaRequest> future = SettableFuture.create();
+      final boolean shouldThrowErrors = pcapiClient.getShouldThrowErrors();
+      pcapiClient.invokeAsync(request.withHttpInfo(), new TypeReference<WebChatGuestMediaRequest>() {}, new AsyncApiCallback<ApiResponse<WebChatGuestMediaRequest>>() {
+        @Override
+        public void onCompleted(ApiResponse<WebChatGuestMediaRequest> response) {
+          notifySuccess(future, callback, response.getBody());
+        }
+
+        @Override
+        public void onFailed(Throwable exception) {
+          if (shouldThrowErrors) {
+            notifyFailure(future, callback, exception);
+          }
+          else {
+            notifySuccess(future, callback, null);
+          }
+        }
+      });
+      return future;
+    }
+    catch (Throwable exception) {
+      return Futures.immediateFailedFuture(exception);
+    }
+  }
+
+  /**
+   * Get a media request in the conversation
+   * 
+   * @param request the request object
+   * @param callback the action to perform when the request is completed
+   * @return the future indication when the request has completed
+   */
+  public Future<ApiResponse<WebChatGuestMediaRequest>> getWebchatGuestConversationMediarequestAsync(ApiRequest<Void> request, final AsyncApiCallback<ApiResponse<WebChatGuestMediaRequest>> callback) {
+    try {
+      final SettableFuture<ApiResponse<WebChatGuestMediaRequest>> future = SettableFuture.create();
+      final boolean shouldThrowErrors = pcapiClient.getShouldThrowErrors();
+      pcapiClient.invokeAsync(request, new TypeReference<WebChatGuestMediaRequest>() {}, new AsyncApiCallback<ApiResponse<WebChatGuestMediaRequest>>() {
+        @Override
+        public void onCompleted(ApiResponse<WebChatGuestMediaRequest> response) {
+          notifySuccess(future, callback, response);
+        }
+
+        @Override
+        public void onFailed(Throwable exception) {
+          if (exception instanceof ApiException) {
+            @SuppressWarnings("unchecked")
+            ApiResponse<WebChatGuestMediaRequest> response = (ApiResponse<WebChatGuestMediaRequest>)(ApiResponse<?>)exception;
+            notifySuccess(future, callback, response);
+          }
+          if (shouldThrowErrors) {
+            notifyFailure(future, callback, exception);
+          }
+          else {
+            @SuppressWarnings("unchecked")
+            ApiResponse<WebChatGuestMediaRequest> response = (ApiResponse<WebChatGuestMediaRequest>)(ApiResponse<?>)(new ApiException(exception));
+            notifySuccess(future, callback, response);
+          }
+        }
+      });
+      return future;
+    }
+    catch (Throwable exception) {
+      return Futures.immediateFailedFuture(exception);
+    }
+  }
+
+  
+  /**
+   * Get all media requests to the guest in the conversation
+   * 
+   * @param request the request object
+   * @param callback the action to perform when the request is completed
+   * @return the future indication when the request has completed
+   */
+  public Future<WebChatGuestMediaRequestEntityList> getWebchatGuestConversationMediarequestsAsync(GetWebchatGuestConversationMediarequestsRequest request, final AsyncApiCallback<WebChatGuestMediaRequestEntityList> callback) {
+    try {
+      final SettableFuture<WebChatGuestMediaRequestEntityList> future = SettableFuture.create();
+      final boolean shouldThrowErrors = pcapiClient.getShouldThrowErrors();
+      pcapiClient.invokeAsync(request.withHttpInfo(), new TypeReference<WebChatGuestMediaRequestEntityList>() {}, new AsyncApiCallback<ApiResponse<WebChatGuestMediaRequestEntityList>>() {
+        @Override
+        public void onCompleted(ApiResponse<WebChatGuestMediaRequestEntityList> response) {
+          notifySuccess(future, callback, response.getBody());
+        }
+
+        @Override
+        public void onFailed(Throwable exception) {
+          if (shouldThrowErrors) {
+            notifyFailure(future, callback, exception);
+          }
+          else {
+            notifySuccess(future, callback, null);
+          }
+        }
+      });
+      return future;
+    }
+    catch (Throwable exception) {
+      return Futures.immediateFailedFuture(exception);
+    }
+  }
+
+  /**
+   * Get all media requests to the guest in the conversation
+   * 
+   * @param request the request object
+   * @param callback the action to perform when the request is completed
+   * @return the future indication when the request has completed
+   */
+  public Future<ApiResponse<WebChatGuestMediaRequestEntityList>> getWebchatGuestConversationMediarequestsAsync(ApiRequest<Void> request, final AsyncApiCallback<ApiResponse<WebChatGuestMediaRequestEntityList>> callback) {
+    try {
+      final SettableFuture<ApiResponse<WebChatGuestMediaRequestEntityList>> future = SettableFuture.create();
+      final boolean shouldThrowErrors = pcapiClient.getShouldThrowErrors();
+      pcapiClient.invokeAsync(request, new TypeReference<WebChatGuestMediaRequestEntityList>() {}, new AsyncApiCallback<ApiResponse<WebChatGuestMediaRequestEntityList>>() {
+        @Override
+        public void onCompleted(ApiResponse<WebChatGuestMediaRequestEntityList> response) {
+          notifySuccess(future, callback, response);
+        }
+
+        @Override
+        public void onFailed(Throwable exception) {
+          if (exception instanceof ApiException) {
+            @SuppressWarnings("unchecked")
+            ApiResponse<WebChatGuestMediaRequestEntityList> response = (ApiResponse<WebChatGuestMediaRequestEntityList>)(ApiResponse<?>)exception;
+            notifySuccess(future, callback, response);
+          }
+          if (shouldThrowErrors) {
+            notifyFailure(future, callback, exception);
+          }
+          else {
+            @SuppressWarnings("unchecked")
+            ApiResponse<WebChatGuestMediaRequestEntityList> response = (ApiResponse<WebChatGuestMediaRequestEntityList>)(ApiResponse<?>)(new ApiException(exception));
             notifySuccess(future, callback, response);
           }
         }
@@ -434,6 +591,82 @@ public class WebChatApiAsync {
 
   
   /**
+   * Update a media request in the conversation, setting the state to ACCEPTED/DECLINED/ERRORED
+   * 
+   * @param request the request object
+   * @param callback the action to perform when the request is completed
+   * @return the future indication when the request has completed
+   */
+  public Future<WebChatGuestMediaRequest> patchWebchatGuestConversationMediarequestAsync(PatchWebchatGuestConversationMediarequestRequest request, final AsyncApiCallback<WebChatGuestMediaRequest> callback) {
+    try {
+      final SettableFuture<WebChatGuestMediaRequest> future = SettableFuture.create();
+      final boolean shouldThrowErrors = pcapiClient.getShouldThrowErrors();
+      pcapiClient.invokeAsync(request.withHttpInfo(), new TypeReference<WebChatGuestMediaRequest>() {}, new AsyncApiCallback<ApiResponse<WebChatGuestMediaRequest>>() {
+        @Override
+        public void onCompleted(ApiResponse<WebChatGuestMediaRequest> response) {
+          notifySuccess(future, callback, response.getBody());
+        }
+
+        @Override
+        public void onFailed(Throwable exception) {
+          if (shouldThrowErrors) {
+            notifyFailure(future, callback, exception);
+          }
+          else {
+            notifySuccess(future, callback, null);
+          }
+        }
+      });
+      return future;
+    }
+    catch (Throwable exception) {
+      return Futures.immediateFailedFuture(exception);
+    }
+  }
+
+  /**
+   * Update a media request in the conversation, setting the state to ACCEPTED/DECLINED/ERRORED
+   * 
+   * @param request the request object
+   * @param callback the action to perform when the request is completed
+   * @return the future indication when the request has completed
+   */
+  public Future<ApiResponse<WebChatGuestMediaRequest>> patchWebchatGuestConversationMediarequestAsync(ApiRequest<WebChatGuestMediaRequest> request, final AsyncApiCallback<ApiResponse<WebChatGuestMediaRequest>> callback) {
+    try {
+      final SettableFuture<ApiResponse<WebChatGuestMediaRequest>> future = SettableFuture.create();
+      final boolean shouldThrowErrors = pcapiClient.getShouldThrowErrors();
+      pcapiClient.invokeAsync(request, new TypeReference<WebChatGuestMediaRequest>() {}, new AsyncApiCallback<ApiResponse<WebChatGuestMediaRequest>>() {
+        @Override
+        public void onCompleted(ApiResponse<WebChatGuestMediaRequest> response) {
+          notifySuccess(future, callback, response);
+        }
+
+        @Override
+        public void onFailed(Throwable exception) {
+          if (exception instanceof ApiException) {
+            @SuppressWarnings("unchecked")
+            ApiResponse<WebChatGuestMediaRequest> response = (ApiResponse<WebChatGuestMediaRequest>)(ApiResponse<?>)exception;
+            notifySuccess(future, callback, response);
+          }
+          if (shouldThrowErrors) {
+            notifyFailure(future, callback, exception);
+          }
+          else {
+            @SuppressWarnings("unchecked")
+            ApiResponse<WebChatGuestMediaRequest> response = (ApiResponse<WebChatGuestMediaRequest>)(ApiResponse<?>)(new ApiException(exception));
+            notifySuccess(future, callback, response);
+          }
+        }
+      });
+      return future;
+    }
+    catch (Throwable exception) {
+      return Futures.immediateFailedFuture(exception);
+    }
+  }
+
+  
+  /**
    * Send a message in a chat conversation.
    * 
    * @param request the request object
@@ -587,7 +820,7 @@ public class WebChatApiAsync {
   
   /**
    * Create an ACD chat conversation from an external customer.
-   * 
+   * This endpoint will create a new ACD Chat conversation under the specified Chat Deployment.  The conversation will begin with a guest member in it (with a role=CUSTOMER) according to the customer information that is supplied. If the guest member is authenticated, the &#39;memberAuthToken&#39; field should include his JWT as generated by the &#39;POST /api/v2/signeddata&#39; resource; if the guest member is anonymous (and the Deployment permits it) this field can be omitted.  The returned data includes the IDs of the conversation created, along with a newly-create JWT token that you can supply to all future endpoints as authentication to perform operations against that conversation. After successfully creating a conversation, you should connect a websocket to the event stream named in the &#39;eventStreamUri&#39; field of the response; the conversation is not routed until the event stream is attached.
    * @param request the request object
    * @param callback the action to perform when the request is completed
    * @return the future indication when the request has completed
@@ -621,7 +854,7 @@ public class WebChatApiAsync {
 
   /**
    * Create an ACD chat conversation from an external customer.
-   * 
+   * This endpoint will create a new ACD Chat conversation under the specified Chat Deployment.  The conversation will begin with a guest member in it (with a role=CUSTOMER) according to the customer information that is supplied. If the guest member is authenticated, the &#39;memberAuthToken&#39; field should include his JWT as generated by the &#39;POST /api/v2/signeddata&#39; resource; if the guest member is anonymous (and the Deployment permits it) this field can be omitted.  The returned data includes the IDs of the conversation created, along with a newly-create JWT token that you can supply to all future endpoints as authentication to perform operations against that conversation. After successfully creating a conversation, you should connect a websocket to the event stream named in the &#39;eventStreamUri&#39; field of the response; the conversation is not routed until the event stream is attached.
    * @param request the request object
    * @param callback the action to perform when the request is completed
    * @return the future indication when the request has completed

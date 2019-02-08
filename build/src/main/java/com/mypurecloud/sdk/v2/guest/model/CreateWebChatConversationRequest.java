@@ -4,7 +4,7 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.mypurecloud.sdk.v2.guest.model.WebChatMemberInfo;
+import com.mypurecloud.sdk.v2.guest.model.GuestMemberInfo;
 import com.mypurecloud.sdk.v2.guest.model.WebChatRoutingTarget;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -19,7 +19,7 @@ public class CreateWebChatConversationRequest  implements Serializable {
   private String organizationId = null;
   private String deploymentId = null;
   private WebChatRoutingTarget routingTarget = null;
-  private WebChatMemberInfo memberInfo = null;
+  private GuestMemberInfo memberInfo = null;
   private String memberAuthToken = null;
 
   
@@ -42,14 +42,14 @@ public class CreateWebChatConversationRequest  implements Serializable {
 
   
   /**
-   * The web chat deployment id.
+   * The web chat Deployment ID which contains the appropriate settings for this chat conversation.
    **/
   public CreateWebChatConversationRequest deploymentId(String deploymentId) {
     this.deploymentId = deploymentId;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "The web chat deployment id.")
+  @ApiModelProperty(example = "null", required = true, value = "The web chat Deployment ID which contains the appropriate settings for this chat conversation.")
   @JsonProperty("deploymentId")
   public String getDeploymentId() {
     return deploymentId;
@@ -60,14 +60,14 @@ public class CreateWebChatConversationRequest  implements Serializable {
 
   
   /**
-   * The target for the new chat conversation.
+   * The routing information to use for the new chat conversation.
    **/
   public CreateWebChatConversationRequest routingTarget(WebChatRoutingTarget routingTarget) {
     this.routingTarget = routingTarget;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "The target for the new chat conversation.")
+  @ApiModelProperty(example = "null", required = true, value = "The routing information to use for the new chat conversation.")
   @JsonProperty("routingTarget")
   public WebChatRoutingTarget getRoutingTarget() {
     return routingTarget;
@@ -78,32 +78,32 @@ public class CreateWebChatConversationRequest  implements Serializable {
 
   
   /**
-   * The member info of the 'customer' member starting the web chat.
+   * The guest member info to use for the new chat conversation.
    **/
-  public CreateWebChatConversationRequest memberInfo(WebChatMemberInfo memberInfo) {
+  public CreateWebChatConversationRequest memberInfo(GuestMemberInfo memberInfo) {
     this.memberInfo = memberInfo;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "The member info of the 'customer' member starting the web chat.")
+  @ApiModelProperty(example = "null", required = true, value = "The guest member info to use for the new chat conversation.")
   @JsonProperty("memberInfo")
-  public WebChatMemberInfo getMemberInfo() {
+  public GuestMemberInfo getMemberInfo() {
     return memberInfo;
   }
-  public void setMemberInfo(WebChatMemberInfo memberInfo) {
+  public void setMemberInfo(GuestMemberInfo memberInfo) {
     this.memberInfo = memberInfo;
   }
 
   
   /**
-   * If appropriate, specify the JWT of the authenticated guest.
+   * If the guest member is an authenticated member (ie, not anonymous) his JWT is provided here. The token will have been previously generated with the \"POST /api/v2/signeddata\" resource.
    **/
   public CreateWebChatConversationRequest memberAuthToken(String memberAuthToken) {
     this.memberAuthToken = memberAuthToken;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "If appropriate, specify the JWT of the authenticated guest.")
+  @ApiModelProperty(example = "null", value = "If the guest member is an authenticated member (ie, not anonymous) his JWT is provided here. The token will have been previously generated with the \"POST /api/v2/signeddata\" resource.")
   @JsonProperty("memberAuthToken")
   public String getMemberAuthToken() {
     return memberAuthToken;

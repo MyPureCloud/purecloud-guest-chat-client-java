@@ -65,7 +65,7 @@ public class WebChatRoutingTarget  implements Serializable {
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "The target type of the routing target, such as 'QUEUE'.")
+  @ApiModelProperty(example = "null", required = true, value = "The target type of the routing target, such as 'QUEUE'.")
   @JsonProperty("targetType")
   public TargetTypeEnum getTargetType() {
     return targetType;
@@ -83,7 +83,7 @@ public class WebChatRoutingTarget  implements Serializable {
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "The target of the route, in the format appropriate given the 'targetType'.")
+  @ApiModelProperty(example = "null", required = true, value = "The target of the route, in the format appropriate given the 'targetType'.")
   @JsonProperty("targetAddress")
   public String getTargetAddress() {
     return targetAddress;

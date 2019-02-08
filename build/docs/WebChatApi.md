@@ -8,10 +8,13 @@ All URIs are relative to *https://api.mypurecloud.com*
 | Method | Description |
 | ------------- | ------------- |
 | [**deleteWebchatGuestConversationMember**](WebChatApi.html#deleteWebchatGuestConversationMember) | Remove a member from a chat conversation |
+| [**getWebchatGuestConversationMediarequest**](WebChatApi.html#getWebchatGuestConversationMediarequest) | Get a media request in the conversation |
+| [**getWebchatGuestConversationMediarequests**](WebChatApi.html#getWebchatGuestConversationMediarequests) | Get all media requests to the guest in the conversation |
 | [**getWebchatGuestConversationMember**](WebChatApi.html#getWebchatGuestConversationMember) | Get a web chat conversation member |
 | [**getWebchatGuestConversationMembers**](WebChatApi.html#getWebchatGuestConversationMembers) | Get the members of a chat conversation. |
 | [**getWebchatGuestConversationMessage**](WebChatApi.html#getWebchatGuestConversationMessage) | Get a web chat conversation message |
 | [**getWebchatGuestConversationMessages**](WebChatApi.html#getWebchatGuestConversationMessages) | Get the messages of a chat conversation. |
+| [**patchWebchatGuestConversationMediarequest**](WebChatApi.html#patchWebchatGuestConversationMediarequest) | Update a media request in the conversation, setting the state to ACCEPTED/DECLINED/ERRORED |
 | [**postWebchatGuestConversationMemberMessages**](WebChatApi.html#postWebchatGuestConversationMemberMessages) | Send a message in a chat conversation. |
 | [**postWebchatGuestConversationMemberTyping**](WebChatApi.html#postWebchatGuestConversationMemberTyping) | Send a typing-indicator in a chat conversation. |
 | [**postWebchatGuestConversations**](WebChatApi.html#postWebchatGuestConversations) | Create an ACD chat conversation from an external customer. |
@@ -75,6 +78,124 @@ try {
 ### Return type
 
 null (empty response body)
+
+<a name="getWebchatGuestConversationMediarequest"></a>
+
+# **getWebchatGuestConversationMediarequest**
+
+
+
+> [WebChatGuestMediaRequest](WebChatGuestMediaRequest.html) getWebchatGuestConversationMediarequest(conversationId, mediaRequestId)
+
+Get a media request in the conversation
+
+
+
+Wraps GET /api/v2/webchat/guest/conversations/{conversationId}/mediarequests/{mediaRequestId}  
+
+Requires NO permissions: 
+
+
+### Example
+
+```{"language":"java"}
+//Import classes:
+import com.mypurecloud.sdk.v2.guest.ApiClient;
+import com.mypurecloud.sdk.v2.guest.ApiException;
+import com.mypurecloud.sdk.v2.guest.Configuration;
+import com.mypurecloud.sdk.v2.guest.auth.*;
+import com.mypurecloud.sdk.v2.guest.api.WebChatApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure API key authorization: Guest Chat JWT
+ApiKeyAuth Guest Chat JWT = (ApiKeyAuth) defaultClient.getAuthentication("Guest Chat JWT");
+Guest Chat JWT.setApiKey("YOUR API KEY");
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//Guest Chat JWT.setApiKeyPrefix("Token");
+
+WebChatApi apiInstance = new WebChatApi();
+String conversationId = "conversationId_example"; // String | conversationId
+String mediaRequestId = "mediaRequestId_example"; // String | mediaRequestId
+try {
+    WebChatGuestMediaRequest result = apiInstance.getWebchatGuestConversationMediarequest(conversationId, mediaRequestId);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling WebChatApi#getWebchatGuestConversationMediarequest");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **conversationId** | **String**| conversationId | |
+| **mediaRequestId** | **String**| mediaRequestId | |
+{: class="table table-striped"}
+
+### Return type
+
+[**WebChatGuestMediaRequest**](WebChatGuestMediaRequest.html)
+
+<a name="getWebchatGuestConversationMediarequests"></a>
+
+# **getWebchatGuestConversationMediarequests**
+
+
+
+> [WebChatGuestMediaRequestEntityList](WebChatGuestMediaRequestEntityList.html) getWebchatGuestConversationMediarequests(conversationId)
+
+Get all media requests to the guest in the conversation
+
+
+
+Wraps GET /api/v2/webchat/guest/conversations/{conversationId}/mediarequests  
+
+Requires NO permissions: 
+
+
+### Example
+
+```{"language":"java"}
+//Import classes:
+import com.mypurecloud.sdk.v2.guest.ApiClient;
+import com.mypurecloud.sdk.v2.guest.ApiException;
+import com.mypurecloud.sdk.v2.guest.Configuration;
+import com.mypurecloud.sdk.v2.guest.auth.*;
+import com.mypurecloud.sdk.v2.guest.api.WebChatApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure API key authorization: Guest Chat JWT
+ApiKeyAuth Guest Chat JWT = (ApiKeyAuth) defaultClient.getAuthentication("Guest Chat JWT");
+Guest Chat JWT.setApiKey("YOUR API KEY");
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//Guest Chat JWT.setApiKeyPrefix("Token");
+
+WebChatApi apiInstance = new WebChatApi();
+String conversationId = "conversationId_example"; // String | conversationId
+try {
+    WebChatGuestMediaRequestEntityList result = apiInstance.getWebchatGuestConversationMediarequests(conversationId);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling WebChatApi#getWebchatGuestConversationMediarequests");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **conversationId** | **String**| conversationId | |
+{: class="table table-striped"}
+
+### Return type
+
+[**WebChatGuestMediaRequestEntityList**](WebChatGuestMediaRequestEntityList.html)
 
 <a name="getWebchatGuestConversationMember"></a>
 
@@ -266,7 +387,7 @@ try {
 
 
 
-> [WebChatMessageEntityList](WebChatMessageEntityList.html) getWebchatGuestConversationMessages(conversationId, after, before)
+> [WebChatMessageEntityList](WebChatMessageEntityList.html) getWebchatGuestConversationMessages(conversationId, after, before, sortOrder)
 
 Get the messages of a chat conversation.
 
@@ -299,8 +420,9 @@ WebChatApi apiInstance = new WebChatApi();
 String conversationId = "conversationId_example"; // String | conversationId
 String after = "after_example"; // String | If available, get the messages chronologically after the id of this message
 String before = "before_example"; // String | If available, get the messages chronologically before the id of this message
+String sortOrder = "ascending"; // String | Sort order
 try {
-    WebChatMessageEntityList result = apiInstance.getWebchatGuestConversationMessages(conversationId, after, before);
+    WebChatMessageEntityList result = apiInstance.getWebchatGuestConversationMessages(conversationId, after, before, sortOrder);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling WebChatApi#getWebchatGuestConversationMessages");
@@ -316,11 +438,74 @@ try {
 | **conversationId** | **String**| conversationId | |
 | **after** | **String**| If available, get the messages chronologically after the id of this message | [optional] |
 | **before** | **String**| If available, get the messages chronologically before the id of this message | [optional] |
+| **sortOrder** | **String**| Sort order | [optional] [default to ascending]<br />**Values**: ascending, descending |
 {: class="table table-striped"}
 
 ### Return type
 
 [**WebChatMessageEntityList**](WebChatMessageEntityList.html)
+
+<a name="patchWebchatGuestConversationMediarequest"></a>
+
+# **patchWebchatGuestConversationMediarequest**
+
+
+
+> [WebChatGuestMediaRequest](WebChatGuestMediaRequest.html) patchWebchatGuestConversationMediarequest(conversationId, mediaRequestId, body)
+
+Update a media request in the conversation, setting the state to ACCEPTED/DECLINED/ERRORED
+
+
+
+Wraps PATCH /api/v2/webchat/guest/conversations/{conversationId}/mediarequests/{mediaRequestId}  
+
+Requires NO permissions: 
+
+
+### Example
+
+```{"language":"java"}
+//Import classes:
+import com.mypurecloud.sdk.v2.guest.ApiClient;
+import com.mypurecloud.sdk.v2.guest.ApiException;
+import com.mypurecloud.sdk.v2.guest.Configuration;
+import com.mypurecloud.sdk.v2.guest.auth.*;
+import com.mypurecloud.sdk.v2.guest.api.WebChatApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure API key authorization: Guest Chat JWT
+ApiKeyAuth Guest Chat JWT = (ApiKeyAuth) defaultClient.getAuthentication("Guest Chat JWT");
+Guest Chat JWT.setApiKey("YOUR API KEY");
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//Guest Chat JWT.setApiKeyPrefix("Token");
+
+WebChatApi apiInstance = new WebChatApi();
+String conversationId = "conversationId_example"; // String | conversationId
+String mediaRequestId = "mediaRequestId_example"; // String | mediaRequestId
+WebChatGuestMediaRequest body = new WebChatGuestMediaRequest(); // WebChatGuestMediaRequest | Request
+try {
+    WebChatGuestMediaRequest result = apiInstance.patchWebchatGuestConversationMediarequest(conversationId, mediaRequestId, body);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling WebChatApi#patchWebchatGuestConversationMediarequest");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **conversationId** | **String**| conversationId | |
+| **mediaRequestId** | **String**| mediaRequestId | |
+| **body** | [**WebChatGuestMediaRequest**](WebChatGuestMediaRequest.html)| Request | |
+{: class="table table-striped"}
+
+### Return type
+
+[**WebChatGuestMediaRequest**](WebChatGuestMediaRequest.html)
 
 <a name="postWebchatGuestConversationMemberMessages"></a>
 
@@ -454,7 +639,7 @@ try {
 
 Create an ACD chat conversation from an external customer.
 
-
+This endpoint will create a new ACD Chat conversation under the specified Chat Deployment.  The conversation will begin with a guest member in it (with a role=CUSTOMER) according to the customer information that is supplied. If the guest member is authenticated, the &#39;memberAuthToken&#39; field should include his JWT as generated by the &#39;POST /api/v2/signeddata&#39; resource; if the guest member is anonymous (and the Deployment permits it) this field can be omitted.  The returned data includes the IDs of the conversation created, along with a newly-create JWT token that you can supply to all future endpoints as authentication to perform operations against that conversation. After successfully creating a conversation, you should connect a websocket to the event stream named in the &#39;eventStreamUri&#39; field of the response; the conversation is not routed until the event stream is attached.
 
 Wraps POST /api/v2/webchat/guest/conversations  
 

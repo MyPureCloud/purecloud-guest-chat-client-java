@@ -11,6 +11,8 @@ import com.mypurecloud.sdk.v2.guest.model.*;
 import com.mypurecloud.sdk.v2.guest.Pair;
 
 import com.mypurecloud.sdk.v2.guest.model.ErrorBody;
+import com.mypurecloud.sdk.v2.guest.model.WebChatGuestMediaRequest;
+import com.mypurecloud.sdk.v2.guest.model.WebChatGuestMediaRequestEntityList;
 import com.mypurecloud.sdk.v2.guest.model.WebChatMemberInfo;
 import com.mypurecloud.sdk.v2.guest.model.WebChatMemberInfoEntityList;
 import com.mypurecloud.sdk.v2.guest.model.WebChatMessage;
@@ -22,10 +24,13 @@ import com.mypurecloud.sdk.v2.guest.model.CreateWebChatConversationRequest;
 
 
 import com.mypurecloud.sdk.v2.guest.api.request.DeleteWebchatGuestConversationMemberRequest;
+import com.mypurecloud.sdk.v2.guest.api.request.GetWebchatGuestConversationMediarequestRequest;
+import com.mypurecloud.sdk.v2.guest.api.request.GetWebchatGuestConversationMediarequestsRequest;
 import com.mypurecloud.sdk.v2.guest.api.request.GetWebchatGuestConversationMemberRequest;
 import com.mypurecloud.sdk.v2.guest.api.request.GetWebchatGuestConversationMembersRequest;
 import com.mypurecloud.sdk.v2.guest.api.request.GetWebchatGuestConversationMessageRequest;
 import com.mypurecloud.sdk.v2.guest.api.request.GetWebchatGuestConversationMessagesRequest;
+import com.mypurecloud.sdk.v2.guest.api.request.PatchWebchatGuestConversationMediarequestRequest;
 import com.mypurecloud.sdk.v2.guest.api.request.PostWebchatGuestConversationMemberMessagesRequest;
 import com.mypurecloud.sdk.v2.guest.api.request.PostWebchatGuestConversationMemberTypingRequest;
 import com.mypurecloud.sdk.v2.guest.api.request.PostWebchatGuestConversationsRequest;
@@ -124,6 +129,168 @@ public class WebChatApi {
       }
       @SuppressWarnings("unchecked")
       ApiResponse<Void> response = (ApiResponse<Void>)(ApiResponse<?>)(new ApiException(exception));
+      return response;
+    }
+  }
+
+  
+  /**
+   * Get a media request in the conversation
+   * 
+   * @param conversationId conversationId (required)
+   * @param mediaRequestId mediaRequestId (required)
+   * @return WebChatGuestMediaRequest
+   * @throws ApiException if the request fails on the server
+   * @throws IOException if the request fails to be processed
+   */
+  public WebChatGuestMediaRequest getWebchatGuestConversationMediarequest(String conversationId, String mediaRequestId) throws IOException, ApiException {
+    return  getWebchatGuestConversationMediarequest(createGetWebchatGuestConversationMediarequestRequest(conversationId, mediaRequestId));
+  }
+
+  /**
+   * Get a media request in the conversation
+   * 
+   * @param conversationId conversationId (required)
+   * @param mediaRequestId mediaRequestId (required)
+   * @return WebChatGuestMediaRequest
+   * @throws IOException if the request fails to be processed
+   */
+  public ApiResponse<WebChatGuestMediaRequest> getWebchatGuestConversationMediarequestWithHttpInfo(String conversationId, String mediaRequestId) throws IOException {
+    return getWebchatGuestConversationMediarequest(createGetWebchatGuestConversationMediarequestRequest(conversationId, mediaRequestId).withHttpInfo());
+  }
+
+  private GetWebchatGuestConversationMediarequestRequest createGetWebchatGuestConversationMediarequestRequest(String conversationId, String mediaRequestId) {
+    return GetWebchatGuestConversationMediarequestRequest.builder()
+            .withConversationId(conversationId)
+    
+            .withMediaRequestId(mediaRequestId)
+    
+            .build();
+  }
+
+  /**
+   * Get a media request in the conversation
+   * 
+   * @param request The request object
+   * @return WebChatGuestMediaRequest
+   * @throws ApiException if the request fails on the server
+   * @throws IOException if the request fails to be processed
+   */
+  public WebChatGuestMediaRequest getWebchatGuestConversationMediarequest(GetWebchatGuestConversationMediarequestRequest request) throws IOException, ApiException {
+    try {
+      ApiResponse<WebChatGuestMediaRequest> response = pcapiClient.invoke(request.withHttpInfo(), new TypeReference<WebChatGuestMediaRequest>() {});
+      return response.getBody();
+    }
+    catch (ApiException | IOException exception) {
+      if (pcapiClient.getShouldThrowErrors()) throw exception;
+      return null;
+    }
+  }
+
+  /**
+   * Get a media request in the conversation
+   * 
+   * @param request The request object
+   * @return the response
+   * @throws IOException if the request fails to be processed
+   */
+  public ApiResponse<WebChatGuestMediaRequest> getWebchatGuestConversationMediarequest(ApiRequest<Void> request) throws IOException {
+    try {
+      return pcapiClient.invoke(request, new TypeReference<WebChatGuestMediaRequest>() {});
+    }
+    catch (ApiException exception) {
+      @SuppressWarnings("unchecked")
+      ApiResponse<WebChatGuestMediaRequest> response = (ApiResponse<WebChatGuestMediaRequest>)(ApiResponse<?>)exception;
+      return response;
+    }
+    catch (Throwable exception) {
+      if (pcapiClient.getShouldThrowErrors()) {
+        if (exception instanceof IOException) {
+          throw (IOException)exception;
+        }
+        throw new RuntimeException(exception);
+      }
+      @SuppressWarnings("unchecked")
+      ApiResponse<WebChatGuestMediaRequest> response = (ApiResponse<WebChatGuestMediaRequest>)(ApiResponse<?>)(new ApiException(exception));
+      return response;
+    }
+  }
+
+  
+  /**
+   * Get all media requests to the guest in the conversation
+   * 
+   * @param conversationId conversationId (required)
+   * @return WebChatGuestMediaRequestEntityList
+   * @throws ApiException if the request fails on the server
+   * @throws IOException if the request fails to be processed
+   */
+  public WebChatGuestMediaRequestEntityList getWebchatGuestConversationMediarequests(String conversationId) throws IOException, ApiException {
+    return  getWebchatGuestConversationMediarequests(createGetWebchatGuestConversationMediarequestsRequest(conversationId));
+  }
+
+  /**
+   * Get all media requests to the guest in the conversation
+   * 
+   * @param conversationId conversationId (required)
+   * @return WebChatGuestMediaRequestEntityList
+   * @throws IOException if the request fails to be processed
+   */
+  public ApiResponse<WebChatGuestMediaRequestEntityList> getWebchatGuestConversationMediarequestsWithHttpInfo(String conversationId) throws IOException {
+    return getWebchatGuestConversationMediarequests(createGetWebchatGuestConversationMediarequestsRequest(conversationId).withHttpInfo());
+  }
+
+  private GetWebchatGuestConversationMediarequestsRequest createGetWebchatGuestConversationMediarequestsRequest(String conversationId) {
+    return GetWebchatGuestConversationMediarequestsRequest.builder()
+            .withConversationId(conversationId)
+    
+            .build();
+  }
+
+  /**
+   * Get all media requests to the guest in the conversation
+   * 
+   * @param request The request object
+   * @return WebChatGuestMediaRequestEntityList
+   * @throws ApiException if the request fails on the server
+   * @throws IOException if the request fails to be processed
+   */
+  public WebChatGuestMediaRequestEntityList getWebchatGuestConversationMediarequests(GetWebchatGuestConversationMediarequestsRequest request) throws IOException, ApiException {
+    try {
+      ApiResponse<WebChatGuestMediaRequestEntityList> response = pcapiClient.invoke(request.withHttpInfo(), new TypeReference<WebChatGuestMediaRequestEntityList>() {});
+      return response.getBody();
+    }
+    catch (ApiException | IOException exception) {
+      if (pcapiClient.getShouldThrowErrors()) throw exception;
+      return null;
+    }
+  }
+
+  /**
+   * Get all media requests to the guest in the conversation
+   * 
+   * @param request The request object
+   * @return the response
+   * @throws IOException if the request fails to be processed
+   */
+  public ApiResponse<WebChatGuestMediaRequestEntityList> getWebchatGuestConversationMediarequests(ApiRequest<Void> request) throws IOException {
+    try {
+      return pcapiClient.invoke(request, new TypeReference<WebChatGuestMediaRequestEntityList>() {});
+    }
+    catch (ApiException exception) {
+      @SuppressWarnings("unchecked")
+      ApiResponse<WebChatGuestMediaRequestEntityList> response = (ApiResponse<WebChatGuestMediaRequestEntityList>)(ApiResponse<?>)exception;
+      return response;
+    }
+    catch (Throwable exception) {
+      if (pcapiClient.getShouldThrowErrors()) {
+        if (exception instanceof IOException) {
+          throw (IOException)exception;
+        }
+        throw new RuntimeException(exception);
+      }
+      @SuppressWarnings("unchecked")
+      ApiResponse<WebChatGuestMediaRequestEntityList> response = (ApiResponse<WebChatGuestMediaRequestEntityList>)(ApiResponse<?>)(new ApiException(exception));
       return response;
     }
   }
@@ -392,12 +559,13 @@ public class WebChatApi {
    * @param conversationId conversationId (required)
    * @param after If available, get the messages chronologically after the id of this message (optional)
    * @param before If available, get the messages chronologically before the id of this message (optional)
+   * @param sortOrder Sort order (optional, default to ascending)
    * @return WebChatMessageEntityList
    * @throws ApiException if the request fails on the server
    * @throws IOException if the request fails to be processed
    */
-  public WebChatMessageEntityList getWebchatGuestConversationMessages(String conversationId, String after, String before) throws IOException, ApiException {
-    return  getWebchatGuestConversationMessages(createGetWebchatGuestConversationMessagesRequest(conversationId, after, before));
+  public WebChatMessageEntityList getWebchatGuestConversationMessages(String conversationId, String after, String before, String sortOrder) throws IOException, ApiException {
+    return  getWebchatGuestConversationMessages(createGetWebchatGuestConversationMessagesRequest(conversationId, after, before, sortOrder));
   }
 
   /**
@@ -406,20 +574,23 @@ public class WebChatApi {
    * @param conversationId conversationId (required)
    * @param after If available, get the messages chronologically after the id of this message (optional)
    * @param before If available, get the messages chronologically before the id of this message (optional)
+   * @param sortOrder Sort order (optional, default to ascending)
    * @return WebChatMessageEntityList
    * @throws IOException if the request fails to be processed
    */
-  public ApiResponse<WebChatMessageEntityList> getWebchatGuestConversationMessagesWithHttpInfo(String conversationId, String after, String before) throws IOException {
-    return getWebchatGuestConversationMessages(createGetWebchatGuestConversationMessagesRequest(conversationId, after, before).withHttpInfo());
+  public ApiResponse<WebChatMessageEntityList> getWebchatGuestConversationMessagesWithHttpInfo(String conversationId, String after, String before, String sortOrder) throws IOException {
+    return getWebchatGuestConversationMessages(createGetWebchatGuestConversationMessagesRequest(conversationId, after, before, sortOrder).withHttpInfo());
   }
 
-  private GetWebchatGuestConversationMessagesRequest createGetWebchatGuestConversationMessagesRequest(String conversationId, String after, String before) {
+  private GetWebchatGuestConversationMessagesRequest createGetWebchatGuestConversationMessagesRequest(String conversationId, String after, String before, String sortOrder) {
     return GetWebchatGuestConversationMessagesRequest.builder()
             .withConversationId(conversationId)
     
             .withAfter(after)
     
             .withBefore(before)
+    
+            .withSortOrder(sortOrder)
     
             .build();
   }
@@ -468,6 +639,93 @@ public class WebChatApi {
       }
       @SuppressWarnings("unchecked")
       ApiResponse<WebChatMessageEntityList> response = (ApiResponse<WebChatMessageEntityList>)(ApiResponse<?>)(new ApiException(exception));
+      return response;
+    }
+  }
+
+  
+  /**
+   * Update a media request in the conversation, setting the state to ACCEPTED/DECLINED/ERRORED
+   * 
+   * @param conversationId conversationId (required)
+   * @param mediaRequestId mediaRequestId (required)
+   * @param body Request (required)
+   * @return WebChatGuestMediaRequest
+   * @throws ApiException if the request fails on the server
+   * @throws IOException if the request fails to be processed
+   */
+  public WebChatGuestMediaRequest patchWebchatGuestConversationMediarequest(String conversationId, String mediaRequestId, WebChatGuestMediaRequest body) throws IOException, ApiException {
+    return  patchWebchatGuestConversationMediarequest(createPatchWebchatGuestConversationMediarequestRequest(conversationId, mediaRequestId, body));
+  }
+
+  /**
+   * Update a media request in the conversation, setting the state to ACCEPTED/DECLINED/ERRORED
+   * 
+   * @param conversationId conversationId (required)
+   * @param mediaRequestId mediaRequestId (required)
+   * @param body Request (required)
+   * @return WebChatGuestMediaRequest
+   * @throws IOException if the request fails to be processed
+   */
+  public ApiResponse<WebChatGuestMediaRequest> patchWebchatGuestConversationMediarequestWithHttpInfo(String conversationId, String mediaRequestId, WebChatGuestMediaRequest body) throws IOException {
+    return patchWebchatGuestConversationMediarequest(createPatchWebchatGuestConversationMediarequestRequest(conversationId, mediaRequestId, body).withHttpInfo());
+  }
+
+  private PatchWebchatGuestConversationMediarequestRequest createPatchWebchatGuestConversationMediarequestRequest(String conversationId, String mediaRequestId, WebChatGuestMediaRequest body) {
+    return PatchWebchatGuestConversationMediarequestRequest.builder()
+            .withConversationId(conversationId)
+    
+            .withMediaRequestId(mediaRequestId)
+    
+            .withBody(body)
+    
+            .build();
+  }
+
+  /**
+   * Update a media request in the conversation, setting the state to ACCEPTED/DECLINED/ERRORED
+   * 
+   * @param request The request object
+   * @return WebChatGuestMediaRequest
+   * @throws ApiException if the request fails on the server
+   * @throws IOException if the request fails to be processed
+   */
+  public WebChatGuestMediaRequest patchWebchatGuestConversationMediarequest(PatchWebchatGuestConversationMediarequestRequest request) throws IOException, ApiException {
+    try {
+      ApiResponse<WebChatGuestMediaRequest> response = pcapiClient.invoke(request.withHttpInfo(), new TypeReference<WebChatGuestMediaRequest>() {});
+      return response.getBody();
+    }
+    catch (ApiException | IOException exception) {
+      if (pcapiClient.getShouldThrowErrors()) throw exception;
+      return null;
+    }
+  }
+
+  /**
+   * Update a media request in the conversation, setting the state to ACCEPTED/DECLINED/ERRORED
+   * 
+   * @param request The request object
+   * @return the response
+   * @throws IOException if the request fails to be processed
+   */
+  public ApiResponse<WebChatGuestMediaRequest> patchWebchatGuestConversationMediarequest(ApiRequest<WebChatGuestMediaRequest> request) throws IOException {
+    try {
+      return pcapiClient.invoke(request, new TypeReference<WebChatGuestMediaRequest>() {});
+    }
+    catch (ApiException exception) {
+      @SuppressWarnings("unchecked")
+      ApiResponse<WebChatGuestMediaRequest> response = (ApiResponse<WebChatGuestMediaRequest>)(ApiResponse<?>)exception;
+      return response;
+    }
+    catch (Throwable exception) {
+      if (pcapiClient.getShouldThrowErrors()) {
+        if (exception instanceof IOException) {
+          throw (IOException)exception;
+        }
+        throw new RuntimeException(exception);
+      }
+      @SuppressWarnings("unchecked")
+      ApiResponse<WebChatGuestMediaRequest> response = (ApiResponse<WebChatGuestMediaRequest>)(ApiResponse<?>)(new ApiException(exception));
       return response;
     }
   }
@@ -645,7 +903,7 @@ public class WebChatApi {
   
   /**
    * Create an ACD chat conversation from an external customer.
-   * 
+   * This endpoint will create a new ACD Chat conversation under the specified Chat Deployment.  The conversation will begin with a guest member in it (with a role=CUSTOMER) according to the customer information that is supplied. If the guest member is authenticated, the &#39;memberAuthToken&#39; field should include his JWT as generated by the &#39;POST /api/v2/signeddata&#39; resource; if the guest member is anonymous (and the Deployment permits it) this field can be omitted.  The returned data includes the IDs of the conversation created, along with a newly-create JWT token that you can supply to all future endpoints as authentication to perform operations against that conversation. After successfully creating a conversation, you should connect a websocket to the event stream named in the &#39;eventStreamUri&#39; field of the response; the conversation is not routed until the event stream is attached.
    * @param body CreateConversationRequest (required)
    * @return CreateWebChatConversationResponse
    * @throws ApiException if the request fails on the server
@@ -657,7 +915,7 @@ public class WebChatApi {
 
   /**
    * Create an ACD chat conversation from an external customer.
-   * 
+   * This endpoint will create a new ACD Chat conversation under the specified Chat Deployment.  The conversation will begin with a guest member in it (with a role=CUSTOMER) according to the customer information that is supplied. If the guest member is authenticated, the &#39;memberAuthToken&#39; field should include his JWT as generated by the &#39;POST /api/v2/signeddata&#39; resource; if the guest member is anonymous (and the Deployment permits it) this field can be omitted.  The returned data includes the IDs of the conversation created, along with a newly-create JWT token that you can supply to all future endpoints as authentication to perform operations against that conversation. After successfully creating a conversation, you should connect a websocket to the event stream named in the &#39;eventStreamUri&#39; field of the response; the conversation is not routed until the event stream is attached.
    * @param body CreateConversationRequest (required)
    * @return CreateWebChatConversationResponse
    * @throws IOException if the request fails to be processed
@@ -675,7 +933,7 @@ public class WebChatApi {
 
   /**
    * Create an ACD chat conversation from an external customer.
-   * 
+   * This endpoint will create a new ACD Chat conversation under the specified Chat Deployment.  The conversation will begin with a guest member in it (with a role=CUSTOMER) according to the customer information that is supplied. If the guest member is authenticated, the &#39;memberAuthToken&#39; field should include his JWT as generated by the &#39;POST /api/v2/signeddata&#39; resource; if the guest member is anonymous (and the Deployment permits it) this field can be omitted.  The returned data includes the IDs of the conversation created, along with a newly-create JWT token that you can supply to all future endpoints as authentication to perform operations against that conversation. After successfully creating a conversation, you should connect a websocket to the event stream named in the &#39;eventStreamUri&#39; field of the response; the conversation is not routed until the event stream is attached.
    * @param request The request object
    * @return CreateWebChatConversationResponse
    * @throws ApiException if the request fails on the server
@@ -694,7 +952,7 @@ public class WebChatApi {
 
   /**
    * Create an ACD chat conversation from an external customer.
-   * 
+   * This endpoint will create a new ACD Chat conversation under the specified Chat Deployment.  The conversation will begin with a guest member in it (with a role=CUSTOMER) according to the customer information that is supplied. If the guest member is authenticated, the &#39;memberAuthToken&#39; field should include his JWT as generated by the &#39;POST /api/v2/signeddata&#39; resource; if the guest member is anonymous (and the Deployment permits it) this field can be omitted.  The returned data includes the IDs of the conversation created, along with a newly-create JWT token that you can supply to all future endpoints as authentication to perform operations against that conversation. After successfully creating a conversation, you should connect a websocket to the event stream named in the &#39;eventStreamUri&#39; field of the response; the conversation is not routed until the event stream is attached.
    * @param request The request object
    * @return the response
    * @throws IOException if the request fails to be processed

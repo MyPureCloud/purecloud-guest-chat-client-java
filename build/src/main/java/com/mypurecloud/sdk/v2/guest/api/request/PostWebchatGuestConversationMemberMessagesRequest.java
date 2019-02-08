@@ -21,6 +21,8 @@ import java.util.Map;
 import java.util.regex.Pattern;
 
 import com.mypurecloud.sdk.v2.guest.model.ErrorBody;
+import com.mypurecloud.sdk.v2.guest.model.WebChatGuestMediaRequest;
+import com.mypurecloud.sdk.v2.guest.model.WebChatGuestMediaRequestEntityList;
 import com.mypurecloud.sdk.v2.guest.model.WebChatMemberInfo;
 import com.mypurecloud.sdk.v2.guest.model.WebChatMemberInfoEntityList;
 import com.mypurecloud.sdk.v2.guest.model.WebChatMessage;
