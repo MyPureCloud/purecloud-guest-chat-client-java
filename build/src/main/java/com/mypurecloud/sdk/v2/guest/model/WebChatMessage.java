@@ -4,6 +4,7 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonValue;
 import com.mypurecloud.sdk.v2.guest.model.WebChatConversation;
 import com.mypurecloud.sdk.v2.guest.model.WebChatMemberInfo;
 import io.swagger.annotations.ApiModel;
@@ -22,6 +23,41 @@ public class WebChatMessage  implements Serializable {
   private WebChatConversation conversation = null;
   private WebChatMemberInfo sender = null;
   private String body = null;
+
+  /**
+   * The purpose of the message within the conversation, such as a standard text entry versus a greeting.
+   */
+  public enum BodyTypeEnum {
+    OUTDATEDSDKVERSION("OutdatedSdkVersion"),
+    STANDARD("standard"),
+    NOTICE("notice");
+
+    private String value;
+
+    BodyTypeEnum(String value) {
+      this.value = value;
+    }
+
+    @JsonCreator
+    public static BodyTypeEnum fromString(String key) {
+      if (key == null) return null;
+
+      for (BodyTypeEnum value : BodyTypeEnum.values()) {
+        if (key.equalsIgnoreCase(value.toString())) {
+          return value;
+        }
+      }
+
+      return BodyTypeEnum.values()[0];
+    }
+
+    @Override
+    @JsonValue
+    public String toString() {
+      return String.valueOf(value);
+    }
+  }
+  private BodyTypeEnum bodyType = null;
   private Date timestamp = null;
   private String selfUri = null;
 
@@ -105,6 +141,24 @@ public class WebChatMessage  implements Serializable {
 
   
   /**
+   * The purpose of the message within the conversation, such as a standard text entry versus a greeting.
+   **/
+  public WebChatMessage bodyType(BodyTypeEnum bodyType) {
+    this.bodyType = bodyType;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", required = true, value = "The purpose of the message within the conversation, such as a standard text entry versus a greeting.")
+  @JsonProperty("bodyType")
+  public BodyTypeEnum getBodyType() {
+    return bodyType;
+  }
+  public void setBodyType(BodyTypeEnum bodyType) {
+    this.bodyType = bodyType;
+  }
+
+  
+  /**
    * The timestamp of the message, in ISO-8601 format
    **/
   public WebChatMessage timestamp(Date timestamp) {
@@ -144,13 +198,14 @@ public class WebChatMessage  implements Serializable {
         Objects.equals(this.conversation, webChatMessage.conversation) &&
         Objects.equals(this.sender, webChatMessage.sender) &&
         Objects.equals(this.body, webChatMessage.body) &&
+        Objects.equals(this.bodyType, webChatMessage.bodyType) &&
         Objects.equals(this.timestamp, webChatMessage.timestamp) &&
         Objects.equals(this.selfUri, webChatMessage.selfUri);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, name, conversation, sender, body, timestamp, selfUri);
+    return Objects.hash(id, name, conversation, sender, body, bodyType, timestamp, selfUri);
   }
 
   @Override
@@ -163,6 +218,7 @@ public class WebChatMessage  implements Serializable {
     sb.append("    conversation: ").append(toIndentedString(conversation)).append("\n");
     sb.append("    sender: ").append(toIndentedString(sender)).append("\n");
     sb.append("    body: ").append(toIndentedString(body)).append("\n");
+    sb.append("    bodyType: ").append(toIndentedString(bodyType)).append("\n");
     sb.append("    timestamp: ").append(toIndentedString(timestamp)).append("\n");
     sb.append("    selfUri: ").append(toIndentedString(selfUri)).append("\n");
     sb.append("}");

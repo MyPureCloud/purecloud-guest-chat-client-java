@@ -11,7 +11,7 @@ ispreview: true
 | ------------ | ------------- | ------------- | ------------- |
 | **id** | **String** | The communicationId of this member. |  [optional] |
 | **displayName** | **String** | The display name of the member. |  [optional] |
-| **profileImageUrl** | **String** | The url to the profile image of the member. |  [optional] |
+| **avatarImageUrl** | **String** | The url to the avatar image of the member. |  [optional] |
 | **role** | [**RoleEnum**](#RoleEnum) | The role of the member, one of [agent, customer, acd, workflow] |  |
 | **joinDate** | [**Date**](Date.html) | The time the member joined the conversation. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ |  [optional] |
 | **leaveDate** | [**Date**](Date.html) | The time the member left the conversation, or null if the member is still active in the conversation. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ |  [optional] |

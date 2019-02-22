@@ -18,7 +18,7 @@ import java.io.Serializable;
 public class GuestMemberInfo  implements Serializable {
   
   private String displayName = null;
-  private String profileImageUrl = null;
+  private String avatarImageUrl = null;
   private Map<String, String> customFields = null;
 
   
@@ -41,20 +41,20 @@ public class GuestMemberInfo  implements Serializable {
 
   
   /**
-   * The URL to the profile image to use for the guest member in the conversation, if any.
+   * The URL to the avatar image to use for the guest member in the conversation, if any.
    **/
-  public GuestMemberInfo profileImageUrl(String profileImageUrl) {
-    this.profileImageUrl = profileImageUrl;
+  public GuestMemberInfo avatarImageUrl(String avatarImageUrl) {
+    this.avatarImageUrl = avatarImageUrl;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "The URL to the profile image to use for the guest member in the conversation, if any.")
-  @JsonProperty("profileImageUrl")
-  public String getProfileImageUrl() {
-    return profileImageUrl;
+  @ApiModelProperty(example = "null", value = "The URL to the avatar image to use for the guest member in the conversation, if any.")
+  @JsonProperty("avatarImageUrl")
+  public String getAvatarImageUrl() {
+    return avatarImageUrl;
   }
-  public void setProfileImageUrl(String profileImageUrl) {
-    this.profileImageUrl = profileImageUrl;
+  public void setAvatarImageUrl(String avatarImageUrl) {
+    this.avatarImageUrl = avatarImageUrl;
   }
 
   
@@ -87,13 +87,13 @@ public class GuestMemberInfo  implements Serializable {
     }
     GuestMemberInfo guestMemberInfo = (GuestMemberInfo) o;
     return Objects.equals(this.displayName, guestMemberInfo.displayName) &&
-        Objects.equals(this.profileImageUrl, guestMemberInfo.profileImageUrl) &&
+        Objects.equals(this.avatarImageUrl, guestMemberInfo.avatarImageUrl) &&
         Objects.equals(this.customFields, guestMemberInfo.customFields);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(displayName, profileImageUrl, customFields);
+    return Objects.hash(displayName, avatarImageUrl, customFields);
   }
 
   @Override
@@ -102,7 +102,7 @@ public class GuestMemberInfo  implements Serializable {
     sb.append("class GuestMemberInfo {\n");
     
     sb.append("    displayName: ").append(toIndentedString(displayName)).append("\n");
-    sb.append("    profileImageUrl: ").append(toIndentedString(profileImageUrl)).append("\n");
+    sb.append("    avatarImageUrl: ").append(toIndentedString(avatarImageUrl)).append("\n");
     sb.append("    customFields: ").append(toIndentedString(customFields)).append("\n");
     sb.append("}");
     return sb.toString();

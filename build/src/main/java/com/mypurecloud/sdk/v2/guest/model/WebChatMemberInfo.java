@@ -21,7 +21,7 @@ public class WebChatMemberInfo  implements Serializable {
   
   private String id = null;
   private String displayName = null;
-  private String profileImageUrl = null;
+  private String avatarImageUrl = null;
 
   /**
    * The role of the member, one of [agent, customer, acd, workflow]
@@ -138,20 +138,20 @@ public class WebChatMemberInfo  implements Serializable {
 
   
   /**
-   * The url to the profile image of the member.
+   * The url to the avatar image of the member.
    **/
-  public WebChatMemberInfo profileImageUrl(String profileImageUrl) {
-    this.profileImageUrl = profileImageUrl;
+  public WebChatMemberInfo avatarImageUrl(String avatarImageUrl) {
+    this.avatarImageUrl = avatarImageUrl;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "The url to the profile image of the member.")
-  @JsonProperty("profileImageUrl")
-  public String getProfileImageUrl() {
-    return profileImageUrl;
+  @ApiModelProperty(example = "null", value = "The url to the avatar image of the member.")
+  @JsonProperty("avatarImageUrl")
+  public String getAvatarImageUrl() {
+    return avatarImageUrl;
   }
-  public void setProfileImageUrl(String profileImageUrl) {
-    this.profileImageUrl = profileImageUrl;
+  public void setAvatarImageUrl(String avatarImageUrl) {
+    this.avatarImageUrl = avatarImageUrl;
   }
 
   
@@ -275,7 +275,7 @@ public class WebChatMemberInfo  implements Serializable {
     WebChatMemberInfo webChatMemberInfo = (WebChatMemberInfo) o;
     return Objects.equals(this.id, webChatMemberInfo.id) &&
         Objects.equals(this.displayName, webChatMemberInfo.displayName) &&
-        Objects.equals(this.profileImageUrl, webChatMemberInfo.profileImageUrl) &&
+        Objects.equals(this.avatarImageUrl, webChatMemberInfo.avatarImageUrl) &&
         Objects.equals(this.role, webChatMemberInfo.role) &&
         Objects.equals(this.joinDate, webChatMemberInfo.joinDate) &&
         Objects.equals(this.leaveDate, webChatMemberInfo.leaveDate) &&
@@ -286,7 +286,7 @@ public class WebChatMemberInfo  implements Serializable {
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, displayName, profileImageUrl, role, joinDate, leaveDate, authenticatedGuest, customFields, state);
+    return Objects.hash(id, displayName, avatarImageUrl, role, joinDate, leaveDate, authenticatedGuest, customFields, state);
   }
 
   @Override
@@ -296,7 +296,7 @@ public class WebChatMemberInfo  implements Serializable {
     
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    displayName: ").append(toIndentedString(displayName)).append("\n");
-    sb.append("    profileImageUrl: ").append(toIndentedString(profileImageUrl)).append("\n");
+    sb.append("    avatarImageUrl: ").append(toIndentedString(avatarImageUrl)).append("\n");
     sb.append("    role: ").append(toIndentedString(role)).append("\n");
     sb.append("    joinDate: ").append(toIndentedString(joinDate)).append("\n");
     sb.append("    leaveDate: ").append(toIndentedString(leaveDate)).append("\n");

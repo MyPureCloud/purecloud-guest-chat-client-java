@@ -5,6 +5,7 @@ import com.fasterxml.jackson.annotation.JsonValue;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.mypurecloud.sdk.v2.guest.model.GuestMemberInfo;
+import com.mypurecloud.sdk.v2.guest.model.JourneyContext;
 import com.mypurecloud.sdk.v2.guest.model.WebChatRoutingTarget;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -21,6 +22,7 @@ public class CreateWebChatConversationRequest  implements Serializable {
   private WebChatRoutingTarget routingTarget = null;
   private GuestMemberInfo memberInfo = null;
   private String memberAuthToken = null;
+  private JourneyContext journeyContext = null;
 
   
   /**
@@ -113,6 +115,24 @@ public class CreateWebChatConversationRequest  implements Serializable {
   }
 
   
+  /**
+   * A subset of the Journey System's data relevant to this conversation/session request (for external linkage and internal usage/context).
+   **/
+  public CreateWebChatConversationRequest journeyContext(JourneyContext journeyContext) {
+    this.journeyContext = journeyContext;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "A subset of the Journey System's data relevant to this conversation/session request (for external linkage and internal usage/context).")
+  @JsonProperty("journeyContext")
+  public JourneyContext getJourneyContext() {
+    return journeyContext;
+  }
+  public void setJourneyContext(JourneyContext journeyContext) {
+    this.journeyContext = journeyContext;
+  }
+
+  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -127,12 +147,13 @@ public class CreateWebChatConversationRequest  implements Serializable {
         Objects.equals(this.deploymentId, createWebChatConversationRequest.deploymentId) &&
         Objects.equals(this.routingTarget, createWebChatConversationRequest.routingTarget) &&
         Objects.equals(this.memberInfo, createWebChatConversationRequest.memberInfo) &&
-        Objects.equals(this.memberAuthToken, createWebChatConversationRequest.memberAuthToken);
+        Objects.equals(this.memberAuthToken, createWebChatConversationRequest.memberAuthToken) &&
+        Objects.equals(this.journeyContext, createWebChatConversationRequest.journeyContext);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(organizationId, deploymentId, routingTarget, memberInfo, memberAuthToken);
+    return Objects.hash(organizationId, deploymentId, routingTarget, memberInfo, memberAuthToken, journeyContext);
   }
 
   @Override
@@ -145,6 +166,7 @@ public class CreateWebChatConversationRequest  implements Serializable {
     sb.append("    routingTarget: ").append(toIndentedString(routingTarget)).append("\n");
     sb.append("    memberInfo: ").append(toIndentedString(memberInfo)).append("\n");
     sb.append("    memberAuthToken: ").append(toIndentedString(memberAuthToken)).append("\n");
+    sb.append("    journeyContext: ").append(toIndentedString(journeyContext)).append("\n");
     sb.append("}");
     return sb.toString();
   }
