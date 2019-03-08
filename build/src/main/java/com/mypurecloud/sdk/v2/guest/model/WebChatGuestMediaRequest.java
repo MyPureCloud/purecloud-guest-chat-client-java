@@ -94,6 +94,7 @@ public class WebChatGuestMediaRequest  implements Serializable {
   }
   private StateEnum state = null;
   private String communicationId = null;
+  private String securityKey = null;
   private String selfUri = null;
 
   
@@ -175,6 +176,24 @@ public class WebChatGuestMediaRequest  implements Serializable {
   }
 
   
+  /**
+   * The security information related to a media request.
+   **/
+  public WebChatGuestMediaRequest securityKey(String securityKey) {
+    this.securityKey = securityKey;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "The security information related to a media request.")
+  @JsonProperty("securityKey")
+  public String getSecurityKey() {
+    return securityKey;
+  }
+  public void setSecurityKey(String securityKey) {
+    this.securityKey = securityKey;
+  }
+
+  
   @ApiModelProperty(example = "null", value = "The URI for this object")
   @JsonProperty("selfUri")
   public String getSelfUri() {
@@ -197,12 +216,13 @@ public class WebChatGuestMediaRequest  implements Serializable {
         Objects.equals(this.types, webChatGuestMediaRequest.types) &&
         Objects.equals(this.state, webChatGuestMediaRequest.state) &&
         Objects.equals(this.communicationId, webChatGuestMediaRequest.communicationId) &&
+        Objects.equals(this.securityKey, webChatGuestMediaRequest.securityKey) &&
         Objects.equals(this.selfUri, webChatGuestMediaRequest.selfUri);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, name, types, state, communicationId, selfUri);
+    return Objects.hash(id, name, types, state, communicationId, securityKey, selfUri);
   }
 
   @Override
@@ -215,6 +235,7 @@ public class WebChatGuestMediaRequest  implements Serializable {
     sb.append("    types: ").append(toIndentedString(types)).append("\n");
     sb.append("    state: ").append(toIndentedString(state)).append("\n");
     sb.append("    communicationId: ").append(toIndentedString(communicationId)).append("\n");
+    sb.append("    securityKey: ").append(toIndentedString(securityKey)).append("\n");
     sb.append("    selfUri: ").append(toIndentedString(selfUri)).append("\n");
     sb.append("}");
     return sb.toString();

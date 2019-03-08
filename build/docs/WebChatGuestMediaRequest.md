@@ -14,6 +14,7 @@ ispreview: true
 | **types** | **List&lt;String&gt;** | The types of media being requested. |  |
 | **state** | [**StateEnum**](#StateEnum) | The state of the media request, one of PENDING|ACCEPTED|DECLINED|TIMEDOUT|CANCELLED|ERRORED. |  |
 | **communicationId** | **String** | The ID of the new media communication, if applicable. |  [optional] |
+| **securityKey** | **String** | The security information related to a media request. |  [optional] |
 | **selfUri** | **String** | The URI for this object |  [optional] |
 {: class="table table-striped"}
 
