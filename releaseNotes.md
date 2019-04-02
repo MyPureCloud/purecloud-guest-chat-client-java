@@ -1,19 +1,22 @@
-Platform API version: 3102
+Platform API version: 3144
 
 
-# Major Changes (2 changes)
-
-**JourneyCustomer** (2 changes)
-
-* Property type was removed
-* Required property idType was added
+# Major Changes (0 changes)
 
 
-# Minor Changes (1 change)
+# Minor Changes (6 changes)
 
-**WebChatGuestMediaRequest** (1 change)
+**WebChatMessage** (3 changes)
 
-* Optional property securityKey was added
+* Enum value member-join was added to property bodyType
+* Enum value member-leave was added to property bodyType
+* Enum value media-request was added to property bodyType
+
+**CreateWebChatMessageRequest** (3 changes)
+
+* Enum value member-join was added to property bodyType
+* Enum value member-leave was added to property bodyType
+* Enum value media-request was added to property bodyType
 
 
 # Point Changes (0 changes)

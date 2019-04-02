@@ -23,7 +23,10 @@ public class CreateWebChatMessageRequest  implements Serializable {
   public enum BodyTypeEnum {
     OUTDATEDSDKVERSION("OutdatedSdkVersion"),
     STANDARD("standard"),
-    NOTICE("notice");
+    NOTICE("notice"),
+    MEMBER_JOIN("member-join"),
+    MEMBER_LEAVE("member-leave"),
+    MEDIA_REQUEST("media-request");
 
     private String value;
 
