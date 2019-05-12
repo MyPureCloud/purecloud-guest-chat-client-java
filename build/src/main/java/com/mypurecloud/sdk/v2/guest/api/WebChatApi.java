@@ -560,12 +560,13 @@ public class WebChatApi {
    * @param after If available, get the messages chronologically after the id of this message (optional)
    * @param before If available, get the messages chronologically before the id of this message (optional)
    * @param sortOrder Sort order (optional, default to ascending)
+   * @param maxResults Limit the returned number of messages, up to a maximum of 100 (optional, default to 100)
    * @return WebChatMessageEntityList
    * @throws ApiException if the request fails on the server
    * @throws IOException if the request fails to be processed
    */
-  public WebChatMessageEntityList getWebchatGuestConversationMessages(String conversationId, String after, String before, String sortOrder) throws IOException, ApiException {
-    return  getWebchatGuestConversationMessages(createGetWebchatGuestConversationMessagesRequest(conversationId, after, before, sortOrder));
+  public WebChatMessageEntityList getWebchatGuestConversationMessages(String conversationId, String after, String before, String sortOrder, Integer maxResults) throws IOException, ApiException {
+    return  getWebchatGuestConversationMessages(createGetWebchatGuestConversationMessagesRequest(conversationId, after, before, sortOrder, maxResults));
   }
 
   /**
@@ -575,14 +576,15 @@ public class WebChatApi {
    * @param after If available, get the messages chronologically after the id of this message (optional)
    * @param before If available, get the messages chronologically before the id of this message (optional)
    * @param sortOrder Sort order (optional, default to ascending)
+   * @param maxResults Limit the returned number of messages, up to a maximum of 100 (optional, default to 100)
    * @return WebChatMessageEntityList
    * @throws IOException if the request fails to be processed
    */
-  public ApiResponse<WebChatMessageEntityList> getWebchatGuestConversationMessagesWithHttpInfo(String conversationId, String after, String before, String sortOrder) throws IOException {
-    return getWebchatGuestConversationMessages(createGetWebchatGuestConversationMessagesRequest(conversationId, after, before, sortOrder).withHttpInfo());
+  public ApiResponse<WebChatMessageEntityList> getWebchatGuestConversationMessagesWithHttpInfo(String conversationId, String after, String before, String sortOrder, Integer maxResults) throws IOException {
+    return getWebchatGuestConversationMessages(createGetWebchatGuestConversationMessagesRequest(conversationId, after, before, sortOrder, maxResults).withHttpInfo());
   }
 
-  private GetWebchatGuestConversationMessagesRequest createGetWebchatGuestConversationMessagesRequest(String conversationId, String after, String before, String sortOrder) {
+  private GetWebchatGuestConversationMessagesRequest createGetWebchatGuestConversationMessagesRequest(String conversationId, String after, String before, String sortOrder, Integer maxResults) {
     return GetWebchatGuestConversationMessagesRequest.builder()
             .withConversationId(conversationId)
     
@@ -591,6 +593,8 @@ public class WebChatApi {
             .withBefore(before)
     
             .withSortOrder(sortOrder)
+    
+            .withMaxResults(maxResults)
     
             .build();
   }

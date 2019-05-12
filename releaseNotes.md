@@ -1,22 +1,14 @@
-Platform API version: 3144
+Platform API version: 3196
 
 
-# Major Changes (0 changes)
+# Major Changes (1 change)
+
+**GET /api/v2/webchat/guest/conversations/{conversationId}/messages** (1 change)
+
+* Parameter maxResults was added
 
 
-# Minor Changes (6 changes)
-
-**WebChatMessage** (3 changes)
-
-* Enum value member-join was added to property bodyType
-* Enum value member-leave was added to property bodyType
-* Enum value media-request was added to property bodyType
-
-**CreateWebChatMessageRequest** (3 changes)
-
-* Enum value member-join was added to property bodyType
-* Enum value member-leave was added to property bodyType
-* Enum value media-request was added to property bodyType
+# Minor Changes (0 changes)
 
 
 # Point Changes (0 changes)

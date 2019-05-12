@@ -387,7 +387,7 @@ try {
 
 
 
-> [WebChatMessageEntityList](WebChatMessageEntityList.html) getWebchatGuestConversationMessages(conversationId, after, before, sortOrder)
+> [WebChatMessageEntityList](WebChatMessageEntityList.html) getWebchatGuestConversationMessages(conversationId, after, before, sortOrder, maxResults)
 
 Get the messages of a chat conversation.
 
@@ -421,8 +421,9 @@ String conversationId = "conversationId_example"; // String | conversationId
 String after = "after_example"; // String | If available, get the messages chronologically after the id of this message
 String before = "before_example"; // String | If available, get the messages chronologically before the id of this message
 String sortOrder = "ascending"; // String | Sort order
+Integer maxResults = 100; // Integer | Limit the returned number of messages, up to a maximum of 100
 try {
-    WebChatMessageEntityList result = apiInstance.getWebchatGuestConversationMessages(conversationId, after, before, sortOrder);
+    WebChatMessageEntityList result = apiInstance.getWebchatGuestConversationMessages(conversationId, after, before, sortOrder, maxResults);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling WebChatApi#getWebchatGuestConversationMessages");
@@ -439,6 +440,7 @@ try {
 | **after** | **String**| If available, get the messages chronologically after the id of this message | [optional] |
 | **before** | **String**| If available, get the messages chronologically before the id of this message | [optional] |
 | **sortOrder** | **String**| Sort order | [optional] [default to ascending]<br />**Values**: ascending, descending |
+| **maxResults** | **Integer**| Limit the returned number of messages, up to a maximum of 100 | [optional] [default to 100] |
 {: class="table table-striped"}
 
 ### Return type

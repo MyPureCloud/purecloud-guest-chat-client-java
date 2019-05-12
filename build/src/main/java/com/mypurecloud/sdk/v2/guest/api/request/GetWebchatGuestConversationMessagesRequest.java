@@ -120,6 +120,20 @@ public class GetWebchatGuestConversationMessagesRequest {
 		}
 	}
 	
+	private Integer maxResults;
+	public Integer getMaxResults() {
+		return this.maxResults;
+	}
+
+	public void setMaxResults(Integer maxResults) {
+		this.maxResults = maxResults;
+	}
+
+	public GetWebchatGuestConversationMessagesRequest withMaxResults(Integer maxResults) {
+	    this.setMaxResults(maxResults);
+	    return this;
+	} 
+	
 	private final Map<String, String> customHeaders = new HashMap<>();
     public Map<String, String> getCustomHeaders() {
         return this.customHeaders;
@@ -155,6 +169,8 @@ public class GetWebchatGuestConversationMessagesRequest {
                 .withQueryParameters("before", "", before)
         
                 .withQueryParameters("sortOrder", "", sortOrder)
+        
+                .withQueryParameters("maxResults", "", maxResults)
         
                 .withCustomHeaders(customHeaders)
                 .withContentTypes("application/json")
@@ -205,6 +221,11 @@ public class GetWebchatGuestConversationMessagesRequest {
 		public Builder withSortOrder(sortOrderValues sortOrder) {
 		    request.setSortOrder(sortOrder.toString());
 		    return this;
+		}
+		
+		public Builder withMaxResults(Integer maxResults) {
+			request.setMaxResults(maxResults);
+			return this;
 		}
 		
 
