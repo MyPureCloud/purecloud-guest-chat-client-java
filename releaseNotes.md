@@ -1,11 +1,11 @@
-Platform API version: 3196
+Platform API version: 3238
 
 
-# Major Changes (1 change)
+# SDK Changes
 
-**GET /api/v2/webchat/guest/conversations/{conversationId}/messages** (1 change)
+* Added PureCloudRegionHosts enum
 
-* Parameter maxResults was added
+# Major Changes (0 changes)
 
 
 # Minor Changes (0 changes)

@@ -27,6 +27,7 @@ import com.mypurecloud.sdk.v2.guest.auth.Authentication;
 import com.mypurecloud.sdk.v2.guest.auth.OAuth;
 import com.mypurecloud.sdk.v2.guest.connector.*;
 import com.mypurecloud.sdk.v2.guest.extensions.AuthResponse;
+import com.mypurecloud.sdk.v2.guest.PureCloudRegionHosts;
 
 
 public class ApiClient implements AutoCloseable {
@@ -670,7 +671,7 @@ public class ApiClient implements AutoCloseable {
         private Builder(ConnectorProperties properties) {
             this.properties = (properties != null) ? properties.copy() : new ConnectorProperties();
             withUserAgent(DEFAULT_USER_AGENT);
-            withDefaultHeader("purecloud-sdk", "5.0.0");
+            withDefaultHeader("purecloud-sdk", "5.1.0");
         }
 
         public Builder withDefaultHeader(String header, String value) {
@@ -699,6 +700,11 @@ public class ApiClient implements AutoCloseable {
 
         public Builder withBasePath(String basePath) {
             this.basePath = basePath;
+            return this;
+        }
+
+         public Builder withBasePath(PureCloudRegionHosts region){      
+            this.basePath = region.getApiHost();        
             return this;
         }
 
