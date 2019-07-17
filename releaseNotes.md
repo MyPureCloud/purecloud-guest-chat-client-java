@@ -1,9 +1,5 @@
-Platform API version: 3238
+Platform API version: 3279
 
-
-# SDK Changes
-
-* Added PureCloudRegionHosts enum
 
 # Major Changes (0 changes)
 
