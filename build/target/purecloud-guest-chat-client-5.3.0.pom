@@ -5,9 +5,22 @@
   <artifactId>purecloud-guest-chat-client</artifactId>
   <packaging>jar</packaging>
   <name>purecloud-guest-chat-client</name>
-  <version>5.2.0</version>
+  <version>5.3.0</version>
   <description>A Java package to interface with the PureCloud Platform API Guest Chat APIs</description>
   <url>https://developer.mypurecloud.com/api/rest/client-libraries/java-guest/</url>
+
+  <repositories>
+    <repository>
+        <id>central</id>
+        <url>https://repo.maven.apache.org/maven2/</url>
+    </repository>
+  </repositories>
+  <pluginRepositories>
+    <pluginRepository>
+        <id>central</id>
+        <url>https://repo.maven.apache.org/maven2/</url>
+    </pluginRepository>
+  </pluginRepositories>
 
   <licenses>
     <license>
