@@ -1,9 +1,9 @@
-Platform API version: 3791
+Platform API version: 3829
 
 
 # SDK Changes
 
-* API-5201 Added new regions to region host enums
+* Fixed region host enums for new regions
 
 # Major Changes (0 changes)
 
