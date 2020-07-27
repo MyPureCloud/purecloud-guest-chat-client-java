@@ -1,24 +1,14 @@
-Platform API version: 3906
+Platform API version: 4073
 
+
+# SDK Changes
+
+* No material changes, renaming PureCloud to Genesys Cloud in documentation
 
 # Major Changes (0 changes)
 
 
-# Minor Changes (8 changes)
-
-**WebChatMemberInfo** (4 changes)
-
-* Optional property firstName was added
-* Optional property lastName was added
-* Optional property email was added
-* Optional property phoneNumber was added
-
-**GuestMemberInfo** (4 changes)
-
-* Optional property firstName was added
-* Optional property lastName was added
-* Optional property email was added
-* Optional property phoneNumber was added
+# Minor Changes (0 changes)
 
 
 # Point Changes (0 changes)
