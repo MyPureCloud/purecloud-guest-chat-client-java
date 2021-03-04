@@ -671,7 +671,7 @@ public class ApiClient implements AutoCloseable {
         private Builder(ConnectorProperties properties) {
             this.properties = (properties != null) ? properties.copy() : new ConnectorProperties();
             withUserAgent(DEFAULT_USER_AGENT);
-            withDefaultHeader("purecloud-sdk", "6.1.4");
+            withDefaultHeader("purecloud-sdk", "6.1.5");
         }
 
         public Builder withDefaultHeader(String header, String value) {
