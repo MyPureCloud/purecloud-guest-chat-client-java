@@ -1,7 +1,7 @@
-Platform API version: 4513
+Platform API version: 4532
 
 
-Adding custom deserializer for model enums
+No functional change. Building to test the pipeline.
 
 # Major Changes (0 changes)
 
