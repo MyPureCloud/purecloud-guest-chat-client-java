@@ -1,7 +1,7 @@
-Platform API version: 4532
+Platform API version: 4658
 
 
-No functional change. Building to test the pipeline.
+Changes to logging and SDK configuration. See https://developer.genesys.cloud/api/rest/client-libraries/ for more information
 
 # Major Changes (0 changes)
 

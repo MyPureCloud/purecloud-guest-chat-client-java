@@ -5,7 +5,7 @@
   <artifactId>purecloud-guest-chat-client</artifactId>
   <packaging>jar</packaging>
   <name>purecloud-guest-chat-client</name>
-  <version>6.1.7</version>
+  <version>7.0.0</version>
   <description>A Java package to interface with the PureCloud Platform API Guest Chat APIs</description>
   <url>https://developer.mypurecloud.com/api/rest/client-libraries/java-guest/</url>
 
@@ -183,12 +183,10 @@
       <artifactId>swagger-annotations</artifactId>
       <version>${swagger-annotations-version}</version>
     </dependency>
-
-  	<!-- Logging: SLF4J -->
-  	<dependency>
-      <groupId>org.slf4j</groupId>
-      <artifactId>slf4j-api</artifactId>
-      <version>${slf4j-version}</version>
+    <dependency>
+      <groupId>org.ini4j</groupId>
+      <artifactId>ini4j</artifactId>
+      <version>${ini4j-version}</version>
     </dependency>
 	
     <!-- HTTP client: apache httpclient -->
@@ -232,7 +230,7 @@
     <dependency>
       <groupId>com.fasterxml.jackson.datatype</groupId>
       <artifactId>jackson-datatype-joda</artifactId>
-      <version>2.1.5</version>
+      <version>${jackson-version}</version>
     </dependency>
     <dependency>
       <groupId>joda-time</groupId>
@@ -272,10 +270,10 @@
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <swagger-annotations-version>1.5.8</swagger-annotations-version>
-	<slf4j-version>1.7.21</slf4j-version>
+    <ini4j-version>0.5.4</ini4j-version>
     <jersey-version>1.19.1</jersey-version>
     <jackson-version>2.12.1</jackson-version>
-    <jodatime-version>2.9.3</jodatime-version>
+    <jodatime-version>2.10.10</jodatime-version>
     <maven-plugin-version>1.0.0</maven-plugin-version>
     <testng-version>6.14.3</testng-version>
     <apache-httpclient-version>4.5.2</apache-httpclient-version>
