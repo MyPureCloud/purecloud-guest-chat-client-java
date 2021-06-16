@@ -5,7 +5,7 @@
   <artifactId>purecloud-guest-chat-client</artifactId>
   <packaging>jar</packaging>
   <name>purecloud-guest-chat-client</name>
-  <version>7.2.0</version>
+  <version>7.2.1</version>
   <description>A Java package to interface with the PureCloud Platform API Guest Chat APIs</description>
   <url>https://developer.mypurecloud.com/api/rest/client-libraries/java-guest/</url>
 
@@ -282,10 +282,10 @@
     <jodatime-version>2.10.10</jodatime-version>
     <maven-plugin-version>1.0.0</maven-plugin-version>
     <testng-version>6.14.3</testng-version>
-    <apache-httpclient-version>4.5.2</apache-httpclient-version>
-    <okhttpclient-version>2.7.0</okhttpclient-version>
-    <ning-asynchttpclient-version>2.0.35</ning-asynchttpclient-version>
-    <nv-websocket-client-version>1.31</nv-websocket-client-version>
-    <guava-version>21.0</guava-version>
+    <apache-httpclient-version>4.5.13</apache-httpclient-version>
+    <okhttpclient-version>2.7.4</okhttpclient-version>
+    <ning-asynchttpclient-version>2.12.3</ning-asynchttpclient-version>
+    <nv-websocket-client-version>2.1</nv-websocket-client-version>
+    <guava-version>30.0-jre</guava-version>
   </properties>
 </project>
