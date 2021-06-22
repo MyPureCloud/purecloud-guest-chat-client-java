@@ -1,7 +1,9 @@
-Platform API version: 4770
+Platform API version: 4784
 
 
-Switching guava dependency from Android to JRE
+# Release notes
+
+* Forcing a major release to ensure SDKs align with API definition
 
 # Major Changes (0 changes)
 
