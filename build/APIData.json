@@ -1,0 +1,188 @@
+{
+  "webchat": {
+    "DELETE /api/v2/webchat/guest/conversations/{conversationId}/members/{memberId}": {
+      "functionName": "deleteWebchatGuestConversationMember",
+      "signature": "deleteWebchatGuestConversationMember(conversationId, memberId)",
+      "parameters": [
+        {
+          "name": "conversationId",
+          "type": "String"
+        },
+        {
+          "name": "memberId",
+          "type": "String"
+        }
+      ]
+    },
+    "GET /api/v2/webchat/guest/conversations/{conversationId}/mediarequests/{mediaRequestId}": {
+      "functionName": "getWebchatGuestConversationMediarequest",
+      "signature": "getWebchatGuestConversationMediarequest(conversationId, mediaRequestId)",
+      "parameters": [
+        {
+          "name": "conversationId",
+          "type": "String"
+        },
+        {
+          "name": "mediaRequestId",
+          "type": "String"
+        }
+      ],
+      "return": "WebChatGuestMediaRequest"
+    },
+    "GET /api/v2/webchat/guest/conversations/{conversationId}/mediarequests": {
+      "functionName": "getWebchatGuestConversationMediarequests",
+      "signature": "getWebchatGuestConversationMediarequests(conversationId)",
+      "parameters": [
+        {
+          "name": "conversationId",
+          "type": "String"
+        }
+      ],
+      "return": "WebChatGuestMediaRequestEntityList"
+    },
+    "GET /api/v2/webchat/guest/conversations/{conversationId}/members/{memberId}": {
+      "functionName": "getWebchatGuestConversationMember",
+      "signature": "getWebchatGuestConversationMember(conversationId, memberId)",
+      "parameters": [
+        {
+          "name": "conversationId",
+          "type": "String"
+        },
+        {
+          "name": "memberId",
+          "type": "String"
+        }
+      ],
+      "return": "WebChatMemberInfo"
+    },
+    "GET /api/v2/webchat/guest/conversations/{conversationId}/members": {
+      "functionName": "getWebchatGuestConversationMembers",
+      "signature": "getWebchatGuestConversationMembers(conversationId, pageSize, pageNumber, excludeDisconnectedMembers)",
+      "parameters": [
+        {
+          "name": "conversationId",
+          "type": "String"
+        },
+        {
+          "name": "pageSize",
+          "type": "Integer"
+        },
+        {
+          "name": "pageNumber",
+          "type": "Integer"
+        },
+        {
+          "name": "excludeDisconnectedMembers",
+          "type": "Boolean"
+        }
+      ],
+      "return": "WebChatMemberInfoEntityList"
+    },
+    "GET /api/v2/webchat/guest/conversations/{conversationId}/messages/{messageId}": {
+      "functionName": "getWebchatGuestConversationMessage",
+      "signature": "getWebchatGuestConversationMessage(conversationId, messageId)",
+      "parameters": [
+        {
+          "name": "conversationId",
+          "type": "String"
+        },
+        {
+          "name": "messageId",
+          "type": "String"
+        }
+      ],
+      "return": "WebChatMessage"
+    },
+    "GET /api/v2/webchat/guest/conversations/{conversationId}/messages": {
+      "functionName": "getWebchatGuestConversationMessages",
+      "signature": "getWebchatGuestConversationMessages(conversationId, after, before, sortOrder, maxResults)",
+      "parameters": [
+        {
+          "name": "conversationId",
+          "type": "String"
+        },
+        {
+          "name": "after",
+          "type": "String"
+        },
+        {
+          "name": "before",
+          "type": "String"
+        },
+        {
+          "name": "sortOrder",
+          "type": "String"
+        },
+        {
+          "name": "maxResults",
+          "type": "Integer"
+        }
+      ],
+      "return": "WebChatMessageEntityList"
+    },
+    "PATCH /api/v2/webchat/guest/conversations/{conversationId}/mediarequests/{mediaRequestId}": {
+      "functionName": "patchWebchatGuestConversationMediarequest",
+      "signature": "patchWebchatGuestConversationMediarequest(conversationId, mediaRequestId, body)",
+      "parameters": [
+        {
+          "name": "conversationId",
+          "type": "String"
+        },
+        {
+          "name": "mediaRequestId",
+          "type": "String"
+        },
+        {
+          "name": "body",
+          "type": "WebChatGuestMediaRequest"
+        }
+      ],
+      "return": "WebChatGuestMediaRequest"
+    },
+    "POST /api/v2/webchat/guest/conversations/{conversationId}/members/{memberId}/messages": {
+      "functionName": "postWebchatGuestConversationMemberMessages",
+      "signature": "postWebchatGuestConversationMemberMessages(conversationId, memberId, body)",
+      "parameters": [
+        {
+          "name": "conversationId",
+          "type": "String"
+        },
+        {
+          "name": "memberId",
+          "type": "String"
+        },
+        {
+          "name": "body",
+          "type": "CreateWebChatMessageRequest"
+        }
+      ],
+      "return": "WebChatMessage"
+    },
+    "POST /api/v2/webchat/guest/conversations/{conversationId}/members/{memberId}/typing": {
+      "functionName": "postWebchatGuestConversationMemberTyping",
+      "signature": "postWebchatGuestConversationMemberTyping(conversationId, memberId)",
+      "parameters": [
+        {
+          "name": "conversationId",
+          "type": "String"
+        },
+        {
+          "name": "memberId",
+          "type": "String"
+        }
+      ],
+      "return": "WebChatTyping"
+    },
+    "POST /api/v2/webchat/guest/conversations": {
+      "functionName": "postWebchatGuestConversations",
+      "signature": "postWebchatGuestConversations(body)",
+      "parameters": [
+        {
+          "name": "body",
+          "type": "CreateWebChatConversationRequest"
+        }
+      ],
+      "return": "CreateWebChatConversationResponse"
+    }
+  }
+}
