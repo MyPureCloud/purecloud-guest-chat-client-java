@@ -31,11 +31,11 @@ ispreview: true
 
 | Name | Value |
 | ---- | ----- |
-| OUTDATEDSDKVERSION | &quot;OutdatedSdkVersion&quot; |
-| AGENT | &quot;AGENT&quot; |
-| CUSTOMER | &quot;CUSTOMER&quot; |
-| WORKFLOW | &quot;WORKFLOW&quot; |
-| ACD | &quot;ACD&quot; |
+| OUTDATEDSDKVERSION | &quot;OutdatedSdkVersion&quot; | 
+| AGENT | &quot;AGENT&quot; | 
+| CUSTOMER | &quot;CUSTOMER&quot; | 
+| WORKFLOW | &quot;WORKFLOW&quot; | 
+| ACD | &quot;ACD&quot; | 
 {: class="table table-striped"}
 
 
@@ -45,10 +45,10 @@ ispreview: true
 
 | Name | Value |
 | ---- | ----- |
-| OUTDATEDSDKVERSION | &quot;OutdatedSdkVersion&quot; |
-| CONNECTED | &quot;CONNECTED&quot; |
-| DISCONNECTED | &quot;DISCONNECTED&quot; |
-| ALERTING | &quot;ALERTING&quot; |
+| OUTDATEDSDKVERSION | &quot;OutdatedSdkVersion&quot; | 
+| CONNECTED | &quot;CONNECTED&quot; | 
+| DISCONNECTED | &quot;DISCONNECTED&quot; | 
+| ALERTING | &quot;ALERTING&quot; | 
 {: class="table table-striped"}
 
 

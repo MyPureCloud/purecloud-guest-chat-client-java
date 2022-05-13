@@ -10,6 +10,9 @@ import com.mypurecloud.sdk.v2.guest.Configuration;
 import com.mypurecloud.sdk.v2.guest.model.*;
 import com.mypurecloud.sdk.v2.guest.Pair;
 
+import com.mypurecloud.sdk.v2.guest.model.CreateWebChatConversationRequest;
+import com.mypurecloud.sdk.v2.guest.model.CreateWebChatConversationResponse;
+import com.mypurecloud.sdk.v2.guest.model.CreateWebChatMessageRequest;
 import com.mypurecloud.sdk.v2.guest.model.ErrorBody;
 import com.mypurecloud.sdk.v2.guest.model.WebChatGuestMediaRequest;
 import com.mypurecloud.sdk.v2.guest.model.WebChatGuestMediaRequestEntityList;
@@ -17,10 +20,7 @@ import com.mypurecloud.sdk.v2.guest.model.WebChatMemberInfo;
 import com.mypurecloud.sdk.v2.guest.model.WebChatMemberInfoEntityList;
 import com.mypurecloud.sdk.v2.guest.model.WebChatMessage;
 import com.mypurecloud.sdk.v2.guest.model.WebChatMessageEntityList;
-import com.mypurecloud.sdk.v2.guest.model.CreateWebChatMessageRequest;
 import com.mypurecloud.sdk.v2.guest.model.WebChatTyping;
-import com.mypurecloud.sdk.v2.guest.model.CreateWebChatConversationResponse;
-import com.mypurecloud.sdk.v2.guest.model.CreateWebChatConversationRequest;
 
 
 import com.mypurecloud.sdk.v2.guest.api.request.DeleteWebchatGuestConversationMemberRequest;
@@ -41,7 +41,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-
 public class WebChatApi {
   private final ApiClient pcapiClient;
 
@@ -53,7 +52,6 @@ public class WebChatApi {
     this.pcapiClient = apiClient;
   }
 
-  
   /**
    * Remove a member from a chat conversation
    * 
@@ -80,9 +78,9 @@ public class WebChatApi {
   private DeleteWebchatGuestConversationMemberRequest createDeleteWebchatGuestConversationMemberRequest(String conversationId, String memberId) {
     return DeleteWebchatGuestConversationMemberRequest.builder()
             .withConversationId(conversationId)
-    
+
             .withMemberId(memberId)
-    
+
             .build();
   }
 
@@ -133,7 +131,6 @@ public class WebChatApi {
     }
   }
 
-  
   /**
    * Get a media request in the conversation
    * 
@@ -162,9 +159,9 @@ public class WebChatApi {
   private GetWebchatGuestConversationMediarequestRequest createGetWebchatGuestConversationMediarequestRequest(String conversationId, String mediaRequestId) {
     return GetWebchatGuestConversationMediarequestRequest.builder()
             .withConversationId(conversationId)
-    
+
             .withMediaRequestId(mediaRequestId)
-    
+
             .build();
   }
 
@@ -216,7 +213,6 @@ public class WebChatApi {
     }
   }
 
-  
   /**
    * Get all media requests to the guest in the conversation
    * 
@@ -243,7 +239,7 @@ public class WebChatApi {
   private GetWebchatGuestConversationMediarequestsRequest createGetWebchatGuestConversationMediarequestsRequest(String conversationId) {
     return GetWebchatGuestConversationMediarequestsRequest.builder()
             .withConversationId(conversationId)
-    
+
             .build();
   }
 
@@ -295,7 +291,6 @@ public class WebChatApi {
     }
   }
 
-  
   /**
    * Get a web chat conversation member
    * 
@@ -324,9 +319,9 @@ public class WebChatApi {
   private GetWebchatGuestConversationMemberRequest createGetWebchatGuestConversationMemberRequest(String conversationId, String memberId) {
     return GetWebchatGuestConversationMemberRequest.builder()
             .withConversationId(conversationId)
-    
+
             .withMemberId(memberId)
-    
+
             .build();
   }
 
@@ -378,7 +373,6 @@ public class WebChatApi {
     }
   }
 
-  
   /**
    * Get the members of a chat conversation.
    * 
@@ -411,13 +405,13 @@ public class WebChatApi {
   private GetWebchatGuestConversationMembersRequest createGetWebchatGuestConversationMembersRequest(String conversationId, Integer pageSize, Integer pageNumber, Boolean excludeDisconnectedMembers) {
     return GetWebchatGuestConversationMembersRequest.builder()
             .withConversationId(conversationId)
-    
+
             .withPageSize(pageSize)
-    
+
             .withPageNumber(pageNumber)
-    
+
             .withExcludeDisconnectedMembers(excludeDisconnectedMembers)
-    
+
             .build();
   }
 
@@ -469,7 +463,6 @@ public class WebChatApi {
     }
   }
 
-  
   /**
    * Get a web chat conversation message
    * 
@@ -498,9 +491,9 @@ public class WebChatApi {
   private GetWebchatGuestConversationMessageRequest createGetWebchatGuestConversationMessageRequest(String conversationId, String messageId) {
     return GetWebchatGuestConversationMessageRequest.builder()
             .withConversationId(conversationId)
-    
+
             .withMessageId(messageId)
-    
+
             .build();
   }
 
@@ -552,7 +545,6 @@ public class WebChatApi {
     }
   }
 
-  
   /**
    * Get the messages of a chat conversation.
    * 
@@ -587,15 +579,15 @@ public class WebChatApi {
   private GetWebchatGuestConversationMessagesRequest createGetWebchatGuestConversationMessagesRequest(String conversationId, String after, String before, String sortOrder, Integer maxResults) {
     return GetWebchatGuestConversationMessagesRequest.builder()
             .withConversationId(conversationId)
-    
+
             .withAfter(after)
-    
+
             .withBefore(before)
-    
+
             .withSortOrder(sortOrder)
-    
+
             .withMaxResults(maxResults)
-    
+
             .build();
   }
 
@@ -647,7 +639,6 @@ public class WebChatApi {
     }
   }
 
-  
   /**
    * Update a media request in the conversation, setting the state to ACCEPTED/DECLINED/ERRORED
    * 
@@ -678,11 +669,11 @@ public class WebChatApi {
   private PatchWebchatGuestConversationMediarequestRequest createPatchWebchatGuestConversationMediarequestRequest(String conversationId, String mediaRequestId, WebChatGuestMediaRequest body) {
     return PatchWebchatGuestConversationMediarequestRequest.builder()
             .withConversationId(conversationId)
-    
+
             .withMediaRequestId(mediaRequestId)
-    
+
             .withBody(body)
-    
+
             .build();
   }
 
@@ -734,7 +725,6 @@ public class WebChatApi {
     }
   }
 
-  
   /**
    * Send a message in a chat conversation.
    * 
@@ -765,11 +755,11 @@ public class WebChatApi {
   private PostWebchatGuestConversationMemberMessagesRequest createPostWebchatGuestConversationMemberMessagesRequest(String conversationId, String memberId, CreateWebChatMessageRequest body) {
     return PostWebchatGuestConversationMemberMessagesRequest.builder()
             .withConversationId(conversationId)
-    
+
             .withMemberId(memberId)
-    
+
             .withBody(body)
-    
+
             .build();
   }
 
@@ -821,7 +811,6 @@ public class WebChatApi {
     }
   }
 
-  
   /**
    * Send a typing-indicator in a chat conversation.
    * 
@@ -850,9 +839,9 @@ public class WebChatApi {
   private PostWebchatGuestConversationMemberTypingRequest createPostWebchatGuestConversationMemberTypingRequest(String conversationId, String memberId) {
     return PostWebchatGuestConversationMemberTypingRequest.builder()
             .withConversationId(conversationId)
-    
+
             .withMemberId(memberId)
-    
+
             .build();
   }
 
@@ -904,10 +893,9 @@ public class WebChatApi {
     }
   }
 
-  
   /**
    * Create an ACD chat conversation from an external customer.
-   * This endpoint will create a new ACD Chat conversation under the specified Chat Deployment.  The conversation will begin with a guest member in it (with a role=CUSTOMER) according to the customer information that is supplied. If the guest member is authenticated, the &#39;memberAuthToken&#39; field should include his JWT as generated by the &#39;POST /api/v2/signeddata&#39; resource; if the guest member is anonymous (and the Deployment permits it) this field can be omitted.  The returned data includes the IDs of the conversation created, along with a newly-create JWT token that you can supply to all future endpoints as authentication to perform operations against that conversation. After successfully creating a conversation, you should connect a websocket to the event stream named in the &#39;eventStreamUri&#39; field of the response; the conversation is not routed until the event stream is attached.
+   * This endpoint will create a new ACD Chat conversation under the specified Chat Deployment.  The conversation will begin with a guest member in it (with a role=CUSTOMER) according to the customer information that is supplied. If the guest member is authenticated, the 'memberAuthToken' field should include his JWT as generated by the 'POST /api/v2/signeddata' resource; if the guest member is anonymous (and the Deployment permits it) this field can be omitted.  The returned data includes the IDs of the conversation created, along with a newly-create JWT token that you can supply to all future endpoints as authentication to perform operations against that conversation. After successfully creating a conversation, you should connect a websocket to the event stream named in the 'eventStreamUri' field of the response; the conversation is not routed until the event stream is attached.
    * @param body CreateConversationRequest (required)
    * @return CreateWebChatConversationResponse
    * @throws ApiException if the request fails on the server
@@ -919,7 +907,7 @@ public class WebChatApi {
 
   /**
    * Create an ACD chat conversation from an external customer.
-   * This endpoint will create a new ACD Chat conversation under the specified Chat Deployment.  The conversation will begin with a guest member in it (with a role=CUSTOMER) according to the customer information that is supplied. If the guest member is authenticated, the &#39;memberAuthToken&#39; field should include his JWT as generated by the &#39;POST /api/v2/signeddata&#39; resource; if the guest member is anonymous (and the Deployment permits it) this field can be omitted.  The returned data includes the IDs of the conversation created, along with a newly-create JWT token that you can supply to all future endpoints as authentication to perform operations against that conversation. After successfully creating a conversation, you should connect a websocket to the event stream named in the &#39;eventStreamUri&#39; field of the response; the conversation is not routed until the event stream is attached.
+   * This endpoint will create a new ACD Chat conversation under the specified Chat Deployment.  The conversation will begin with a guest member in it (with a role=CUSTOMER) according to the customer information that is supplied. If the guest member is authenticated, the 'memberAuthToken' field should include his JWT as generated by the 'POST /api/v2/signeddata' resource; if the guest member is anonymous (and the Deployment permits it) this field can be omitted.  The returned data includes the IDs of the conversation created, along with a newly-create JWT token that you can supply to all future endpoints as authentication to perform operations against that conversation. After successfully creating a conversation, you should connect a websocket to the event stream named in the 'eventStreamUri' field of the response; the conversation is not routed until the event stream is attached.
    * @param body CreateConversationRequest (required)
    * @return CreateWebChatConversationResponse
    * @throws IOException if the request fails to be processed
@@ -931,13 +919,13 @@ public class WebChatApi {
   private PostWebchatGuestConversationsRequest createPostWebchatGuestConversationsRequest(CreateWebChatConversationRequest body) {
     return PostWebchatGuestConversationsRequest.builder()
             .withBody(body)
-    
+
             .build();
   }
 
   /**
    * Create an ACD chat conversation from an external customer.
-   * This endpoint will create a new ACD Chat conversation under the specified Chat Deployment.  The conversation will begin with a guest member in it (with a role=CUSTOMER) according to the customer information that is supplied. If the guest member is authenticated, the &#39;memberAuthToken&#39; field should include his JWT as generated by the &#39;POST /api/v2/signeddata&#39; resource; if the guest member is anonymous (and the Deployment permits it) this field can be omitted.  The returned data includes the IDs of the conversation created, along with a newly-create JWT token that you can supply to all future endpoints as authentication to perform operations against that conversation. After successfully creating a conversation, you should connect a websocket to the event stream named in the &#39;eventStreamUri&#39; field of the response; the conversation is not routed until the event stream is attached.
+   * This endpoint will create a new ACD Chat conversation under the specified Chat Deployment.  The conversation will begin with a guest member in it (with a role=CUSTOMER) according to the customer information that is supplied. If the guest member is authenticated, the 'memberAuthToken' field should include his JWT as generated by the 'POST /api/v2/signeddata' resource; if the guest member is anonymous (and the Deployment permits it) this field can be omitted.  The returned data includes the IDs of the conversation created, along with a newly-create JWT token that you can supply to all future endpoints as authentication to perform operations against that conversation. After successfully creating a conversation, you should connect a websocket to the event stream named in the 'eventStreamUri' field of the response; the conversation is not routed until the event stream is attached.
    * @param request The request object
    * @return CreateWebChatConversationResponse
    * @throws ApiException if the request fails on the server
@@ -956,7 +944,7 @@ public class WebChatApi {
 
   /**
    * Create an ACD chat conversation from an external customer.
-   * This endpoint will create a new ACD Chat conversation under the specified Chat Deployment.  The conversation will begin with a guest member in it (with a role=CUSTOMER) according to the customer information that is supplied. If the guest member is authenticated, the &#39;memberAuthToken&#39; field should include his JWT as generated by the &#39;POST /api/v2/signeddata&#39; resource; if the guest member is anonymous (and the Deployment permits it) this field can be omitted.  The returned data includes the IDs of the conversation created, along with a newly-create JWT token that you can supply to all future endpoints as authentication to perform operations against that conversation. After successfully creating a conversation, you should connect a websocket to the event stream named in the &#39;eventStreamUri&#39; field of the response; the conversation is not routed until the event stream is attached.
+   * This endpoint will create a new ACD Chat conversation under the specified Chat Deployment.  The conversation will begin with a guest member in it (with a role=CUSTOMER) according to the customer information that is supplied. If the guest member is authenticated, the 'memberAuthToken' field should include his JWT as generated by the 'POST /api/v2/signeddata' resource; if the guest member is anonymous (and the Deployment permits it) this field can be omitted.  The returned data includes the IDs of the conversation created, along with a newly-create JWT token that you can supply to all future endpoints as authentication to perform operations against that conversation. After successfully creating a conversation, you should connect a websocket to the event stream named in the 'eventStreamUri' field of the response; the conversation is not routed until the event stream is attached.
    * @param request The request object
    * @return the response
    * @throws IOException if the request fails to be processed
@@ -983,5 +971,4 @@ public class WebChatApi {
     }
   }
 
-  
 }

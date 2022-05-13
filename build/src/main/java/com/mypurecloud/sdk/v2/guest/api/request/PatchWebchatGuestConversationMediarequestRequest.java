@@ -20,6 +20,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.regex.Pattern;
 
+import com.mypurecloud.sdk.v2.guest.model.CreateWebChatConversationRequest;
+import com.mypurecloud.sdk.v2.guest.model.CreateWebChatConversationResponse;
+import com.mypurecloud.sdk.v2.guest.model.CreateWebChatMessageRequest;
 import com.mypurecloud.sdk.v2.guest.model.ErrorBody;
 import com.mypurecloud.sdk.v2.guest.model.WebChatGuestMediaRequest;
 import com.mypurecloud.sdk.v2.guest.model.WebChatGuestMediaRequestEntityList;
@@ -27,13 +30,10 @@ import com.mypurecloud.sdk.v2.guest.model.WebChatMemberInfo;
 import com.mypurecloud.sdk.v2.guest.model.WebChatMemberInfoEntityList;
 import com.mypurecloud.sdk.v2.guest.model.WebChatMessage;
 import com.mypurecloud.sdk.v2.guest.model.WebChatMessageEntityList;
-import com.mypurecloud.sdk.v2.guest.model.CreateWebChatMessageRequest;
 import com.mypurecloud.sdk.v2.guest.model.WebChatTyping;
-import com.mypurecloud.sdk.v2.guest.model.CreateWebChatConversationResponse;
-import com.mypurecloud.sdk.v2.guest.model.CreateWebChatConversationRequest;
 
 public class PatchWebchatGuestConversationMediarequestRequest {
-    
+
 	private String conversationId;
 	public String getConversationId() {
 		return this.conversationId;
@@ -47,7 +47,7 @@ public class PatchWebchatGuestConversationMediarequestRequest {
 	    this.setConversationId(conversationId);
 	    return this;
 	} 
-	
+
 	private String mediaRequestId;
 	public String getMediaRequestId() {
 		return this.mediaRequestId;
@@ -61,7 +61,7 @@ public class PatchWebchatGuestConversationMediarequestRequest {
 	    this.setMediaRequestId(mediaRequestId);
 	    return this;
 	} 
-	
+
 	private WebChatGuestMediaRequest body;
 	public WebChatGuestMediaRequest getBody() {
 		return this.body;
@@ -75,7 +75,7 @@ public class PatchWebchatGuestConversationMediarequestRequest {
 	    this.setBody(body);
 	    return this;
 	} 
-	
+
 	private final Map<String, String> customHeaders = new HashMap<>();
     public Map<String, String> getCustomHeaders() {
         return this.customHeaders;
@@ -119,8 +119,8 @@ public class PatchWebchatGuestConversationMediarequestRequest {
                 .withPathParameter("mediaRequestId", mediaRequestId)
         
                 .withBody(body)
-        
-                .withCustomHeaders(customHeaders)
+
+		.withCustomHeaders(customHeaders)
                 .withContentTypes("application/json")
                 .withAccepts("application/json")
                 .withAuthNames("Guest Chat JWT")
@@ -131,12 +131,12 @@ public class PatchWebchatGuestConversationMediarequestRequest {
 		return new Builder();
 	}
 
-	
+
 	public static Builder builder(String conversationId, String mediaRequestId, WebChatGuestMediaRequest body) {
 	    return new Builder()
 	            .withRequiredParams(conversationId, mediaRequestId, body);
 	}
-	
+
 
 	public static class Builder {
 		private final PatchWebchatGuestConversationMediarequestRequest request;
@@ -145,32 +145,32 @@ public class PatchWebchatGuestConversationMediarequestRequest {
 			request = new PatchWebchatGuestConversationMediarequestRequest();
 		}
 
-		
+
 		public Builder withConversationId(String conversationId) {
 			request.setConversationId(conversationId);
 			return this;
 		}
-		
+
 		public Builder withMediaRequestId(String mediaRequestId) {
 			request.setMediaRequestId(mediaRequestId);
 			return this;
 		}
-		
+
 		public Builder withBody(WebChatGuestMediaRequest body) {
 			request.setBody(body);
 			return this;
 		}
-		
 
-		
+
+
 		public Builder withRequiredParams(String conversationId, String mediaRequestId, WebChatGuestMediaRequest body) {
 			request.setConversationId(conversationId);
-						request.setMediaRequestId(mediaRequestId);
-						request.setBody(body);
-			
+			request.setMediaRequestId(mediaRequestId);
+			request.setBody(body);
+
 			return this;
 		}
-		
+
 
 		public PatchWebchatGuestConversationMediarequestRequest build() {
             

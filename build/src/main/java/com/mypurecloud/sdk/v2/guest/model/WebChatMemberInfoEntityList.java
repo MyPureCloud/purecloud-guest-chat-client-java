@@ -8,6 +8,7 @@ import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.deser.std.StdDeserializer;
 import java.util.Objects;
+import java.util.ArrayList;
 import java.io.IOException;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.mypurecloud.sdk.v2.guest.PagedResource;
@@ -28,11 +29,11 @@ public class WebChatMemberInfoEntityList  implements Serializable, PagedResource
   private Integer pageSize = null;
   private Integer pageNumber = null;
   private Long total = null;
+  private String lastUri = null;
   private String firstUri = null;
   private String selfUri = null;
-  private String nextUri = null;
   private String previousUri = null;
-  private String lastUri = null;
+  private String nextUri = null;
   private Integer pageCount = null;
 
   
@@ -52,7 +53,7 @@ public class WebChatMemberInfoEntityList  implements Serializable, PagedResource
     this.entities = entities;
   }
 
-  
+
   /**
    **/
   public WebChatMemberInfoEntityList pageSize(Integer pageSize) {
@@ -69,7 +70,7 @@ public class WebChatMemberInfoEntityList  implements Serializable, PagedResource
     this.pageSize = pageSize;
   }
 
-  
+
   /**
    **/
   public WebChatMemberInfoEntityList pageNumber(Integer pageNumber) {
@@ -86,7 +87,7 @@ public class WebChatMemberInfoEntityList  implements Serializable, PagedResource
     this.pageNumber = pageNumber;
   }
 
-  
+
   /**
    **/
   public WebChatMemberInfoEntityList total(Long total) {
@@ -103,75 +104,7 @@ public class WebChatMemberInfoEntityList  implements Serializable, PagedResource
     this.total = total;
   }
 
-  
-  /**
-   **/
-  public WebChatMemberInfoEntityList firstUri(String firstUri) {
-    this.firstUri = firstUri;
-    return this;
-  }
-  
-  @ApiModelProperty(example = "null", value = "")
-  @JsonProperty("firstUri")
-  public String getFirstUri() {
-    return firstUri;
-  }
-  public void setFirstUri(String firstUri) {
-    this.firstUri = firstUri;
-  }
 
-  
-  /**
-   **/
-  public WebChatMemberInfoEntityList selfUri(String selfUri) {
-    this.selfUri = selfUri;
-    return this;
-  }
-  
-  @ApiModelProperty(example = "null", value = "")
-  @JsonProperty("selfUri")
-  public String getSelfUri() {
-    return selfUri;
-  }
-  public void setSelfUri(String selfUri) {
-    this.selfUri = selfUri;
-  }
-
-  
-  /**
-   **/
-  public WebChatMemberInfoEntityList nextUri(String nextUri) {
-    this.nextUri = nextUri;
-    return this;
-  }
-  
-  @ApiModelProperty(example = "null", value = "")
-  @JsonProperty("nextUri")
-  public String getNextUri() {
-    return nextUri;
-  }
-  public void setNextUri(String nextUri) {
-    this.nextUri = nextUri;
-  }
-
-  
-  /**
-   **/
-  public WebChatMemberInfoEntityList previousUri(String previousUri) {
-    this.previousUri = previousUri;
-    return this;
-  }
-  
-  @ApiModelProperty(example = "null", value = "")
-  @JsonProperty("previousUri")
-  public String getPreviousUri() {
-    return previousUri;
-  }
-  public void setPreviousUri(String previousUri) {
-    this.previousUri = previousUri;
-  }
-
-  
   /**
    **/
   public WebChatMemberInfoEntityList lastUri(String lastUri) {
@@ -188,7 +121,75 @@ public class WebChatMemberInfoEntityList  implements Serializable, PagedResource
     this.lastUri = lastUri;
   }
 
+
+  /**
+   **/
+  public WebChatMemberInfoEntityList firstUri(String firstUri) {
+    this.firstUri = firstUri;
+    return this;
+  }
   
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("firstUri")
+  public String getFirstUri() {
+    return firstUri;
+  }
+  public void setFirstUri(String firstUri) {
+    this.firstUri = firstUri;
+  }
+
+
+  /**
+   **/
+  public WebChatMemberInfoEntityList selfUri(String selfUri) {
+    this.selfUri = selfUri;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("selfUri")
+  public String getSelfUri() {
+    return selfUri;
+  }
+  public void setSelfUri(String selfUri) {
+    this.selfUri = selfUri;
+  }
+
+
+  /**
+   **/
+  public WebChatMemberInfoEntityList previousUri(String previousUri) {
+    this.previousUri = previousUri;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("previousUri")
+  public String getPreviousUri() {
+    return previousUri;
+  }
+  public void setPreviousUri(String previousUri) {
+    this.previousUri = previousUri;
+  }
+
+
+  /**
+   **/
+  public WebChatMemberInfoEntityList nextUri(String nextUri) {
+    this.nextUri = nextUri;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("nextUri")
+  public String getNextUri() {
+    return nextUri;
+  }
+  public void setNextUri(String nextUri) {
+    this.nextUri = nextUri;
+  }
+
+
   /**
    **/
   public WebChatMemberInfoEntityList pageCount(Integer pageCount) {
@@ -205,7 +206,6 @@ public class WebChatMemberInfoEntityList  implements Serializable, PagedResource
     this.pageCount = pageCount;
   }
 
-  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -216,21 +216,22 @@ public class WebChatMemberInfoEntityList  implements Serializable, PagedResource
       return false;
     }
     WebChatMemberInfoEntityList webChatMemberInfoEntityList = (WebChatMemberInfoEntityList) o;
+
     return Objects.equals(this.entities, webChatMemberInfoEntityList.entities) &&
-        Objects.equals(this.pageSize, webChatMemberInfoEntityList.pageSize) &&
-        Objects.equals(this.pageNumber, webChatMemberInfoEntityList.pageNumber) &&
-        Objects.equals(this.total, webChatMemberInfoEntityList.total) &&
-        Objects.equals(this.firstUri, webChatMemberInfoEntityList.firstUri) &&
-        Objects.equals(this.selfUri, webChatMemberInfoEntityList.selfUri) &&
-        Objects.equals(this.nextUri, webChatMemberInfoEntityList.nextUri) &&
-        Objects.equals(this.previousUri, webChatMemberInfoEntityList.previousUri) &&
-        Objects.equals(this.lastUri, webChatMemberInfoEntityList.lastUri) &&
-        Objects.equals(this.pageCount, webChatMemberInfoEntityList.pageCount);
+            Objects.equals(this.pageSize, webChatMemberInfoEntityList.pageSize) &&
+            Objects.equals(this.pageNumber, webChatMemberInfoEntityList.pageNumber) &&
+            Objects.equals(this.total, webChatMemberInfoEntityList.total) &&
+            Objects.equals(this.lastUri, webChatMemberInfoEntityList.lastUri) &&
+            Objects.equals(this.firstUri, webChatMemberInfoEntityList.firstUri) &&
+            Objects.equals(this.selfUri, webChatMemberInfoEntityList.selfUri) &&
+            Objects.equals(this.previousUri, webChatMemberInfoEntityList.previousUri) &&
+            Objects.equals(this.nextUri, webChatMemberInfoEntityList.nextUri) &&
+            Objects.equals(this.pageCount, webChatMemberInfoEntityList.pageCount);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(entities, pageSize, pageNumber, total, firstUri, selfUri, nextUri, previousUri, lastUri, pageCount);
+    return Objects.hash(entities, pageSize, pageNumber, total, lastUri, firstUri, selfUri, previousUri, nextUri, pageCount);
   }
 
   @Override
@@ -242,11 +243,11 @@ public class WebChatMemberInfoEntityList  implements Serializable, PagedResource
     sb.append("    pageSize: ").append(toIndentedString(pageSize)).append("\n");
     sb.append("    pageNumber: ").append(toIndentedString(pageNumber)).append("\n");
     sb.append("    total: ").append(toIndentedString(total)).append("\n");
+    sb.append("    lastUri: ").append(toIndentedString(lastUri)).append("\n");
     sb.append("    firstUri: ").append(toIndentedString(firstUri)).append("\n");
     sb.append("    selfUri: ").append(toIndentedString(selfUri)).append("\n");
-    sb.append("    nextUri: ").append(toIndentedString(nextUri)).append("\n");
     sb.append("    previousUri: ").append(toIndentedString(previousUri)).append("\n");
-    sb.append("    lastUri: ").append(toIndentedString(lastUri)).append("\n");
+    sb.append("    nextUri: ").append(toIndentedString(nextUri)).append("\n");
     sb.append("    pageCount: ").append(toIndentedString(pageCount)).append("\n");
     sb.append("}");
     return sb.toString();

@@ -20,6 +20,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.regex.Pattern;
 
+import com.mypurecloud.sdk.v2.guest.model.CreateWebChatConversationRequest;
+import com.mypurecloud.sdk.v2.guest.model.CreateWebChatConversationResponse;
+import com.mypurecloud.sdk.v2.guest.model.CreateWebChatMessageRequest;
 import com.mypurecloud.sdk.v2.guest.model.ErrorBody;
 import com.mypurecloud.sdk.v2.guest.model.WebChatGuestMediaRequest;
 import com.mypurecloud.sdk.v2.guest.model.WebChatGuestMediaRequestEntityList;
@@ -27,13 +30,10 @@ import com.mypurecloud.sdk.v2.guest.model.WebChatMemberInfo;
 import com.mypurecloud.sdk.v2.guest.model.WebChatMemberInfoEntityList;
 import com.mypurecloud.sdk.v2.guest.model.WebChatMessage;
 import com.mypurecloud.sdk.v2.guest.model.WebChatMessageEntityList;
-import com.mypurecloud.sdk.v2.guest.model.CreateWebChatMessageRequest;
 import com.mypurecloud.sdk.v2.guest.model.WebChatTyping;
-import com.mypurecloud.sdk.v2.guest.model.CreateWebChatConversationResponse;
-import com.mypurecloud.sdk.v2.guest.model.CreateWebChatConversationRequest;
 
 public class GetWebchatGuestConversationMembersRequest {
-    
+
 	private String conversationId;
 	public String getConversationId() {
 		return this.conversationId;
@@ -47,7 +47,7 @@ public class GetWebchatGuestConversationMembersRequest {
 	    this.setConversationId(conversationId);
 	    return this;
 	} 
-	
+
 	private Integer pageSize;
 	public Integer getPageSize() {
 		return this.pageSize;
@@ -61,7 +61,7 @@ public class GetWebchatGuestConversationMembersRequest {
 	    this.setPageSize(pageSize);
 	    return this;
 	} 
-	
+
 	private Integer pageNumber;
 	public Integer getPageNumber() {
 		return this.pageNumber;
@@ -75,7 +75,7 @@ public class GetWebchatGuestConversationMembersRequest {
 	    this.setPageNumber(pageNumber);
 	    return this;
 	} 
-	
+
 	private Boolean excludeDisconnectedMembers;
 	public Boolean getExcludeDisconnectedMembers() {
 		return this.excludeDisconnectedMembers;
@@ -89,7 +89,7 @@ public class GetWebchatGuestConversationMembersRequest {
 	    this.setExcludeDisconnectedMembers(excludeDisconnectedMembers);
 	    return this;
 	} 
-	
+
 	private final Map<String, String> customHeaders = new HashMap<>();
     public Map<String, String> getCustomHeaders() {
         return this.customHeaders;
@@ -120,13 +120,16 @@ public class GetWebchatGuestConversationMembersRequest {
         return ApiRequestBuilder.create("GET", "/api/v2/webchat/guest/conversations/{conversationId}/members")
                 .withPathParameter("conversationId", conversationId)
         
+
                 .withQueryParameters("pageSize", "", pageSize)
         
+
                 .withQueryParameters("pageNumber", "", pageNumber)
         
+
                 .withQueryParameters("excludeDisconnectedMembers", "", excludeDisconnectedMembers)
         
-                .withCustomHeaders(customHeaders)
+		.withCustomHeaders(customHeaders)
                 .withContentTypes("application/json")
                 .withAccepts("application/json")
                 .withAuthNames("Guest Chat JWT")
@@ -137,12 +140,12 @@ public class GetWebchatGuestConversationMembersRequest {
 		return new Builder();
 	}
 
-	
+
 	public static Builder builder(String conversationId) {
 	    return new Builder()
 	            .withRequiredParams(conversationId);
 	}
-	
+
 
 	public static class Builder {
 		private final GetWebchatGuestConversationMembersRequest request;
@@ -151,35 +154,35 @@ public class GetWebchatGuestConversationMembersRequest {
 			request = new GetWebchatGuestConversationMembersRequest();
 		}
 
-		
+
 		public Builder withConversationId(String conversationId) {
 			request.setConversationId(conversationId);
 			return this;
 		}
-		
+
 		public Builder withPageSize(Integer pageSize) {
 			request.setPageSize(pageSize);
 			return this;
 		}
-		
+
 		public Builder withPageNumber(Integer pageNumber) {
 			request.setPageNumber(pageNumber);
 			return this;
 		}
-		
+
 		public Builder withExcludeDisconnectedMembers(Boolean excludeDisconnectedMembers) {
 			request.setExcludeDisconnectedMembers(excludeDisconnectedMembers);
 			return this;
 		}
-		
 
-		
+
+
 		public Builder withRequiredParams(String conversationId) {
 			request.setConversationId(conversationId);
-			
+
 			return this;
 		}
-		
+
 
 		public GetWebchatGuestConversationMembersRequest build() {
             

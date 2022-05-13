@@ -19,19 +19,30 @@ ispreview: true
 {: class="table table-striped"}
 
 
+<a name="TypesEnum"></a>
+
+## Enum: TypesEnum
+
+| Name | Value |
+| ---- | ----- |
+| COBROWSE | &quot;COBROWSE&quot; |
+| SCREENSHARE | &quot;SCREENSHARE&quot; |
+{: class="table table-striped"}
+
+
 <a name="StateEnum"></a>
 
 ## Enum: StateEnum
 
 | Name | Value |
 | ---- | ----- |
-| OUTDATEDSDKVERSION | &quot;OutdatedSdkVersion&quot; |
-| PENDING | &quot;PENDING&quot; |
-| ACCEPTED | &quot;ACCEPTED&quot; |
-| DECLINED | &quot;DECLINED&quot; |
-| TIMEDOUT | &quot;TIMEDOUT&quot; |
-| CANCELLED | &quot;CANCELLED&quot; |
-| ERRORED | &quot;ERRORED&quot; |
+| OUTDATEDSDKVERSION | &quot;OutdatedSdkVersion&quot; | 
+| PENDING | &quot;PENDING&quot; | 
+| ACCEPTED | &quot;ACCEPTED&quot; | 
+| DECLINED | &quot;DECLINED&quot; | 
+| TIMEDOUT | &quot;TIMEDOUT&quot; | 
+| CANCELLED | &quot;CANCELLED&quot; | 
+| ERRORED | &quot;ERRORED&quot; | 
 {: class="table table-striped"}
 
 

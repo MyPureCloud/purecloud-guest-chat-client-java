@@ -23,8 +23,8 @@ ispreview: true
 
 | Name | Value |
 | ---- | ----- |
-| OUTDATEDSDKVERSION | &quot;OutdatedSdkVersion&quot; |
-| QUEUE | &quot;QUEUE&quot; |
+| OUTDATEDSDKVERSION | &quot;OutdatedSdkVersion&quot; | 
+| QUEUE | &quot;QUEUE&quot; | 
 {: class="table table-striped"}
 
 

@@ -3,7 +3,6 @@ package com.mypurecloud.sdk.v2.guest;
 import java.util.Collections;
 import java.util.Map;
 
-
 public class ApiException extends Exception implements ApiResponse<Object> {
     private final int statusCode;
     private final Map<String, String> headers;
