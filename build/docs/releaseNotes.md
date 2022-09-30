@@ -1,7 +1,5 @@
-Platform API version: 5697
+Platform API version: 6160
 
-
-Fixing enum name issue
 
 # Major Changes (0 changes)
 
