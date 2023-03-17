@@ -1,7 +1,7 @@
 @options
 @packages
 -classpath
-'/home/jenkins/.m2/repository/io/swagger/swagger-annotations/1.6.8/swagger-annotations-1.6.8.jar:/home/jenkins/.m2/repository/org/slf4j/slf4j-api/2.0.3/slf4j-api-2.0.3.jar:/home/jenkins/.m2/repository/org/ini4j/ini4j/0.5.4/ini4j-0.5.4.jar:/home/jenkins/.m2/repository/org/apache/httpcomponents/httpclient/4.5.13/httpclient-4.5.13.jar:/home/jenkins/.m2/repository/org/apache/httpcomponents/httpcore/4.4.13/httpcore-4.4.13.jar:/home/jenkins/.m2/repository/commons-logging/commons-logging/1.2/commons-logging-1.2.jar:/home/jenkins/.m2/repository/commons-codec/commons-codec/1.11/commons-codec-1.11.jar:/home/jenkins/.m2/repository/com/squareup/okhttp3/okhttp/4.10.0/okhttp-4.10.0.jar:/home/jenkins/.m2/repository/com/squareup/okio/okio-jvm/3.0.0/okio-jvm-3.0.0.jar:/home/jenkins/.m2/repository/org/jetbrains/kotlin/kotlin-stdlib-jdk8/1.5.31/kotlin-stdlib-jdk8-1.5.31.jar:/home/jenkins/.m2/repository/org/jetbrains/kotlin/kotlin-stdlib-jdk7/1.5.31/kotlin-stdlib-jdk7-1.5.31.jar:/home/jenkins/.m2/repository/org/jetbrains/kotlin/kotlin-stdlib-common/1.5.31/kotlin-stdlib-common-1.5.31.jar:/home/jenkins/.m2/repository/org/jetbrains/kotlin/kotlin-stdlib/1.6.20/kotlin-stdlib-1.6.20.jar:/home/jenkins/.m2/repository/org/jetbrains/annotations/13.0/annotations-13.0.jar:/home/jenkins/.m2/repository/org/asynchttpclient/async-http-client/2.12.3/async-http-client-2.12.3.jar:/home/jenkins/.m2/repository/org/asynchttpclient/async-http-client-netty-utils/2.12.3/async-http-client-netty-utils-2.12.3.jar:/home/jenkins/.m2/repository/io/netty/netty-buffer/4.1.60.Final/netty-buffer-4.1.60.Final.jar:/home/jenkins/.m2/repository/io/netty/netty-codec-http/4.1.60.Final/netty-codec-http-4.1.60.Final.jar:/home/jenkins/.m2/repository/io/netty/netty-common/4.1.60.Final/netty-common-4.1.60.Final.jar:/home/jenkins/.m2/repository/io/netty/netty-transport/4.1.60.Final/netty-transport-4.1.60.Final.jar:/home/jenkins/.m2/repository/io/netty/netty-codec/4.1.60.Final/netty-codec-4.1.60.Final.jar:/home/jenkins/.m2/repository/io/netty/netty-handler/4.1.60.Final/netty-handler-4.1.60.Final.jar:/home/jenkins/.m2/repository/io/netty/netty-resolver/4.1.60.Final/netty-resolver-4.1.60.Final.jar:/home/jenkins/.m2/repository/io/netty/netty-codec-socks/4.1.60.Final/netty-codec-socks-4.1.60.Final.jar:/home/jenkins/.m2/repository/io/netty/netty-handler-proxy/4.1.60.Final/netty-handler-proxy-4.1.60.Final.jar:/home/jenkins/.m2/repository/io/netty/netty-transport-native-epoll/4.1.60.Final/netty-transport-native-epoll-4.1.60.Final-linux-x86_64.jar:/home/jenkins/.m2/repository/io/netty/netty-transport-native-unix-common/4.1.60.Final/netty-transport-native-unix-common-4.1.60.Final.jar:/home/jenkins/.m2/repository/io/netty/netty-transport-native-kqueue/4.1.60.Final/netty-transport-native-kqueue-4.1.60.Final-osx-x86_64.jar:/home/jenkins/.m2/repository/org/reactivestreams/reactive-streams/1.0.3/reactive-streams-1.0.3.jar:/home/jenkins/.m2/repository/com/typesafe/netty/netty-reactive-streams/2.0.4/netty-reactive-streams-2.0.4.jar:/home/jenkins/.m2/repository/com/sun/activation/jakarta.activation/1.2.2/jakarta.activation-1.2.2.jar:/home/jenkins/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.14.0/jackson-core-2.14.0.jar:/home/jenkins/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.14.0/jackson-annotations-2.14.0.jar:/home/jenkins/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.14.0/jackson-databind-2.14.0.jar:/home/jenkins/.m2/repository/com/fasterxml/jackson/jaxrs/jackson-jaxrs-json-provider/2.14.0/jackson-jaxrs-json-provider-2.14.0.jar:/home/jenkins/.m2/repository/com/fasterxml/jackson/jaxrs/jackson-jaxrs-base/2.14.0/jackson-jaxrs-base-2.14.0.jar:/home/jenkins/.m2/repository/com/fasterxml/jackson/module/jackson-module-jaxb-annotations/2.14.0/jackson-module-jaxb-annotations-2.14.0.jar:/home/jenkins/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/2.3.3/jakarta.xml.bind-api-2.3.3.jar:/home/jenkins/.m2/repository/jakarta/activation/jakarta.activation-api/1.2.2/jakarta.activation-api-1.2.2.jar:/home/jenkins/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-joda/2.14.0/jackson-datatype-joda-2.14.0.jar:/home/jenkins/.m2/repository/joda-time/joda-time/2.10.14/joda-time-2.10.14.jar:/home/jenkins/.m2/repository/com/brsanthu/migbase64/2.2/migbase64-2.2.jar:/home/jenkins/.m2/repository/com/neovisionaries/nv-websocket-client/2.14/nv-websocket-client-2.14.jar:/home/jenkins/.m2/repository/com/google/guava/guava/31.1-jre/guava-31.1-jre.jar:/home/jenkins/.m2/repository/com/google/guava/failureaccess/1.0.1/failureaccess-1.0.1.jar:/home/jenkins/.m2/repository/com/google/guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar:/home/jenkins/.m2/repository/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar:/home/jenkins/.m2/repository/org/checkerframework/checker-qual/3.12.0/checker-qual-3.12.0.jar:/home/jenkins/.m2/repository/com/google/errorprone/error_prone_annotations/2.11.0/error_prone_annotations-2.11.0.jar:/home/jenkins/.m2/repository/com/google/j2objc/j2objc-annotations/1.3/j2objc-annotations-1.3.jar'
+'/home/jenkins/.m2/repository/io/swagger/swagger-annotations/1.6.9/swagger-annotations-1.6.9.jar:/home/jenkins/.m2/repository/org/slf4j/slf4j-api/2.0.6/slf4j-api-2.0.6.jar:/home/jenkins/.m2/repository/org/ini4j/ini4j/0.5.4/ini4j-0.5.4.jar:/home/jenkins/.m2/repository/org/apache/httpcomponents/httpclient/4.5.14/httpclient-4.5.14.jar:/home/jenkins/.m2/repository/org/apache/httpcomponents/httpcore/4.4.16/httpcore-4.4.16.jar:/home/jenkins/.m2/repository/commons-logging/commons-logging/1.2/commons-logging-1.2.jar:/home/jenkins/.m2/repository/commons-codec/commons-codec/1.11/commons-codec-1.11.jar:/home/jenkins/.m2/repository/com/squareup/okhttp3/okhttp/4.10.0/okhttp-4.10.0.jar:/home/jenkins/.m2/repository/com/squareup/okio/okio-jvm/3.0.0/okio-jvm-3.0.0.jar:/home/jenkins/.m2/repository/org/jetbrains/kotlin/kotlin-stdlib-jdk8/1.5.31/kotlin-stdlib-jdk8-1.5.31.jar:/home/jenkins/.m2/repository/org/jetbrains/kotlin/kotlin-stdlib-jdk7/1.5.31/kotlin-stdlib-jdk7-1.5.31.jar:/home/jenkins/.m2/repository/org/jetbrains/kotlin/kotlin-stdlib-common/1.5.31/kotlin-stdlib-common-1.5.31.jar:/home/jenkins/.m2/repository/org/jetbrains/kotlin/kotlin-stdlib/1.6.20/kotlin-stdlib-1.6.20.jar:/home/jenkins/.m2/repository/org/jetbrains/annotations/13.0/annotations-13.0.jar:/home/jenkins/.m2/repository/org/asynchttpclient/async-http-client/2.12.3/async-http-client-2.12.3.jar:/home/jenkins/.m2/repository/org/asynchttpclient/async-http-client-netty-utils/2.12.3/async-http-client-netty-utils-2.12.3.jar:/home/jenkins/.m2/repository/io/netty/netty-buffer/4.1.60.Final/netty-buffer-4.1.60.Final.jar:/home/jenkins/.m2/repository/io/netty/netty-codec-http/4.1.60.Final/netty-codec-http-4.1.60.Final.jar:/home/jenkins/.m2/repository/io/netty/netty-common/4.1.60.Final/netty-common-4.1.60.Final.jar:/home/jenkins/.m2/repository/io/netty/netty-transport/4.1.60.Final/netty-transport-4.1.60.Final.jar:/home/jenkins/.m2/repository/io/netty/netty-codec/4.1.60.Final/netty-codec-4.1.60.Final.jar:/home/jenkins/.m2/repository/io/netty/netty-handler/4.1.60.Final/netty-handler-4.1.60.Final.jar:/home/jenkins/.m2/repository/io/netty/netty-resolver/4.1.60.Final/netty-resolver-4.1.60.Final.jar:/home/jenkins/.m2/repository/io/netty/netty-codec-socks/4.1.60.Final/netty-codec-socks-4.1.60.Final.jar:/home/jenkins/.m2/repository/io/netty/netty-handler-proxy/4.1.60.Final/netty-handler-proxy-4.1.60.Final.jar:/home/jenkins/.m2/repository/io/netty/netty-transport-native-epoll/4.1.60.Final/netty-transport-native-epoll-4.1.60.Final-linux-x86_64.jar:/home/jenkins/.m2/repository/io/netty/netty-transport-native-unix-common/4.1.60.Final/netty-transport-native-unix-common-4.1.60.Final.jar:/home/jenkins/.m2/repository/io/netty/netty-transport-native-kqueue/4.1.60.Final/netty-transport-native-kqueue-4.1.60.Final-osx-x86_64.jar:/home/jenkins/.m2/repository/org/reactivestreams/reactive-streams/1.0.3/reactive-streams-1.0.3.jar:/home/jenkins/.m2/repository/com/typesafe/netty/netty-reactive-streams/2.0.4/netty-reactive-streams-2.0.4.jar:/home/jenkins/.m2/repository/com/sun/activation/jakarta.activation/1.2.2/jakarta.activation-1.2.2.jar:/home/jenkins/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.14.1/jackson-core-2.14.1.jar:/home/jenkins/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.14.1/jackson-annotations-2.14.1.jar:/home/jenkins/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.14.1/jackson-databind-2.14.1.jar:/home/jenkins/.m2/repository/com/fasterxml/jackson/jaxrs/jackson-jaxrs-json-provider/2.14.1/jackson-jaxrs-json-provider-2.14.1.jar:/home/jenkins/.m2/repository/com/fasterxml/jackson/jaxrs/jackson-jaxrs-base/2.14.1/jackson-jaxrs-base-2.14.1.jar:/home/jenkins/.m2/repository/com/fasterxml/jackson/module/jackson-module-jaxb-annotations/2.14.1/jackson-module-jaxb-annotations-2.14.1.jar:/home/jenkins/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/2.3.3/jakarta.xml.bind-api-2.3.3.jar:/home/jenkins/.m2/repository/jakarta/activation/jakarta.activation-api/1.2.2/jakarta.activation-api-1.2.2.jar:/home/jenkins/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-joda/2.14.1/jackson-datatype-joda-2.14.1.jar:/home/jenkins/.m2/repository/joda-time/joda-time/2.12.2/joda-time-2.12.2.jar:/home/jenkins/.m2/repository/com/brsanthu/migbase64/2.2/migbase64-2.2.jar:/home/jenkins/.m2/repository/com/neovisionaries/nv-websocket-client/2.14/nv-websocket-client-2.14.jar:/home/jenkins/.m2/repository/com/google/guava/guava/31.1-jre/guava-31.1-jre.jar:/home/jenkins/.m2/repository/com/google/guava/failureaccess/1.0.1/failureaccess-1.0.1.jar:/home/jenkins/.m2/repository/com/google/guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar:/home/jenkins/.m2/repository/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar:/home/jenkins/.m2/repository/org/checkerframework/checker-qual/3.12.0/checker-qual-3.12.0.jar:/home/jenkins/.m2/repository/com/google/errorprone/error_prone_annotations/2.11.0/error_prone_annotations-2.11.0.jar:/home/jenkins/.m2/repository/com/google/j2objc/j2objc-annotations/1.3/j2objc-annotations-1.3.jar'
 -encoding
 'UTF-8'
 -protected
@@ -9,7 +9,7 @@
 '/var/build/workspace/build-platform-sdks-pipeline/output/purecloudjava-guest/build/src/main/java:/var/build/workspace/build-platform-sdks-pipeline/output/purecloudjava-guest/build/target/generated-sources/annotations'
 -author
 -bottom
-'Copyright &#169; 2022. All rights reserved.'
+'Copyright &#169; 2023. All rights reserved.'
 -charset
 'UTF-8'
 -d
@@ -17,12 +17,12 @@
 -docencoding
 'UTF-8'
 -doctitle
-'purecloud-guest-chat-client 9.1.2 API'
+'purecloud-guest-chat-client 9.1.3 API'
 -linkoffline
 'https://docs.oracle.com/javase/7/docs/api' '/var/build/workspace/build-platform-sdks-pipeline/output/purecloudjava-guest/build/target/javadoc-bundle-options'
 -use
 -windowtitle
-'purecloud-guest-chat-client 9.1.2 API'
+'purecloud-guest-chat-client 9.1.3 API'
 com.mypurecloud.sdk.v2.guest.model
 com.mypurecloud.sdk.v2.guest.api
 com.mypurecloud.sdk.v2.guest.api.request
@@ -34,69 +34,69 @@ com.mypurecloud.sdk.v2.connector.apache
 com.mypurecloud.sdk.v2.connector.ning
 com.mypurecloud.sdk.v2.connector.okhttp
 com.mypurecloud.sdk.v2.extensions
-/home/jenkins/.m2/repository/io/swagger/swagger-annotations/1.6.8/swagger-annotations-1.6.8.jar = 1671562106390
-/home/jenkins/.m2/repository/org/slf4j/slf4j-api/2.0.3/slf4j-api-2.0.3.jar = 1671562106474
-/home/jenkins/.m2/repository/org/ini4j/ini4j/0.5.4/ini4j-0.5.4.jar = 1671531692246
-/home/jenkins/.m2/repository/org/apache/httpcomponents/httpclient/4.5.13/httpclient-4.5.13.jar = 1671531692458
-/home/jenkins/.m2/repository/org/apache/httpcomponents/httpcore/4.4.13/httpcore-4.4.13.jar = 1671536474485
-/home/jenkins/.m2/repository/commons-logging/commons-logging/1.2/commons-logging-1.2.jar = 1671531710058
-/home/jenkins/.m2/repository/commons-codec/commons-codec/1.11/commons-codec-1.11.jar = 1671531693186
-/home/jenkins/.m2/repository/com/squareup/okhttp3/okhttp/4.10.0/okhttp-4.10.0.jar = 1671562107126
-/home/jenkins/.m2/repository/com/squareup/okio/okio-jvm/3.0.0/okio-jvm-3.0.0.jar = 1671562106618
-/home/jenkins/.m2/repository/org/jetbrains/kotlin/kotlin-stdlib-jdk8/1.5.31/kotlin-stdlib-jdk8-1.5.31.jar = 1671562106466
-/home/jenkins/.m2/repository/org/jetbrains/kotlin/kotlin-stdlib-jdk7/1.5.31/kotlin-stdlib-jdk7-1.5.31.jar = 1671562106542
-/home/jenkins/.m2/repository/org/jetbrains/kotlin/kotlin-stdlib-common/1.5.31/kotlin-stdlib-common-1.5.31.jar = 1671562106658
-/home/jenkins/.m2/repository/org/jetbrains/kotlin/kotlin-stdlib/1.6.20/kotlin-stdlib-1.6.20.jar = 1671531742682
-/home/jenkins/.m2/repository/org/jetbrains/annotations/13.0/annotations-13.0.jar = 1671531742686
-/home/jenkins/.m2/repository/org/asynchttpclient/async-http-client/2.12.3/async-http-client-2.12.3.jar = 1671531692266
-/home/jenkins/.m2/repository/org/asynchttpclient/async-http-client-netty-utils/2.12.3/async-http-client-netty-utils-2.12.3.jar = 1671531692250
-/home/jenkins/.m2/repository/io/netty/netty-buffer/4.1.60.Final/netty-buffer-4.1.60.Final.jar = 1671562106786
-/home/jenkins/.m2/repository/io/netty/netty-codec-http/4.1.60.Final/netty-codec-http-4.1.60.Final.jar = 1671562107046
-/home/jenkins/.m2/repository/io/netty/netty-common/4.1.60.Final/netty-common-4.1.60.Final.jar = 1671562107230
-/home/jenkins/.m2/repository/io/netty/netty-transport/4.1.60.Final/netty-transport-4.1.60.Final.jar = 1671562107094
-/home/jenkins/.m2/repository/io/netty/netty-codec/4.1.60.Final/netty-codec-4.1.60.Final.jar = 1671562107130
-/home/jenkins/.m2/repository/io/netty/netty-handler/4.1.60.Final/netty-handler-4.1.60.Final.jar = 1671562107450
-/home/jenkins/.m2/repository/io/netty/netty-resolver/4.1.60.Final/netty-resolver-4.1.60.Final.jar = 1671562107134
-/home/jenkins/.m2/repository/io/netty/netty-codec-socks/4.1.60.Final/netty-codec-socks-4.1.60.Final.jar = 1671531692342
-/home/jenkins/.m2/repository/io/netty/netty-handler-proxy/4.1.60.Final/netty-handler-proxy-4.1.60.Final.jar = 1671531692334
-/home/jenkins/.m2/repository/io/netty/netty-transport-native-epoll/4.1.60.Final/netty-transport-native-epoll-4.1.60.Final-linux-x86_64.jar = 1671531692338
-/home/jenkins/.m2/repository/io/netty/netty-transport-native-unix-common/4.1.60.Final/netty-transport-native-unix-common-4.1.60.Final.jar = 1671531692342
-/home/jenkins/.m2/repository/io/netty/netty-transport-native-kqueue/4.1.60.Final/netty-transport-native-kqueue-4.1.60.Final-osx-x86_64.jar = 1671531692350
-/home/jenkins/.m2/repository/org/reactivestreams/reactive-streams/1.0.3/reactive-streams-1.0.3.jar = 1671531692350
-/home/jenkins/.m2/repository/com/typesafe/netty/netty-reactive-streams/2.0.4/netty-reactive-streams-2.0.4.jar = 1671531692354
-/home/jenkins/.m2/repository/com/sun/activation/jakarta.activation/1.2.2/jakarta.activation-1.2.2.jar = 1671562107182
-/home/jenkins/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.14.0/jackson-core-2.14.0.jar = 1671562107518
-/home/jenkins/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.14.0/jackson-annotations-2.14.0.jar = 1671562107230
-/home/jenkins/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.14.0/jackson-databind-2.14.0.jar = 1671562108058
-/home/jenkins/.m2/repository/com/fasterxml/jackson/jaxrs/jackson-jaxrs-json-provider/2.14.0/jackson-jaxrs-json-provider-2.14.0.jar = 1671562107262
-/home/jenkins/.m2/repository/com/fasterxml/jackson/jaxrs/jackson-jaxrs-base/2.14.0/jackson-jaxrs-base-2.14.0.jar = 1671562107282
-/home/jenkins/.m2/repository/com/fasterxml/jackson/module/jackson-module-jaxb-annotations/2.14.0/jackson-module-jaxb-annotations-2.14.0.jar = 1671562107298
-/home/jenkins/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/2.3.3/jakarta.xml.bind-api-2.3.3.jar = 1671531692994
-/home/jenkins/.m2/repository/jakarta/activation/jakarta.activation-api/1.2.2/jakarta.activation-api-1.2.2.jar = 1671536475821
-/home/jenkins/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-joda/2.14.0/jackson-datatype-joda-2.14.0.jar = 1671562107418
-/home/jenkins/.m2/repository/joda-time/joda-time/2.10.14/joda-time-2.10.14.jar = 1671562107834
-/home/jenkins/.m2/repository/com/brsanthu/migbase64/2.2/migbase64-2.2.jar = 1671531692370
-/home/jenkins/.m2/repository/com/neovisionaries/nv-websocket-client/2.14/nv-websocket-client-2.14.jar = 1671531693302
-/home/jenkins/.m2/repository/com/google/guava/guava/31.1-jre/guava-31.1-jre.jar = 1671562108622
-/home/jenkins/.m2/repository/com/google/guava/failureaccess/1.0.1/failureaccess-1.0.1.jar = 1671531692470
-/home/jenkins/.m2/repository/com/google/guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar = 1671531692470
-/home/jenkins/.m2/repository/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar = 1671531692946
-/home/jenkins/.m2/repository/org/checkerframework/checker-qual/3.12.0/checker-qual-3.12.0.jar = 1671562107674
-/home/jenkins/.m2/repository/com/google/errorprone/error_prone_annotations/2.11.0/error_prone_annotations-2.11.0.jar = 1671536470401
-/home/jenkins/.m2/repository/com/google/j2objc/j2objc-annotations/1.3/j2objc-annotations-1.3.jar = 1671531692482
-/var/build/workspace/build-platform-sdks-pipeline/output/purecloudjava-guest/build/src/main/java = 1671562053026
-/var/build/workspace/build-platform-sdks-pipeline/output/purecloudjava-guest/build/target/generated-sources/annotations = 1671562117470
-/var/build/workspace/build-platform-sdks-pipeline/output/purecloudjava-guest/build/target/apidocs/package-list = 1671562169793
-/var/build/workspace/build-platform-sdks-pipeline/output/purecloudjava-guest/build/target/apidocs/overview-frame.html = 1671562169813
-/var/build/workspace/build-platform-sdks-pipeline/output/purecloudjava-guest/build/target/apidocs/constant-values.html = 1671562170125
-/var/build/workspace/build-platform-sdks-pipeline/output/purecloudjava-guest/build/target/apidocs/serialized-form.html = 1671562170277
-/var/build/workspace/build-platform-sdks-pipeline/output/purecloudjava-guest/build/target/apidocs/overview-tree.html = 1671562171965
-/var/build/workspace/build-platform-sdks-pipeline/output/purecloudjava-guest/build/target/apidocs/index-all.html = 1671562172241
-/var/build/workspace/build-platform-sdks-pipeline/output/purecloudjava-guest/build/target/apidocs/deprecated-list.html = 1671562172281
-/var/build/workspace/build-platform-sdks-pipeline/output/purecloudjava-guest/build/target/apidocs/allclasses-frame.html = 1671562172281
-/var/build/workspace/build-platform-sdks-pipeline/output/purecloudjava-guest/build/target/apidocs/allclasses-noframe.html = 1671562172281
-/var/build/workspace/build-platform-sdks-pipeline/output/purecloudjava-guest/build/target/apidocs/index.html = 1671562172305
-/var/build/workspace/build-platform-sdks-pipeline/output/purecloudjava-guest/build/target/apidocs/overview-summary.html = 1671562172305
-/var/build/workspace/build-platform-sdks-pipeline/output/purecloudjava-guest/build/target/apidocs/help-doc.html = 1671562172313
-/var/build/workspace/build-platform-sdks-pipeline/output/purecloudjava-guest/build/target/apidocs/stylesheet.css = 1671562172313
-/var/build/workspace/build-platform-sdks-pipeline/output/purecloudjava-guest/build/target/apidocs/script.js = 1671562172313
+/home/jenkins/.m2/repository/io/swagger/swagger-annotations/1.6.9/swagger-annotations-1.6.9.jar = 1679033610663
+/home/jenkins/.m2/repository/org/slf4j/slf4j-api/2.0.6/slf4j-api-2.0.6.jar = 1679033610687
+/home/jenkins/.m2/repository/org/ini4j/ini4j/0.5.4/ini4j-0.5.4.jar = 1679033610711
+/home/jenkins/.m2/repository/org/apache/httpcomponents/httpclient/4.5.14/httpclient-4.5.14.jar = 1679033611395
+/home/jenkins/.m2/repository/org/apache/httpcomponents/httpcore/4.4.16/httpcore-4.4.16.jar = 1679033610979
+/home/jenkins/.m2/repository/commons-logging/commons-logging/1.2/commons-logging-1.2.jar = 1679033610719
+/home/jenkins/.m2/repository/commons-codec/commons-codec/1.11/commons-codec-1.11.jar = 1679033610987
+/home/jenkins/.m2/repository/com/squareup/okhttp3/okhttp/4.10.0/okhttp-4.10.0.jar = 1679033611451
+/home/jenkins/.m2/repository/com/squareup/okio/okio-jvm/3.0.0/okio-jvm-3.0.0.jar = 1679033611055
+/home/jenkins/.m2/repository/org/jetbrains/kotlin/kotlin-stdlib-jdk8/1.5.31/kotlin-stdlib-jdk8-1.5.31.jar = 1679033611055
+/home/jenkins/.m2/repository/org/jetbrains/kotlin/kotlin-stdlib-jdk7/1.5.31/kotlin-stdlib-jdk7-1.5.31.jar = 1679033611039
+/home/jenkins/.m2/repository/org/jetbrains/kotlin/kotlin-stdlib-common/1.5.31/kotlin-stdlib-common-1.5.31.jar = 1679033611207
+/home/jenkins/.m2/repository/org/jetbrains/kotlin/kotlin-stdlib/1.6.20/kotlin-stdlib-1.6.20.jar = 1679033612403
+/home/jenkins/.m2/repository/org/jetbrains/annotations/13.0/annotations-13.0.jar = 1679033611151
+/home/jenkins/.m2/repository/org/asynchttpclient/async-http-client/2.12.3/async-http-client-2.12.3.jar = 1679033611607
+/home/jenkins/.m2/repository/org/asynchttpclient/async-http-client-netty-utils/2.12.3/async-http-client-netty-utils-2.12.3.jar = 1679033611299
+/home/jenkins/.m2/repository/io/netty/netty-buffer/4.1.60.Final/netty-buffer-4.1.60.Final.jar = 1679033611627
+/home/jenkins/.m2/repository/io/netty/netty-codec-http/4.1.60.Final/netty-codec-http-4.1.60.Final.jar = 1679033612063
+/home/jenkins/.m2/repository/io/netty/netty-common/4.1.60.Final/netty-common-4.1.60.Final.jar = 1679033612031
+/home/jenkins/.m2/repository/io/netty/netty-transport/4.1.60.Final/netty-transport-4.1.60.Final.jar = 1679033612027
+/home/jenkins/.m2/repository/io/netty/netty-codec/4.1.60.Final/netty-codec-4.1.60.Final.jar = 1679033611927
+/home/jenkins/.m2/repository/io/netty/netty-handler/4.1.60.Final/netty-handler-4.1.60.Final.jar = 1679033612391
+/home/jenkins/.m2/repository/io/netty/netty-resolver/4.1.60.Final/netty-resolver-4.1.60.Final.jar = 1679033612083
+/home/jenkins/.m2/repository/io/netty/netty-codec-socks/4.1.60.Final/netty-codec-socks-4.1.60.Final.jar = 1679033612107
+/home/jenkins/.m2/repository/io/netty/netty-handler-proxy/4.1.60.Final/netty-handler-proxy-4.1.60.Final.jar = 1679033612119
+/home/jenkins/.m2/repository/io/netty/netty-transport-native-epoll/4.1.60.Final/netty-transport-native-epoll-4.1.60.Final-linux-x86_64.jar = 1679033612231
+/home/jenkins/.m2/repository/io/netty/netty-transport-native-unix-common/4.1.60.Final/netty-transport-native-unix-common-4.1.60.Final.jar = 1679033612139
+/home/jenkins/.m2/repository/io/netty/netty-transport-native-kqueue/4.1.60.Final/netty-transport-native-kqueue-4.1.60.Final-osx-x86_64.jar = 1679033612279
+/home/jenkins/.m2/repository/org/reactivestreams/reactive-streams/1.0.3/reactive-streams-1.0.3.jar = 1679033612199
+/home/jenkins/.m2/repository/com/typesafe/netty/netty-reactive-streams/2.0.4/netty-reactive-streams-2.0.4.jar = 1679033612303
+/home/jenkins/.m2/repository/com/sun/activation/jakarta.activation/1.2.2/jakarta.activation-1.2.2.jar = 1679033612271
+/home/jenkins/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.14.1/jackson-core-2.14.1.jar = 1679033612687
+/home/jenkins/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.14.1/jackson-annotations-2.14.1.jar = 1679033612355
+/home/jenkins/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.14.1/jackson-databind-2.14.1.jar = 1679033613283
+/home/jenkins/.m2/repository/com/fasterxml/jackson/jaxrs/jackson-jaxrs-json-provider/2.14.1/jackson-jaxrs-json-provider-2.14.1.jar = 1679033612391
+/home/jenkins/.m2/repository/com/fasterxml/jackson/jaxrs/jackson-jaxrs-base/2.14.1/jackson-jaxrs-base-2.14.1.jar = 1679033612451
+/home/jenkins/.m2/repository/com/fasterxml/jackson/module/jackson-module-jaxb-annotations/2.14.1/jackson-module-jaxb-annotations-2.14.1.jar = 1679033612447
+/home/jenkins/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/2.3.3/jakarta.xml.bind-api-2.3.3.jar = 1679033600863
+/home/jenkins/.m2/repository/jakarta/activation/jakarta.activation-api/1.2.2/jakarta.activation-api-1.2.2.jar = 1679033612519
+/home/jenkins/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-joda/2.14.1/jackson-datatype-joda-2.14.1.jar = 1679033612511
+/home/jenkins/.m2/repository/joda-time/joda-time/2.12.2/joda-time-2.12.2.jar = 1679033612875
+/home/jenkins/.m2/repository/com/brsanthu/migbase64/2.2/migbase64-2.2.jar = 1679033612591
+/home/jenkins/.m2/repository/com/neovisionaries/nv-websocket-client/2.14/nv-websocket-client-2.14.jar = 1679033612643
+/home/jenkins/.m2/repository/com/google/guava/guava/31.1-jre/guava-31.1-jre.jar = 1679033613783
+/home/jenkins/.m2/repository/com/google/guava/failureaccess/1.0.1/failureaccess-1.0.1.jar = 1679033612691
+/home/jenkins/.m2/repository/com/google/guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar = 1679033612731
+/home/jenkins/.m2/repository/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar = 1679033612731
+/home/jenkins/.m2/repository/org/checkerframework/checker-qual/3.12.0/checker-qual-3.12.0.jar = 1679033612891
+/home/jenkins/.m2/repository/com/google/errorprone/error_prone_annotations/2.11.0/error_prone_annotations-2.11.0.jar = 1679033612803
+/home/jenkins/.m2/repository/com/google/j2objc/j2objc-annotations/1.3/j2objc-annotations-1.3.jar = 1679033612811
+/var/build/workspace/build-platform-sdks-pipeline/output/purecloudjava-guest/build/src/main/java = 1679033571866
+/var/build/workspace/build-platform-sdks-pipeline/output/purecloudjava-guest/build/target/generated-sources/annotations = 1679033621855
+/var/build/workspace/build-platform-sdks-pipeline/output/purecloudjava-guest/build/target/apidocs/package-list = 1679033664032
+/var/build/workspace/build-platform-sdks-pipeline/output/purecloudjava-guest/build/target/apidocs/overview-frame.html = 1679033664032
+/var/build/workspace/build-platform-sdks-pipeline/output/purecloudjava-guest/build/target/apidocs/constant-values.html = 1679033664212
+/var/build/workspace/build-platform-sdks-pipeline/output/purecloudjava-guest/build/target/apidocs/serialized-form.html = 1679033664272
+/var/build/workspace/build-platform-sdks-pipeline/output/purecloudjava-guest/build/target/apidocs/overview-tree.html = 1679033665260
+/var/build/workspace/build-platform-sdks-pipeline/output/purecloudjava-guest/build/target/apidocs/index-all.html = 1679033665588
+/var/build/workspace/build-platform-sdks-pipeline/output/purecloudjava-guest/build/target/apidocs/deprecated-list.html = 1679033665608
+/var/build/workspace/build-platform-sdks-pipeline/output/purecloudjava-guest/build/target/apidocs/allclasses-frame.html = 1679033665636
+/var/build/workspace/build-platform-sdks-pipeline/output/purecloudjava-guest/build/target/apidocs/allclasses-noframe.html = 1679033665640
+/var/build/workspace/build-platform-sdks-pipeline/output/purecloudjava-guest/build/target/apidocs/index.html = 1679033665644
+/var/build/workspace/build-platform-sdks-pipeline/output/purecloudjava-guest/build/target/apidocs/overview-summary.html = 1679033665664
+/var/build/workspace/build-platform-sdks-pipeline/output/purecloudjava-guest/build/target/apidocs/help-doc.html = 1679033665672
+/var/build/workspace/build-platform-sdks-pipeline/output/purecloudjava-guest/build/target/apidocs/stylesheet.css = 1679033665672
+/var/build/workspace/build-platform-sdks-pipeline/output/purecloudjava-guest/build/target/apidocs/script.js = 1679033665672
