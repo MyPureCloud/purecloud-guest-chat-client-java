@@ -1,9 +1,9 @@
 {
   "major": 9,
-  "minor": 1,
-  "point": 4,
+  "minor": 2,
+  "point": 0,
   "prerelease": "",
   "apiVersion": 0,
-  "display": "9.1.4",
-  "displayFull": "9.1.4"
+  "display": "9.2.0",
+  "displayFull": "9.2.0"
 }

@@ -13,6 +13,7 @@ docs/JourneyActionMap.md
 docs/JourneyContext.md
 docs/JourneyCustomer.md
 docs/JourneyCustomerSession.md
+docs/Limit.md
 docs/WebChatApi.json
 docs/WebChatApi.md
 docs/WebChatConversation.md
@@ -78,6 +79,7 @@ src/main/java/com/mypurecloud/sdk/v2/guest/model/JourneyActionMap.java
 src/main/java/com/mypurecloud/sdk/v2/guest/model/JourneyContext.java
 src/main/java/com/mypurecloud/sdk/v2/guest/model/JourneyCustomer.java
 src/main/java/com/mypurecloud/sdk/v2/guest/model/JourneyCustomerSession.java
+src/main/java/com/mypurecloud/sdk/v2/guest/model/Limit.java
 src/main/java/com/mypurecloud/sdk/v2/guest/model/WebChatConversation.java
 src/main/java/com/mypurecloud/sdk/v2/guest/model/WebChatGuestMediaRequest.java
 src/main/java/com/mypurecloud/sdk/v2/guest/model/WebChatGuestMediaRequestEntityList.java

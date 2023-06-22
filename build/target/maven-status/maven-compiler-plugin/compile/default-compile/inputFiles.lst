@@ -33,6 +33,7 @@
 /var/build/workspace/build-platform-sdks-pipeline/output/purecloudjava-guest/build/src/main/java/com/mypurecloud/sdk/v2/guest/model/JourneyAction.java
 /var/build/workspace/build-platform-sdks-pipeline/output/purecloudjava-guest/build/src/main/java/com/mypurecloud/sdk/v2/ApiDateFormat.java
 /var/build/workspace/build-platform-sdks-pipeline/output/purecloudjava-guest/build/src/main/java/com/mypurecloud/sdk/v2/guest/model/WebChatConversation.java
+/var/build/workspace/build-platform-sdks-pipeline/output/purecloudjava-guest/build/src/main/java/com/mypurecloud/sdk/v2/guest/model/Limit.java
 /var/build/workspace/build-platform-sdks-pipeline/output/purecloudjava-guest/build/src/main/java/com/mypurecloud/sdk/v2/connector/ApiClientConnectorLoader.java
 /var/build/workspace/build-platform-sdks-pipeline/output/purecloudjava-guest/build/src/main/java/com/mypurecloud/sdk/v2/connector/apache/ApacheHttpClientConnectorProvider.java
 /var/build/workspace/build-platform-sdks-pipeline/output/purecloudjava-guest/build/src/main/java/com/mypurecloud/sdk/v2/guest/model/JourneyCustomerSession.java

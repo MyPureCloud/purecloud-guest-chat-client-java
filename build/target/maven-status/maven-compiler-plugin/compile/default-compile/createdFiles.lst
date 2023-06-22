@@ -1,5 +1,6 @@
 com/mypurecloud/sdk/v2/guest/api/WebChatApiAsync$9.class
 com/mypurecloud/sdk/v2/guest/api/request/GetWebchatGuestConversationMessagesRequest$1.class
+com/mypurecloud/sdk/v2/guest/model/Limit.class
 com/mypurecloud/sdk/v2/guest/api/WebChatApiAsync$42.class
 com/mypurecloud/sdk/v2/guest/api/request/GetWebchatGuestConversationMediarequestsRequest$Builder.class
 com/mypurecloud/sdk/v2/guest/api/WebChatApiAsync$22.class
@@ -86,6 +87,7 @@ com/mypurecloud/sdk/v2/guest/api/request/PostWebchatGuestConversationMemberMessa
 com/mypurecloud/sdk/v2/guest/FileWatcher.class
 com/mypurecloud/sdk/v2/guest/auth/OAuthFlow.class
 com/mypurecloud/sdk/v2/guest/ApiClient$ConnectorProperties.class
+com/mypurecloud/sdk/v2/guest/model/Limit$NamespaceEnumDeserializer.class
 com/mypurecloud/sdk/v2/guest/api/WebChatApiAsync$35.class
 com/mypurecloud/sdk/v2/guest/model/WebChatMessage$BodyTypeEnumDeserializer.class
 com/mypurecloud/sdk/v2/guest/ApiRequestBuilder.class
@@ -118,6 +120,7 @@ com/mypurecloud/sdk/v2/guest/SLF4JInterceptor$HeaderComparator.class
 com/mypurecloud/sdk/v2/guest/connector/ApiClientConnectorProperty.class
 com/mypurecloud/sdk/v2/guest/api/request/GetWebchatGuestConversationMediarequestsRequest.class
 com/mypurecloud/sdk/v2/guest/api/WebChatApi$1.class
+com/mypurecloud/sdk/v2/guest/model/Limit$NamespaceEnum.class
 com/mypurecloud/sdk/v2/guest/model/WebChatMemberInfoEntityList.class
 com/mypurecloud/sdk/v2/guest/api/WebChatApiAsync$7.class
 com/mypurecloud/sdk/v2/guest/ApiClient$ApiRequestWrapper.class
