@@ -55,6 +55,7 @@ ispreview: true
 | JOURNEY | &quot;journey&quot; | 
 | KNOWLEDGE | &quot;knowledge&quot; | 
 | LANGUAGE_UNDERSTANDING | &quot;language.understanding&quot; | 
+| LEARNING | &quot;learning&quot; | 
 | LIMIT_REGISTRY | &quot;limit.registry&quot; | 
 | MARKETPLACE | &quot;marketplace&quot; | 
 | MEDIA_COMMUNICATIONS | &quot;media.communications&quot; | 

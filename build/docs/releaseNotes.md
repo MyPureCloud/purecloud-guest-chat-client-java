@@ -1,4 +1,4 @@
-Platform API version: 7205
+Platform API version: 7251
 
 
 # Major Changes (0 changes)
@@ -8,7 +8,7 @@ Platform API version: 7205
 
 **Limit** (1 change)
 
-* Enum value media.communications was added to property namespace
+* Enum value learning was added to property namespace
 
 
 # Point Changes (0 changes)
