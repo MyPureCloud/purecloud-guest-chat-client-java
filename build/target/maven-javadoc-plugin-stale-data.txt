@@ -17,12 +17,12 @@
 -docencoding
 'UTF-8'
 -doctitle
-'purecloud-guest-chat-client 13.3.0 API'
+'purecloud-guest-chat-client 13.4.0 API'
 -linkoffline
 'https://docs.oracle.com/javase/8/docs/api' '/var/build/workspace/build-platform-sdks-pipeline/output/purecloudjava-guest/build/target/javadoc-bundle-options'
 -use
 -windowtitle
-'purecloud-guest-chat-client 13.3.0 API'
+'purecloud-guest-chat-client 13.4.0 API'
 com.mypurecloud.sdk.v2.guest.model
 com.mypurecloud.sdk.v2.guest.api
 com.mypurecloud.sdk.v2.guest.api.request
@@ -85,23 +85,23 @@ com.mypurecloud.sdk.v2.extensions
 /home/jenkins/.m2/repository/org/checkerframework/checker-qual/3.33.0/checker-qual-3.33.0.jar = 1696424379213
 /home/jenkins/.m2/repository/com/google/errorprone/error_prone_annotations/2.18.0/error_prone_annotations-2.18.0.jar = 1696424379169
 /home/jenkins/.m2/repository/com/google/j2objc/j2objc-annotations/2.8/j2objc-annotations-2.8.jar = 1696424379177
-/var/build/workspace/build-platform-sdks-pipeline/output/purecloudjava-guest/build/src/main/java = 1696427714394
-/var/build/workspace/build-platform-sdks-pipeline/output/purecloudjava-guest/build/target/generated-sources/annotations = 1696427736158
-/var/build/workspace/build-platform-sdks-pipeline/output/purecloudjava-guest/build/target/apidocs/element-list = 1696427802899
-/var/build/workspace/build-platform-sdks-pipeline/output/purecloudjava-guest/build/target/apidocs/serialized-form.html = 1696427803355
-/var/build/workspace/build-platform-sdks-pipeline/output/purecloudjava-guest/build/target/apidocs/overview-tree.html = 1696427805187
-/var/build/workspace/build-platform-sdks-pipeline/output/purecloudjava-guest/build/target/apidocs/index.html = 1696427805215
-/var/build/workspace/build-platform-sdks-pipeline/output/purecloudjava-guest/build/target/apidocs/allclasses-index.html = 1696427805807
-/var/build/workspace/build-platform-sdks-pipeline/output/purecloudjava-guest/build/target/apidocs/allpackages-index.html = 1696427805811
-/var/build/workspace/build-platform-sdks-pipeline/output/purecloudjava-guest/build/target/apidocs/module-search-index.js = 1696427805811
-/var/build/workspace/build-platform-sdks-pipeline/output/purecloudjava-guest/build/target/apidocs/package-search-index.js = 1696427805811
-/var/build/workspace/build-platform-sdks-pipeline/output/purecloudjava-guest/build/target/apidocs/type-search-index.js = 1696427805811
-/var/build/workspace/build-platform-sdks-pipeline/output/purecloudjava-guest/build/target/apidocs/member-search-index.js = 1696427805831
-/var/build/workspace/build-platform-sdks-pipeline/output/purecloudjava-guest/build/target/apidocs/tag-search-index.js = 1696427805831
-/var/build/workspace/build-platform-sdks-pipeline/output/purecloudjava-guest/build/target/apidocs/index-all.html = 1696427806219
-/var/build/workspace/build-platform-sdks-pipeline/output/purecloudjava-guest/build/target/apidocs/overview-summary.html = 1696427806243
-/var/build/workspace/build-platform-sdks-pipeline/output/purecloudjava-guest/build/target/apidocs/help-doc.html = 1696427806251
-/var/build/workspace/build-platform-sdks-pipeline/output/purecloudjava-guest/build/target/apidocs/stylesheet.css = 1696427806255
-/var/build/workspace/build-platform-sdks-pipeline/output/purecloudjava-guest/build/target/apidocs/script.js = 1696427806255
-/var/build/workspace/build-platform-sdks-pipeline/output/purecloudjava-guest/build/target/apidocs/search.js = 1696427806255
-/var/build/workspace/build-platform-sdks-pipeline/output/purecloudjava-guest/build/target/apidocs/jquery-ui.overrides.css = 1696427806283
+/var/build/workspace/build-platform-sdks-pipeline/output/purecloudjava-guest/build/src/main/java = 1696437889830
+/var/build/workspace/build-platform-sdks-pipeline/output/purecloudjava-guest/build/target/generated-sources/annotations = 1696437895294
+/var/build/workspace/build-platform-sdks-pipeline/output/purecloudjava-guest/build/target/apidocs/element-list = 1696437907094
+/var/build/workspace/build-platform-sdks-pipeline/output/purecloudjava-guest/build/target/apidocs/serialized-form.html = 1696437907210
+/var/build/workspace/build-platform-sdks-pipeline/output/purecloudjava-guest/build/target/apidocs/overview-tree.html = 1696437907742
+/var/build/workspace/build-platform-sdks-pipeline/output/purecloudjava-guest/build/target/apidocs/index.html = 1696437907746
+/var/build/workspace/build-platform-sdks-pipeline/output/purecloudjava-guest/build/target/apidocs/allclasses-index.html = 1696437907862
+/var/build/workspace/build-platform-sdks-pipeline/output/purecloudjava-guest/build/target/apidocs/allpackages-index.html = 1696437907866
+/var/build/workspace/build-platform-sdks-pipeline/output/purecloudjava-guest/build/target/apidocs/module-search-index.js = 1696437907866
+/var/build/workspace/build-platform-sdks-pipeline/output/purecloudjava-guest/build/target/apidocs/package-search-index.js = 1696437907866
+/var/build/workspace/build-platform-sdks-pipeline/output/purecloudjava-guest/build/target/apidocs/type-search-index.js = 1696437907866
+/var/build/workspace/build-platform-sdks-pipeline/output/purecloudjava-guest/build/target/apidocs/member-search-index.js = 1696437907874
+/var/build/workspace/build-platform-sdks-pipeline/output/purecloudjava-guest/build/target/apidocs/tag-search-index.js = 1696437907874
+/var/build/workspace/build-platform-sdks-pipeline/output/purecloudjava-guest/build/target/apidocs/index-all.html = 1696437908014
+/var/build/workspace/build-platform-sdks-pipeline/output/purecloudjava-guest/build/target/apidocs/overview-summary.html = 1696437908022
+/var/build/workspace/build-platform-sdks-pipeline/output/purecloudjava-guest/build/target/apidocs/help-doc.html = 1696437908030
+/var/build/workspace/build-platform-sdks-pipeline/output/purecloudjava-guest/build/target/apidocs/stylesheet.css = 1696437908034
+/var/build/workspace/build-platform-sdks-pipeline/output/purecloudjava-guest/build/target/apidocs/script.js = 1696437908038
+/var/build/workspace/build-platform-sdks-pipeline/output/purecloudjava-guest/build/target/apidocs/search.js = 1696437908038
+/var/build/workspace/build-platform-sdks-pipeline/output/purecloudjava-guest/build/target/apidocs/jquery-ui.overrides.css = 1696437908046
