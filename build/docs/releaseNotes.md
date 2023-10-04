@@ -1,14 +1,12 @@
-Platform API version: 7251
+Platform API version: 7379
+
+
 
 
 # Major Changes (0 changes)
 
 
-# Minor Changes (1 change)
-
-**Limit** (1 change)
-
-* Enum value learning was added to property namespace
+# Minor Changes (0 changes)
 
 
 # Point Changes (0 changes)

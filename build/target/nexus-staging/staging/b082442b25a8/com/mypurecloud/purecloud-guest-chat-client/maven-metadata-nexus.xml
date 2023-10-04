@@ -3,10 +3,10 @@
   <groupId>com.mypurecloud</groupId>
   <artifactId>purecloud-guest-chat-client</artifactId>
   <versioning>
-    <release>13.2.0</release>
+    <release>13.3.0</release>
     <versions>
-      <version>13.2.0</version>
+      <version>13.3.0</version>
     </versions>
-    <lastUpdated>20230815062312</lastUpdated>
+    <lastUpdated>20231004122922</lastUpdated>
   </versioning>
 </metadata>
