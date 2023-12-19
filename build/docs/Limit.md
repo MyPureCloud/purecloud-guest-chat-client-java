@@ -43,6 +43,7 @@ ispreview: true
 | DATATABLES | &quot;datatables&quot; | 
 | DIRECTORY | &quot;directory&quot; | 
 | EMAIL | &quot;email&quot; | 
+| EMPLOYEE_ENGAGEMENT | &quot;employee.engagement&quot; | 
 | EVENT_ORCHESTRATION | &quot;event.orchestration&quot; | 
 | EXTERNAL_CONTACTS | &quot;external.contacts&quot; | 
 | GCV | &quot;gcv&quot; | 
