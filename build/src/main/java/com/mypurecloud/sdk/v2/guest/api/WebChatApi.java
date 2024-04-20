@@ -133,7 +133,7 @@ public class WebChatApi {
 
   /**
    * Get a media request in the conversation
-   * 
+   * This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-legacy-co-browse-and-screenshare/
    * @param conversationId conversationId (required)
    * @param mediaRequestId mediaRequestId (required)
    * @return WebChatGuestMediaRequest
@@ -146,7 +146,7 @@ public class WebChatApi {
 
   /**
    * Get a media request in the conversation
-   * 
+   * This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-legacy-co-browse-and-screenshare/
    * @param conversationId conversationId (required)
    * @param mediaRequestId mediaRequestId (required)
    * @return WebChatGuestMediaRequest
@@ -167,7 +167,7 @@ public class WebChatApi {
 
   /**
    * Get a media request in the conversation
-   * 
+   * This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-legacy-co-browse-and-screenshare/
    * @param request The request object
    * @return WebChatGuestMediaRequest
    * @throws ApiException if the request fails on the server
@@ -186,7 +186,7 @@ public class WebChatApi {
 
   /**
    * Get a media request in the conversation
-   * 
+   * This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-legacy-co-browse-and-screenshare/
    * @param request The request object
    * @return the response
    * @throws IOException if the request fails to be processed
@@ -641,7 +641,7 @@ public class WebChatApi {
 
   /**
    * Update a media request in the conversation, setting the state to ACCEPTED/DECLINED/ERRORED
-   * 
+   * This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-legacy-co-browse-and-screenshare/
    * @param conversationId conversationId (required)
    * @param mediaRequestId mediaRequestId (required)
    * @param body Request (required)
@@ -655,7 +655,7 @@ public class WebChatApi {
 
   /**
    * Update a media request in the conversation, setting the state to ACCEPTED/DECLINED/ERRORED
-   * 
+   * This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-legacy-co-browse-and-screenshare/
    * @param conversationId conversationId (required)
    * @param mediaRequestId mediaRequestId (required)
    * @param body Request (required)
@@ -679,7 +679,7 @@ public class WebChatApi {
 
   /**
    * Update a media request in the conversation, setting the state to ACCEPTED/DECLINED/ERRORED
-   * 
+   * This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-legacy-co-browse-and-screenshare/
    * @param request The request object
    * @return WebChatGuestMediaRequest
    * @throws ApiException if the request fails on the server
@@ -698,7 +698,7 @@ public class WebChatApi {
 
   /**
    * Update a media request in the conversation, setting the state to ACCEPTED/DECLINED/ERRORED
-   * 
+   * This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-legacy-co-browse-and-screenshare/
    * @param request The request object
    * @return the response
    * @throws IOException if the request fails to be processed

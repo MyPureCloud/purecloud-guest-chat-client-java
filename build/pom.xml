@@ -98,7 +98,7 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
-        <version>3.12.1</version>
+        <version>3.13.0</version>
         <configuration>
           <source>1.8</source>
           <target>1.8 </target>
@@ -110,7 +110,7 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-source-plugin</artifactId>
-        <version>3.3.0</version>
+        <version>3.3.1</version>
         <executions>
           <execution>
             <id>attach-sources</id>
@@ -156,7 +156,7 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-gpg-plugin</artifactId>
-        <version>3.2.0</version>
+        <version>3.2.3</version>
         <executions>
           <execution>
             <id>sign-artifacts</id>
@@ -278,9 +278,9 @@
   </dependencies>
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <swagger-annotations-version>1.6.13</swagger-annotations-version>
+    <swagger-annotations-version>1.6.14</swagger-annotations-version>
     <jackson-version>2.17.0</jackson-version>
-    <slf4j-version>2.0.12</slf4j-version>
+    <slf4j-version>2.0.13</slf4j-version>
     <jodatime-version>2.12.7</jodatime-version>
     <testng-version>6.14.3</testng-version>
     <apache-httpclient-version>4.5.14</apache-httpclient-version>
