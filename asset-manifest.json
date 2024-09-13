@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/purecloud-guest-chat-client-java/static/css/main.1f1c02e6.css",
-    "main.js": "/purecloud-guest-chat-client-java/static/js/main.75a1fba4.js",
+    "main.js": "/purecloud-guest-chat-client-java/static/js/main.7fa6645f.js",
     "react-syntax-highlighter/refractor-import.js": "/purecloud-guest-chat-client-java/static/js/react-syntax-highlighter/refractor-import.252e9f8b.chunk.js",
     "static/js/453.5565870f.chunk.js": "/purecloud-guest-chat-client-java/static/js/453.5565870f.chunk.js",
     "static/media/genesys-dev-icons.eot?": "/purecloud-guest-chat-client-java/static/media/genesys-dev-icons.ac21bc53ac924798cc2f.eot",
@@ -23,12 +23,12 @@
     "static/media/logo-dark.svg": "/purecloud-guest-chat-client-java/static/media/logo-dark.69cd32a4484f8e0b926aba88c6200252.svg",
     "index.html": "/purecloud-guest-chat-client-java/index.html",
     "main.1f1c02e6.css.map": "/purecloud-guest-chat-client-java/static/css/main.1f1c02e6.css.map",
-    "main.75a1fba4.js.map": "/purecloud-guest-chat-client-java/static/js/main.75a1fba4.js.map",
+    "main.7fa6645f.js.map": "/purecloud-guest-chat-client-java/static/js/main.7fa6645f.js.map",
     "refractor-import.252e9f8b.chunk.js.map": "/purecloud-guest-chat-client-java/static/js/react-syntax-highlighter/refractor-import.252e9f8b.chunk.js.map",
     "453.5565870f.chunk.js.map": "/purecloud-guest-chat-client-java/static/js/453.5565870f.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.1f1c02e6.css",
-    "static/js/main.75a1fba4.js"
+    "static/js/main.7fa6645f.js"
   ]
 }

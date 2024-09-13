@@ -20,7 +20,6 @@ All URIs are relative to *https://api.mypurecloud.com*
 ## deleteWebchatGuestConversationMember
 
 
-
 > Void deleteWebchatGuestConversationMember(conversationId, memberId)
 
 Remove a member from a chat conversation
@@ -68,7 +67,7 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **conversationId** | **String**| conversationId | |
 | **memberId** | **String**| memberId | |
-{: class="table table-striped"}
+
 
 
 ### Return type
@@ -77,7 +76,9 @@ null (empty response body)
 
 ## getWebchatGuestConversationMediarequest
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
 > [WebChatGuestMediaRequest](WebChatGuestMediaRequest) getWebchatGuestConversationMediarequest(conversationId, mediaRequestId)
 
@@ -129,7 +130,7 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **conversationId** | **String**| conversationId | |
 | **mediaRequestId** | **String**| mediaRequestId | |
-{: class="table table-striped"}
+
 
 
 ### Return type
@@ -137,7 +138,6 @@ try {
 [**WebChatGuestMediaRequest**](WebChatGuestMediaRequest)
 
 ## getWebchatGuestConversationMediarequests
-
 
 
 > [WebChatGuestMediaRequestEntityList](WebChatGuestMediaRequestEntityList) getWebchatGuestConversationMediarequests(conversationId)
@@ -186,7 +186,7 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **conversationId** | **String**| conversationId | |
-{: class="table table-striped"}
+
 
 
 ### Return type
@@ -194,7 +194,6 @@ try {
 [**WebChatGuestMediaRequestEntityList**](WebChatGuestMediaRequestEntityList)
 
 ## getWebchatGuestConversationMember
-
 
 
 > [WebChatMemberInfo](WebChatMemberInfo) getWebchatGuestConversationMember(conversationId, memberId)
@@ -245,7 +244,7 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **conversationId** | **String**| conversationId | |
 | **memberId** | **String**| memberId | |
-{: class="table table-striped"}
+
 
 
 ### Return type
@@ -253,7 +252,6 @@ try {
 [**WebChatMemberInfo**](WebChatMemberInfo)
 
 ## getWebchatGuestConversationMembers
-
 
 
 > [WebChatMemberInfoEntityList](WebChatMemberInfoEntityList) getWebchatGuestConversationMembers(conversationId, pageSize, pageNumber, excludeDisconnectedMembers)
@@ -308,7 +306,7 @@ try {
 | **pageSize** | **Integer**| The number of entries to return per page, or omitted for the default. | [optional] [default to 25] |
 | **pageNumber** | **Integer**| The page number to return, or omitted for the first page. | [optional] [default to 1] |
 | **excludeDisconnectedMembers** | **Boolean**| If true, the results will not contain members who have a DISCONNECTED state. | [optional] [default to false] |
-{: class="table table-striped"}
+
 
 
 ### Return type
@@ -316,7 +314,6 @@ try {
 [**WebChatMemberInfoEntityList**](WebChatMemberInfoEntityList)
 
 ## getWebchatGuestConversationMessage
-
 
 
 > [WebChatMessage](WebChatMessage) getWebchatGuestConversationMessage(conversationId, messageId)
@@ -367,7 +364,7 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **conversationId** | **String**| conversationId | |
 | **messageId** | **String**| messageId | |
-{: class="table table-striped"}
+
 
 
 ### Return type
@@ -375,7 +372,6 @@ try {
 [**WebChatMessage**](WebChatMessage)
 
 ## getWebchatGuestConversationMessages
-
 
 
 > [WebChatMessageEntityList](WebChatMessageEntityList) getWebchatGuestConversationMessages(conversationId, after, before, sortOrder, maxResults)
@@ -432,7 +428,7 @@ try {
 | **before** | **String**| If available, get the messages chronologically before the id of this message | [optional] |
 | **sortOrder** | **String**| Sort order | [optional] [default to ascending]<br />**Values**: ascending, descending |
 | **maxResults** | **Integer**| Limit the returned number of messages, up to a maximum of 100 | [optional] [default to 100] |
-{: class="table table-striped"}
+
 
 
 ### Return type
@@ -441,7 +437,9 @@ try {
 
 ## patchWebchatGuestConversationMediarequest
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
 > [WebChatGuestMediaRequest](WebChatGuestMediaRequest) patchWebchatGuestConversationMediarequest(conversationId, mediaRequestId, body)
 
@@ -495,7 +493,7 @@ try {
 | **conversationId** | **String**| conversationId | |
 | **mediaRequestId** | **String**| mediaRequestId | |
 | **body** | [**WebChatGuestMediaRequest**](WebChatGuestMediaRequest)| Request | |
-{: class="table table-striped"}
+
 
 
 ### Return type
@@ -503,7 +501,6 @@ try {
 [**WebChatGuestMediaRequest**](WebChatGuestMediaRequest)
 
 ## postWebchatGuestConversationMemberMessages
-
 
 
 > [WebChatMessage](WebChatMessage) postWebchatGuestConversationMemberMessages(conversationId, memberId, body)
@@ -556,7 +553,7 @@ try {
 | **conversationId** | **String**| conversationId | |
 | **memberId** | **String**| memberId | |
 | **body** | [**CreateWebChatMessageRequest**](CreateWebChatMessageRequest)| Message | |
-{: class="table table-striped"}
+
 
 
 ### Return type
@@ -564,7 +561,6 @@ try {
 [**WebChatMessage**](WebChatMessage)
 
 ## postWebchatGuestConversationMemberTyping
-
 
 
 > [WebChatTyping](WebChatTyping) postWebchatGuestConversationMemberTyping(conversationId, memberId)
@@ -615,7 +611,7 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **conversationId** | **String**| conversationId | |
 | **memberId** | **String**| memberId | |
-{: class="table table-striped"}
+
 
 
 ### Return type
@@ -623,7 +619,6 @@ try {
 [**WebChatTyping**](WebChatTyping)
 
 ## postWebchatGuestConversations
-
 
 
 > [CreateWebChatConversationResponse](CreateWebChatConversationResponse) postWebchatGuestConversations(body)
@@ -664,7 +659,7 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **body** | [**CreateWebChatConversationRequest**](CreateWebChatConversationRequest)| CreateConversationRequest | |
-{: class="table table-striped"}
+
 
 
 ### Return type
