@@ -667,4 +667,4 @@ try {
 [**CreateWebChatConversationResponse**](CreateWebChatConversationResponse)
 
 
-_com.mypurecloud.sdk.v2.guest:purecloud-guest-chat-client:14.1.0_
+_com.mypurecloud.sdk.v2.guest:purecloud-guest-chat-client:14.2.0_
