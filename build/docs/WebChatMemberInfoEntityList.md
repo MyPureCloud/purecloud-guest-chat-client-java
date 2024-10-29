@@ -1,25 +1,22 @@
----
-title: WebChatMemberInfoEntityList
-ispreview: true
----
-## WebChatMemberInfoEntityList
+# WebChatMemberInfoEntityList
 
 
 ## Properties
 
 | Name | Type | Description | Notes |
 | ------------ | ------------- | ------------- | ------------- |
-| **entities** | [**List&lt;WebChatMemberInfo&gt;**](WebChatMemberInfo.html) |  |  [optional] |
+| **entities** | [**List&lt;WebChatMemberInfo&gt;**](WebChatMemberInfo) |  |  [optional] |
 | **pageSize** | **Integer** |  |  [optional] |
 | **pageNumber** | **Integer** |  |  [optional] |
 | **total** | **Long** |  |  [optional] |
-| **firstUri** | **String** |  |  [optional] |
 | **lastUri** | **String** |  |  [optional] |
+| **firstUri** | **String** |  |  [optional] |
 | **selfUri** | **String** |  |  [optional] |
 | **nextUri** | **String** |  |  [optional] |
 | **previousUri** | **String** |  |  [optional] |
 | **pageCount** | **Integer** |  |  [optional] |
-{: class="table table-striped"}
 
 
 
+
+_com.mypurecloud.sdk.v2.guest:purecloud-guest-chat-client:14.2.0_

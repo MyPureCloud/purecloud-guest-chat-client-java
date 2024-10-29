@@ -1,8 +1,4 @@
----
-title: JourneyActionMap
-ispreview: true
----
-## JourneyActionMap
+# JourneyActionMap
 
 
 ## Properties
@@ -11,7 +7,8 @@ ispreview: true
 | ------------ | ------------- | ------------- | ------------- |
 | **id** | **String** | The ID of the actionMap in the Journey System which triggered this action |  |
 | **version** | **Integer** | The version number of the actionMap in the Journey System at the time this action was triggered |  |
-{: class="table table-striped"}
 
 
 
+
+_com.mypurecloud.sdk.v2.guest:purecloud-guest-chat-client:14.2.0_

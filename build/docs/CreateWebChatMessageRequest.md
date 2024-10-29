@@ -1,8 +1,4 @@
----
-title: CreateWebChatMessageRequest
-ispreview: true
----
-## CreateWebChatMessageRequest
+# CreateWebChatMessageRequest
 
 
 ## Properties
@@ -10,11 +6,8 @@ ispreview: true
 | Name | Type | Description | Notes |
 | ------------ | ------------- | ------------- | ------------- |
 | **body** | **String** | The message body. Note that message bodies are limited to 4,000 characters. |  |
-| **bodyType** | [**BodyTypeEnum**](#BodyTypeEnum) | The purpose of the message within the conversation, such as a standard text entry versus a greeting. |  [optional] |
-{: class="table table-striped"}
+| **bodyType** | [**BodyTypeEnum**](#Enum--BodyTypeEnum) | The purpose of the message within the conversation, such as a standard text entry versus a greeting. |  [optional] |
 
-
-<a name="BodyTypeEnum"></a>
 
 ## Enum: BodyTypeEnum
 
@@ -26,7 +19,8 @@ ispreview: true
 | MEMBER_JOIN | &quot;member-join&quot; | 
 | MEMBER_LEAVE | &quot;member-leave&quot; | 
 | MEDIA_REQUEST | &quot;media-request&quot; | 
-{: class="table table-striped"}
 
 
 
+
+_com.mypurecloud.sdk.v2.guest:purecloud-guest-chat-client:14.2.0_

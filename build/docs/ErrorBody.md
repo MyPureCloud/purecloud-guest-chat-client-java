@@ -1,8 +1,4 @@
----
-title: ErrorBody
-ispreview: true
----
-## ErrorBody
+# ErrorBody
 
 
 ## Properties
@@ -17,10 +13,11 @@ ispreview: true
 | **messageWithParams** | **String** |  |  [optional] |
 | **messageParams** | **Map&lt;String, String&gt;** |  |  [optional] |
 | **contextId** | **String** |  |  [optional] |
-| **details** | [**List&lt;Detail&gt;**](Detail.html) |  |  [optional] |
-| **errors** | [**List&lt;ErrorBody&gt;**](ErrorBody.html) |  |  [optional] |
-| **limit** | [**Limit**](Limit.html) |  |  [optional] |
-{: class="table table-striped"}
+| **details** | [**List&lt;Detail&gt;**](Detail) |  |  [optional] |
+| **errors** | [**List&lt;ErrorBody&gt;**](ErrorBody) |  |  [optional] |
+| **limit** | [**Limit**](Limit) |  |  [optional] |
 
 
 
+
+_com.mypurecloud.sdk.v2.guest:purecloud-guest-chat-client:14.2.0_

@@ -1,8 +1,4 @@
----
-title: WebChatMemberInfo
-ispreview: true
----
-## WebChatMemberInfo
+# WebChatMemberInfo
 
 
 ## Properties
@@ -16,16 +12,13 @@ ispreview: true
 | **email** | **String** | The email address of the member. |  [optional] |
 | **phoneNumber** | **String** | The phone number of the member. |  [optional] |
 | **avatarImageUrl** | **String** | The url to the avatar image of the member. |  [optional] |
-| **role** | [**RoleEnum**](#RoleEnum) | The role of the member, one of [agent, customer, acd, workflow] |  |
-| **joinDate** | [**Date**](Date.html) | The time the member joined the conversation. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z |  [optional] |
-| **leaveDate** | [**Date**](Date.html) | The time the member left the conversation, or null if the member is still active in the conversation. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z |  [optional] |
+| **role** | [**RoleEnum**](#Enum--RoleEnum) | The role of the member, one of [agent, customer, acd, workflow] |  |
+| **joinDate** | [**Date**](Date) | The time the member joined the conversation. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z |  [optional] |
+| **leaveDate** | [**Date**](Date) | The time the member left the conversation, or null if the member is still active in the conversation. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z |  [optional] |
 | **authenticatedGuest** | **Boolean** | If true, the guest member is an authenticated guest. |  [optional] |
 | **customFields** | **Map&lt;String, String&gt;** | Any custom fields of information pertaining to this member. |  [optional] |
-| **state** | [**StateEnum**](#StateEnum) | The connection state of this member. |  [optional] |
-{: class="table table-striped"}
+| **state** | [**StateEnum**](#Enum--StateEnum) | The connection state of this member. |  [optional] |
 
-
-<a name="RoleEnum"></a>
 
 ## Enum: RoleEnum
 
@@ -36,10 +29,7 @@ ispreview: true
 | CUSTOMER | &quot;CUSTOMER&quot; | 
 | WORKFLOW | &quot;WORKFLOW&quot; | 
 | ACD | &quot;ACD&quot; | 
-{: class="table table-striped"}
 
-
-<a name="StateEnum"></a>
 
 ## Enum: StateEnum
 
@@ -49,7 +39,8 @@ ispreview: true
 | CONNECTED | &quot;CONNECTED&quot; | 
 | DISCONNECTED | &quot;DISCONNECTED&quot; | 
 | ALERTING | &quot;ALERTING&quot; | 
-{: class="table table-striped"}
 
 
 
+
+_com.mypurecloud.sdk.v2.guest:purecloud-guest-chat-client:14.2.0_

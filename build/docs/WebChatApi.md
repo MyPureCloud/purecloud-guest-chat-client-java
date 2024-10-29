@@ -1,29 +1,23 @@
----
-title: WebChatApi
----
-## WebChatApi
+# WebChatApi
 
 All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | Description |
 | ------------- | ------------- |
-| [**deleteWebchatGuestConversationMember**](WebChatApi.html#deleteWebchatGuestConversationMember) | Remove a member from a chat conversation |
-| [**getWebchatGuestConversationMediarequest**](WebChatApi.html#getWebchatGuestConversationMediarequest) | Get a media request in the conversation |
-| [**getWebchatGuestConversationMediarequests**](WebChatApi.html#getWebchatGuestConversationMediarequests) | Get all media requests to the guest in the conversation |
-| [**getWebchatGuestConversationMember**](WebChatApi.html#getWebchatGuestConversationMember) | Get a web chat conversation member |
-| [**getWebchatGuestConversationMembers**](WebChatApi.html#getWebchatGuestConversationMembers) | Get the members of a chat conversation. |
-| [**getWebchatGuestConversationMessage**](WebChatApi.html#getWebchatGuestConversationMessage) | Get a web chat conversation message |
-| [**getWebchatGuestConversationMessages**](WebChatApi.html#getWebchatGuestConversationMessages) | Get the messages of a chat conversation. |
-| [**patchWebchatGuestConversationMediarequest**](WebChatApi.html#patchWebchatGuestConversationMediarequest) | Update a media request in the conversation, setting the state to ACCEPTED/DECLINED/ERRORED |
-| [**postWebchatGuestConversationMemberMessages**](WebChatApi.html#postWebchatGuestConversationMemberMessages) | Send a message in a chat conversation. |
-| [**postWebchatGuestConversationMemberTyping**](WebChatApi.html#postWebchatGuestConversationMemberTyping) | Send a typing-indicator in a chat conversation. |
-| [**postWebchatGuestConversations**](WebChatApi.html#postWebchatGuestConversations) | Create an ACD chat conversation from an external customer. |
-{: class="table table-striped"}
+| [**deleteWebchatGuestConversationMember**](#deleteWebchatGuestConversationMember) | Remove a member from a chat conversation |
+| [**getWebchatGuestConversationMediarequest**](#getWebchatGuestConversationMediarequest) | Get a media request in the conversation |
+| [**getWebchatGuestConversationMediarequests**](#getWebchatGuestConversationMediarequests) | Get all media requests to the guest in the conversation |
+| [**getWebchatGuestConversationMember**](#getWebchatGuestConversationMember) | Get a web chat conversation member |
+| [**getWebchatGuestConversationMembers**](#getWebchatGuestConversationMembers) | Get the members of a chat conversation. |
+| [**getWebchatGuestConversationMessage**](#getWebchatGuestConversationMessage) | Get a web chat conversation message |
+| [**getWebchatGuestConversationMessages**](#getWebchatGuestConversationMessages) | Get the messages of a chat conversation. |
+| [**patchWebchatGuestConversationMediarequest**](#patchWebchatGuestConversationMediarequest) | Update a media request in the conversation, setting the state to ACCEPTED/DECLINED/ERRORED |
+| [**postWebchatGuestConversationMemberMessages**](#postWebchatGuestConversationMemberMessages) | Send a message in a chat conversation. |
+| [**postWebchatGuestConversationMemberTyping**](#postWebchatGuestConversationMemberTyping) | Send a typing-indicator in a chat conversation. |
+| [**postWebchatGuestConversations**](#postWebchatGuestConversations) | Create an ACD chat conversation from an external customer. |
 
-<a name="deleteWebchatGuestConversationMember"></a>
 
-# **deleteWebchatGuestConversationMember**
-
+## deleteWebchatGuestConversationMember
 
 
 > Void deleteWebchatGuestConversationMember(conversationId, memberId)
@@ -73,20 +67,20 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **conversationId** | **String**| conversationId | |
 | **memberId** | **String**| memberId | |
-{: class="table table-striped"}
+
 
 
 ### Return type
 
 null (empty response body)
 
-<a name="getWebchatGuestConversationMediarequest"></a>
+## getWebchatGuestConversationMediarequest
 
-# **getWebchatGuestConversationMediarequest**
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
-
-> [WebChatGuestMediaRequest](WebChatGuestMediaRequest.html) getWebchatGuestConversationMediarequest(conversationId, mediaRequestId)
+> [WebChatGuestMediaRequest](WebChatGuestMediaRequest) getWebchatGuestConversationMediarequest(conversationId, mediaRequestId)
 
 Get a media request in the conversation
 
@@ -136,20 +130,17 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **conversationId** | **String**| conversationId | |
 | **mediaRequestId** | **String**| mediaRequestId | |
-{: class="table table-striped"}
+
 
 
 ### Return type
 
-[**WebChatGuestMediaRequest**](WebChatGuestMediaRequest.html)
+[**WebChatGuestMediaRequest**](WebChatGuestMediaRequest)
 
-<a name="getWebchatGuestConversationMediarequests"></a>
-
-# **getWebchatGuestConversationMediarequests**
+## getWebchatGuestConversationMediarequests
 
 
-
-> [WebChatGuestMediaRequestEntityList](WebChatGuestMediaRequestEntityList.html) getWebchatGuestConversationMediarequests(conversationId)
+> [WebChatGuestMediaRequestEntityList](WebChatGuestMediaRequestEntityList) getWebchatGuestConversationMediarequests(conversationId)
 
 Get all media requests to the guest in the conversation
 
@@ -195,20 +186,17 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **conversationId** | **String**| conversationId | |
-{: class="table table-striped"}
+
 
 
 ### Return type
 
-[**WebChatGuestMediaRequestEntityList**](WebChatGuestMediaRequestEntityList.html)
+[**WebChatGuestMediaRequestEntityList**](WebChatGuestMediaRequestEntityList)
 
-<a name="getWebchatGuestConversationMember"></a>
-
-# **getWebchatGuestConversationMember**
+## getWebchatGuestConversationMember
 
 
-
-> [WebChatMemberInfo](WebChatMemberInfo.html) getWebchatGuestConversationMember(conversationId, memberId)
+> [WebChatMemberInfo](WebChatMemberInfo) getWebchatGuestConversationMember(conversationId, memberId)
 
 Get a web chat conversation member
 
@@ -256,20 +244,17 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **conversationId** | **String**| conversationId | |
 | **memberId** | **String**| memberId | |
-{: class="table table-striped"}
+
 
 
 ### Return type
 
-[**WebChatMemberInfo**](WebChatMemberInfo.html)
+[**WebChatMemberInfo**](WebChatMemberInfo)
 
-<a name="getWebchatGuestConversationMembers"></a>
-
-# **getWebchatGuestConversationMembers**
+## getWebchatGuestConversationMembers
 
 
-
-> [WebChatMemberInfoEntityList](WebChatMemberInfoEntityList.html) getWebchatGuestConversationMembers(conversationId, pageSize, pageNumber, excludeDisconnectedMembers)
+> [WebChatMemberInfoEntityList](WebChatMemberInfoEntityList) getWebchatGuestConversationMembers(conversationId, pageSize, pageNumber, excludeDisconnectedMembers)
 
 Get the members of a chat conversation.
 
@@ -321,20 +306,17 @@ try {
 | **pageSize** | **Integer**| The number of entries to return per page, or omitted for the default. | [optional] [default to 25] |
 | **pageNumber** | **Integer**| The page number to return, or omitted for the first page. | [optional] [default to 1] |
 | **excludeDisconnectedMembers** | **Boolean**| If true, the results will not contain members who have a DISCONNECTED state. | [optional] [default to false] |
-{: class="table table-striped"}
+
 
 
 ### Return type
 
-[**WebChatMemberInfoEntityList**](WebChatMemberInfoEntityList.html)
+[**WebChatMemberInfoEntityList**](WebChatMemberInfoEntityList)
 
-<a name="getWebchatGuestConversationMessage"></a>
-
-# **getWebchatGuestConversationMessage**
+## getWebchatGuestConversationMessage
 
 
-
-> [WebChatMessage](WebChatMessage.html) getWebchatGuestConversationMessage(conversationId, messageId)
+> [WebChatMessage](WebChatMessage) getWebchatGuestConversationMessage(conversationId, messageId)
 
 Get a web chat conversation message
 
@@ -382,20 +364,17 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **conversationId** | **String**| conversationId | |
 | **messageId** | **String**| messageId | |
-{: class="table table-striped"}
+
 
 
 ### Return type
 
-[**WebChatMessage**](WebChatMessage.html)
+[**WebChatMessage**](WebChatMessage)
 
-<a name="getWebchatGuestConversationMessages"></a>
-
-# **getWebchatGuestConversationMessages**
+## getWebchatGuestConversationMessages
 
 
-
-> [WebChatMessageEntityList](WebChatMessageEntityList.html) getWebchatGuestConversationMessages(conversationId, after, before, sortOrder, maxResults)
+> [WebChatMessageEntityList](WebChatMessageEntityList) getWebchatGuestConversationMessages(conversationId, after, before, sortOrder, maxResults)
 
 Get the messages of a chat conversation.
 
@@ -449,20 +428,20 @@ try {
 | **before** | **String**| If available, get the messages chronologically before the id of this message | [optional] |
 | **sortOrder** | **String**| Sort order | [optional] [default to ascending]<br />**Values**: ascending, descending |
 | **maxResults** | **Integer**| Limit the returned number of messages, up to a maximum of 100 | [optional] [default to 100] |
-{: class="table table-striped"}
+
 
 
 ### Return type
 
-[**WebChatMessageEntityList**](WebChatMessageEntityList.html)
+[**WebChatMessageEntityList**](WebChatMessageEntityList)
 
-<a name="patchWebchatGuestConversationMediarequest"></a>
+## patchWebchatGuestConversationMediarequest
 
-# **patchWebchatGuestConversationMediarequest**
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
-
-> [WebChatGuestMediaRequest](WebChatGuestMediaRequest.html) patchWebchatGuestConversationMediarequest(conversationId, mediaRequestId, body)
+> [WebChatGuestMediaRequest](WebChatGuestMediaRequest) patchWebchatGuestConversationMediarequest(conversationId, mediaRequestId, body)
 
 Update a media request in the conversation, setting the state to ACCEPTED/DECLINED/ERRORED
 
@@ -513,21 +492,18 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **conversationId** | **String**| conversationId | |
 | **mediaRequestId** | **String**| mediaRequestId | |
-| **body** | [**WebChatGuestMediaRequest**](WebChatGuestMediaRequest.html)| Request | |
-{: class="table table-striped"}
+| **body** | [**WebChatGuestMediaRequest**](WebChatGuestMediaRequest)| Request | |
+
 
 
 ### Return type
 
-[**WebChatGuestMediaRequest**](WebChatGuestMediaRequest.html)
+[**WebChatGuestMediaRequest**](WebChatGuestMediaRequest)
 
-<a name="postWebchatGuestConversationMemberMessages"></a>
-
-# **postWebchatGuestConversationMemberMessages**
+## postWebchatGuestConversationMemberMessages
 
 
-
-> [WebChatMessage](WebChatMessage.html) postWebchatGuestConversationMemberMessages(conversationId, memberId, body)
+> [WebChatMessage](WebChatMessage) postWebchatGuestConversationMemberMessages(conversationId, memberId, body)
 
 Send a message in a chat conversation.
 
@@ -576,21 +552,18 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **conversationId** | **String**| conversationId | |
 | **memberId** | **String**| memberId | |
-| **body** | [**CreateWebChatMessageRequest**](CreateWebChatMessageRequest.html)| Message | |
-{: class="table table-striped"}
+| **body** | [**CreateWebChatMessageRequest**](CreateWebChatMessageRequest)| Message | |
+
 
 
 ### Return type
 
-[**WebChatMessage**](WebChatMessage.html)
+[**WebChatMessage**](WebChatMessage)
 
-<a name="postWebchatGuestConversationMemberTyping"></a>
-
-# **postWebchatGuestConversationMemberTyping**
+## postWebchatGuestConversationMemberTyping
 
 
-
-> [WebChatTyping](WebChatTyping.html) postWebchatGuestConversationMemberTyping(conversationId, memberId)
+> [WebChatTyping](WebChatTyping) postWebchatGuestConversationMemberTyping(conversationId, memberId)
 
 Send a typing-indicator in a chat conversation.
 
@@ -638,20 +611,17 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **conversationId** | **String**| conversationId | |
 | **memberId** | **String**| memberId | |
-{: class="table table-striped"}
+
 
 
 ### Return type
 
-[**WebChatTyping**](WebChatTyping.html)
+[**WebChatTyping**](WebChatTyping)
 
-<a name="postWebchatGuestConversations"></a>
-
-# **postWebchatGuestConversations**
+## postWebchatGuestConversations
 
 
-
-> [CreateWebChatConversationResponse](CreateWebChatConversationResponse.html) postWebchatGuestConversations(body)
+> [CreateWebChatConversationResponse](CreateWebChatConversationResponse) postWebchatGuestConversations(body)
 
 Create an ACD chat conversation from an external customer.
 
@@ -688,11 +658,13 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**CreateWebChatConversationRequest**](CreateWebChatConversationRequest.html)| CreateConversationRequest | |
-{: class="table table-striped"}
+| **body** | [**CreateWebChatConversationRequest**](CreateWebChatConversationRequest)| CreateConversationRequest | |
+
 
 
 ### Return type
 
-[**CreateWebChatConversationResponse**](CreateWebChatConversationResponse.html)
+[**CreateWebChatConversationResponse**](CreateWebChatConversationResponse)
 
+
+_com.mypurecloud.sdk.v2.guest:purecloud-guest-chat-client:14.2.0_

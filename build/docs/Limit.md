@@ -1,8 +1,4 @@
----
-title: Limit
-ispreview: true
----
-## Limit
+# Limit
 
 
 ## Properties
@@ -10,25 +6,15 @@ ispreview: true
 | Name | Type | Description | Notes |
 | ------------ | ------------- | ------------- | ------------- |
 | **key** | **String** |  |  [optional] |
-| **namespace** | [**NamespaceEnum**](#NamespaceEnum) |  |  [optional] |
+| **namespace** | [**NamespaceEnum**](#Enum--NamespaceEnum) |  |  [optional] |
 | **value** | **Long** |  |  [optional] |
-{: class="table table-striped"}
 
-
-<a name="NamespaceEnum"></a>
 
 ## Enum: NamespaceEnum
 
 | Name | Value |
 | ---- | ----- |
 | OUTDATEDSDKVERSION | &quot;OutdatedSdkVersion&quot; | 
-| AGENT_ASSISTANT | &quot;agent.assistant&quot; | 
-| ANALYTICS_ALERTING | &quot;analytics.alerting&quot; | 
-| ANALYTICS | &quot;analytics&quot; | 
-| ANALYTICS_REALTIME | &quot;analytics.realtime&quot; | 
-| ANALYTICS_REPORTING_SETTINGS | &quot;analytics.reporting.settings&quot; | 
-| ARCHITECT | &quot;architect&quot; | 
-| AUDIOHOOK | &quot;audiohook&quot; | 
 | AUDIT | &quot;audit&quot; | 
 | AUTH_API | &quot;auth.api&quot; | 
 | AUTHORIZATION | &quot;authorization&quot; | 
@@ -90,8 +76,16 @@ ispreview: true
 | WEBHOOKS | &quot;webhooks&quot; | 
 | WORKFORCE_MANAGEMENT_FORECAST | &quot;workforce.management.forecast&quot; | 
 | WORKFORCE_MANAGEMENT | &quot;workforce.management&quot; | 
+| AGENT_ASSISTANT | &quot;agent.assistant&quot; | 
+| ANALYTICS_ALERTING | &quot;analytics.alerting&quot; | 
+| ANALYTICS | &quot;analytics&quot; | 
+| ANALYTICS_REALTIME | &quot;analytics.realtime&quot; | 
+| ANALYTICS_REPORTING_SETTINGS | &quot;analytics.reporting.settings&quot; | 
+| ARCHITECT | &quot;architect&quot; | 
+| AUDIOHOOK | &quot;audiohook&quot; | 
 | SYSTEM | &quot;system&quot; | 
-{: class="table table-striped"}
 
 
 
+
+_com.mypurecloud.sdk.v2.guest:purecloud-guest-chat-client:14.2.0_

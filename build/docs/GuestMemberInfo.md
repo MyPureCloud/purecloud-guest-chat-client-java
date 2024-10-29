@@ -1,8 +1,4 @@
----
-title: GuestMemberInfo
-ispreview: true
----
-## GuestMemberInfo
+# GuestMemberInfo
 
 
 ## Properties
@@ -16,7 +12,8 @@ ispreview: true
 | **phoneNumber** | **String** | The phone number to use for the guest member in the conversation. |  [optional] |
 | **avatarImageUrl** | **String** | The URL to the avatar image to use for the guest member in the conversation, if any. |  [optional] |
 | **customFields** | **Map&lt;String, String&gt;** | Any custom fields of information, in key-value format, to attach to the guest member in the conversation. |  [optional] |
-{: class="table table-striped"}
 
 
 
+
+_com.mypurecloud.sdk.v2.guest:purecloud-guest-chat-client:14.2.0_

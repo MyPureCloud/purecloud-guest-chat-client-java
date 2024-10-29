@@ -1,16 +1,13 @@
----
-title: WebChatGuestMediaRequestEntityList
-ispreview: true
----
-## WebChatGuestMediaRequestEntityList
+# WebChatGuestMediaRequestEntityList
 
 
 ## Properties
 
 | Name | Type | Description | Notes |
 | ------------ | ------------- | ------------- | ------------- |
-| **entities** | [**List&lt;WebChatGuestMediaRequest&gt;**](WebChatGuestMediaRequest.html) |  |  [optional] |
-{: class="table table-striped"}
+| **entities** | [**List&lt;WebChatGuestMediaRequest&gt;**](WebChatGuestMediaRequest) |  |  [optional] |
 
 
 
+
+_com.mypurecloud.sdk.v2.guest:purecloud-guest-chat-client:14.2.0_

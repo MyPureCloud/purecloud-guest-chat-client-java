@@ -1,8 +1,4 @@
----
-title: Detail
-ispreview: true
----
-## Detail
+# Detail
 
 
 ## Properties
@@ -13,7 +9,8 @@ ispreview: true
 | **fieldName** | **String** |  |  [optional] |
 | **entityId** | **String** |  |  [optional] |
 | **entityName** | **String** |  |  [optional] |
-{: class="table table-striped"}
 
 
 
+
+_com.mypurecloud.sdk.v2.guest:purecloud-guest-chat-client:14.2.0_
