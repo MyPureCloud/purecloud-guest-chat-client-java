@@ -1,4 +1,4 @@
-Platform API version: 8752
+Platform API version: 8952
 
 
 
@@ -6,12 +6,11 @@ Platform API version: 8752
 # Major Changes (0 changes)
 
 
-# Minor Changes (2 changes)
+# Minor Changes (1 change)
 
-**Limit** (2 changes)
+**Limit** (1 change)
 
-* Enum value analytics.agents was added to property namespace
-* Enum value micro.frontend was added to property namespace
+* Enum value external.events.data.ingestion was added to property namespace
 
 
 # Point Changes (0 changes)
