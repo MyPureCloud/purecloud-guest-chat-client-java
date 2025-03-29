@@ -9,7 +9,7 @@
 * **Source** https://github.com/MyPureCloud/purecloud-guest-chat-client-java
 * **Guest chat documentation** https://developer.genesys.cloud/commdigital/digital/webchat/guestchat
 
-Documentation version: com.mypurecloud.sdk.v2.guest:purecloud-guest-chat-client:14.5.0
+Documentation version: com.mypurecloud.sdk.v2.guest:purecloud-guest-chat-client:15.0.0
 
 ## Install Using maven
 
