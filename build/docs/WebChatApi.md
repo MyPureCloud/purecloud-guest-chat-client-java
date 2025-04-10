@@ -710,4 +710,4 @@ try {
 [**CreateWebChatConversationResponse**](CreateWebChatConversationResponse)
 
 
-_com.mypurecloud.sdk.v2.guest:purecloud-guest-chat-client:15.0.0_
+_com.mypurecloud.sdk.v2.guest:purecloud-guest-chat-client:15.1.0_

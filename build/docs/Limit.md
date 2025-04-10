@@ -37,6 +37,7 @@
 | DATAACTIONS | &quot;dataactions&quot; | 
 | DATATABLES | &quot;datatables&quot; | 
 | DIRECTORY | &quot;directory&quot; | 
+| DSAR | &quot;dsar&quot; | 
 | EMAIL | &quot;email&quot; | 
 | EMPLOYEE_ENGAGEMENT | &quot;employee.engagement&quot; | 
 | EVENT_ORCHESTRATION | &quot;event.orchestration&quot; | 
@@ -93,4 +94,4 @@
 
 
 
-_com.mypurecloud.sdk.v2.guest:purecloud-guest-chat-client:15.0.0_
+_com.mypurecloud.sdk.v2.guest:purecloud-guest-chat-client:15.1.0_

@@ -64,6 +64,7 @@ public class Limit  implements Serializable {
     DATAACTIONS("dataactions"),
     DATATABLES("datatables"),
     DIRECTORY("directory"),
+    DSAR("dsar"),
     EMAIL("email"),
     EMPLOYEE_ENGAGEMENT("employee.engagement"),
     EVENT_ORCHESTRATION("event.orchestration"),
