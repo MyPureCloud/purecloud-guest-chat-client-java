@@ -1,4 +1,4 @@
-Platform API version: 9095
+Platform API version: 9215
 
 
 
@@ -10,7 +10,7 @@ Platform API version: 9095
 
 **Limit** (1 change)
 
-* Enum value dsar was added to property namespace
+* Enum value guides was added to property namespace
 
 
 # Point Changes (0 changes)
