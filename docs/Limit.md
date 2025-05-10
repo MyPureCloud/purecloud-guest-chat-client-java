@@ -47,6 +47,7 @@
 | GCV | &quot;gcv&quot; | 
 | GDPR | &quot;gdpr&quot; | 
 | GROUPS | &quot;groups&quot; | 
+| GUIDES | &quot;guides&quot; | 
 | HISTORICAL_ADHERENCE | &quot;historical.adherence&quot; | 
 | INFRASTRUCTUREASCODE | &quot;infrastructureascode&quot; | 
 | INTEGRATIONS | &quot;integrations&quot; | 
@@ -94,4 +95,4 @@
 
 
 
-_com.mypurecloud.sdk.v2.guest:purecloud-guest-chat-client:15.1.0_
+_com.mypurecloud.sdk.v2.guest:purecloud-guest-chat-client:15.2.0_
