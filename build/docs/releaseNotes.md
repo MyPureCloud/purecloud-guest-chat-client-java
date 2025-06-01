@@ -1,4 +1,4 @@
-Platform API version: 9215
+Platform API version: 9298
 
 
 
@@ -6,11 +6,12 @@ Platform API version: 9215
 # Major Changes (0 changes)
 
 
-# Minor Changes (1 change)
+# Minor Changes (2 changes)
 
-**Limit** (1 change)
+**Limit** (2 changes)
 
-* Enum value guides was added to property namespace
+* Enum value analytics.data.extraction was added to property namespace
+* Enum value users.rules was added to property namespace
 
 
 # Point Changes (0 changes)
