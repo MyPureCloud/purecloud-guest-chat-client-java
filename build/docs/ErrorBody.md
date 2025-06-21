@@ -20,4 +20,4 @@
 
 
 
-_com.mypurecloud.sdk.v2.guest:purecloud-guest-chat-client:15.3.0_
+_com.mypurecloud.sdk.v2.guest:purecloud-guest-chat-client:15.4.0_

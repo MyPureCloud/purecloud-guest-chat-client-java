@@ -12,11 +12,11 @@
 | **firstUri** | **String** |  |  [optional] |
 | **lastUri** | **String** |  |  [optional] |
 | **selfUri** | **String** |  |  [optional] |
-| **nextUri** | **String** |  |  [optional] |
 | **previousUri** | **String** |  |  [optional] |
+| **nextUri** | **String** |  |  [optional] |
 | **pageCount** | **Integer** |  |  [optional] |
 
 
 
 
-_com.mypurecloud.sdk.v2.guest:purecloud-guest-chat-client:15.3.0_
+_com.mypurecloud.sdk.v2.guest:purecloud-guest-chat-client:15.4.0_
