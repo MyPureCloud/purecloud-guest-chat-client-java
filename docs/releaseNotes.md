@@ -1,4 +1,4 @@
-Platform API version: 9298
+Platform API version: 9347
 
 
 
@@ -6,12 +6,11 @@ Platform API version: 9298
 # Major Changes (0 changes)
 
 
-# Minor Changes (2 changes)
+# Minor Changes (1 change)
 
-**Limit** (2 changes)
+**Limit** (1 change)
 
-* Enum value analytics.data.extraction was added to property namespace
-* Enum value users.rules was added to property namespace
+* Enum value voice.transcription was added to property namespace
 
 
 # Point Changes (0 changes)
