@@ -16,4 +16,4 @@
 
 
 
-_com.mypurecloud.sdk.v2.guest:purecloud-guest-chat-client:15.7.0_
+_com.mypurecloud.sdk.v2.guest:purecloud-guest-chat-client:16.0.0_
