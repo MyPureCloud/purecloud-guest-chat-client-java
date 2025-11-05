@@ -10,13 +10,13 @@
 | **pageNumber** | **Integer** |  |  [optional] |
 | **total** | **Long** |  |  [optional] |
 | **firstUri** | **String** |  |  [optional] |
+| **lastUri** | **String** |  |  [optional] |
+| **selfUri** | **String** |  |  [optional] |
 | **previousUri** | **String** |  |  [optional] |
 | **nextUri** | **String** |  |  [optional] |
-| **selfUri** | **String** |  |  [optional] |
-| **lastUri** | **String** |  |  [optional] |
 | **pageCount** | **Integer** |  |  [optional] |
 
 
 
 
-_com.mypurecloud.sdk.v2.guest:purecloud-guest-chat-client:15.7.0_
+_com.mypurecloud.sdk.v2.guest:purecloud-guest-chat-client:16.0.0_
